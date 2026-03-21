@@ -207,6 +207,80 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── FORRESTER WAVE LEADER ── */}
+      <section style={{ padding: "80px 0", background: "linear-gradient(135deg, rgba(120,86,255,0.06) 0%, rgba(252,205,0,0.03) 100%)", borderTop: "1px solid rgba(120,86,255,0.15)", borderBottom: "1px solid rgba(120,86,255,0.15)", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", top: -80, left: "5%", width: 500, height: 500, background: "radial-gradient(circle, rgba(120,86,255,0.10) 0%, transparent 60%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", bottom: -60, right: "10%", width: 400, height: 400, background: "radial-gradient(circle, rgba(252,205,0,0.06) 0%, transparent 60%)", pointerEvents: "none" }} />
+        <div className="container-xl" style={{ position: "relative" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
+            {/* Left — wave chart */}
+            <div style={{ position: "relative" }}>
+              <div style={{ borderRadius: 16, overflow: "hidden", border: "1px solid rgba(120,86,255,0.3)", boxShadow: "0 20px 60px rgba(120,86,255,0.15), 0 0 0 1px rgba(120,86,255,0.1)" }}>
+                <Image
+                  src="/assets/forrester-wave-chart.png"
+                  alt="Forrester Wave Q4 2025 — ACCELQ Leader"
+                  width={680}
+                  height={480}
+                  style={{ width: "100%", height: "auto", display: "block" }}
+                />
+              </div>
+              {/* Badge overlay */}
+              <div style={{ position: "absolute", top: -16, right: -16, background: "#09090f", border: "1px solid rgba(252,205,0,0.4)", borderRadius: 12, padding: "12px 16px", boxShadow: "0 8px 32px rgba(0,0,0,0.6)", display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
+                <Image src="/assets/forrester-wave-badge.svg" alt="Forrester Wave Leader" width={80} height={64} />
+              </div>
+            </div>
+
+            {/* Right — copy */}
+            <div>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(252,205,0,0.1)", border: "1px solid rgba(252,205,0,0.35)", borderRadius: 6, padding: "6px 14px", marginBottom: 20 }}>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><polygon points="7,1 9,5.5 14,5.5 10.5,8.5 12,13 7,10 2,13 3.5,8.5 0,5.5 5,5.5" fill="#fccd00" /></svg>
+                <span style={{ fontSize: 11, fontWeight: 700, color: "#fccd00", letterSpacing: "0.07em", textTransform: "uppercase" }}>Forrester Wave™ Q4 2025</span>
+              </div>
+
+              <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 900, lineHeight: 1.1, letterSpacing: "-0.03em", marginBottom: 16 }}>
+                Named a{" "}
+                <span className="text-gradient-gold">Leader</span>
+                {" "}in Autonomous Testing Platforms
+              </h2>
+
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(120,86,255,0.1)", border: "1px solid rgba(120,86,255,0.3)", borderRadius: 8, padding: "8px 16px", marginBottom: 20 }}>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2l1.8 3.6L14 6.2l-3 2.9.7 4.1L8 11.2l-3.7 2 .7-4.1L2 6.2l4.2-.6z" stroke="#7856ff" fill="rgba(120,86,255,0.2)" strokeWidth="1.2" /></svg>
+                <span style={{ fontSize: 13, fontWeight: 700, color: "#c084fc" }}>Highest Score in Current Offering</span>
+              </div>
+
+              <blockquote style={{ borderLeft: "3px solid rgba(120,86,255,0.5)", paddingLeft: 18, marginBottom: 28 }}>
+                <p style={{ fontSize: "0.95rem", color: "#8888a8", lineHeight: 1.8, fontStyle: "italic" }}>
+                  &ldquo;ACCELQ&apos;s impressive vision and innovation help its strategy stand out among competitors, focusing on a fully autonomous QE platform with event-driven orchestration and explainable AI.&rdquo;
+                </p>
+                <cite style={{ fontSize: 11, color: "#55556a", fontStyle: "normal", display: "block", marginTop: 8 }}>— Forrester Research, Autonomous Testing Platforms, Q4 2025</cite>
+              </blockquote>
+
+              <div style={{ display: "flex", gap: 16, marginBottom: 32, flexWrap: "wrap" }}>
+                {[
+                  { val: "#1", label: "Current Offering", color: "#7856ff" },
+                  { val: "Leader", label: "Wave Position", color: "#fccd00" },
+                  { val: "★ Fav", label: "Customer Choice", color: "#00e5d3" },
+                ].map((s) => (
+                  <div key={s.label} style={{ padding: "12px 20px", background: "rgba(9,9,15,0.8)", border: "1px solid #2a2a3d", borderRadius: 10, textAlign: "center", minWidth: 90 }}>
+                    <div style={{ fontSize: "1.4rem", fontWeight: 900, color: s.color }}>{s.val}</div>
+                    <div style={{ fontSize: 11, color: "#55556a", marginTop: 2 }}>{s.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                <Link href="/forrester-wave#getreport" className="btn-cta" style={{ fontSize: 14, padding: "11px 24px" }}>
+                  Get Free Report
+                </Link>
+                <Link href="/forrester-wave" className="btn-secondary" style={{ fontSize: 14, padding: "11px 24px" }}>
+                  See Full Analysis
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── THE PROBLEM ── */}
       <section style={{ padding: "100px 0" }}>
         <div className="container-xl">

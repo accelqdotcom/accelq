@@ -80,6 +80,7 @@ const NAV = [
         links: [
           { label: "About Us", href: "/company/about", desc: "Our mission, team, and story" },
           { label: "Careers", href: "/company/careers", desc: "Join the team building quality for the AI era" },
+          { label: "Forrester Wave™ Leader", href: "/forrester-wave", desc: "Q4 2025 — Highest score in Current Offering" },
           { label: "News", href: "/company/news", desc: "Latest announcements and press" },
           { label: "Contact Us", href: "/company/contact", desc: "Get in touch with our team" },
         ],

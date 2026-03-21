@@ -28,6 +28,7 @@ const FOOTER_LINKS = {
   Company: [
     { label: "About Us", href: "/company/about" },
     { label: "Careers", href: "/company/careers" },
+    { label: "Forrester Wave™ Leader", href: "/forrester-wave" },
     { label: "Partners", href: "/partners" },
     { label: "Pricing", href: "/pricing" },
     { label: "Contact Us", href: "/company/contact" },
