@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const NAV = [
   {
@@ -116,24 +117,23 @@ export default function Navigation() {
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
         background: scrolled
-          ? "rgba(13,17,23,0.95)"
-          : "rgba(13,17,23,0.80)",
-        backdropFilter: "blur(12px)",
-        borderBottom: scrolled ? "1px solid #21262d" : "1px solid transparent",
+          ? "rgba(9,9,15,0.97)"
+          : "rgba(9,9,15,0.75)",
+        backdropFilter: "blur(16px)",
+        borderBottom: scrolled ? "1px solid #2a2a3d" : "1px solid transparent",
       }}
     >
       <div className="container-xl">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="flex items-center gap-2">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <rect width="28" height="28" rx="6" fill="#21ADC3" />
-                <path d="M7 14L11 10L15 14L19 8" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                <circle cx="19" cy="20" r="3" fill="white" opacity="0.8" />
-              </svg>
-              <span className="font-bold text-lg tracking-tight text-white">ACCELQ</span>
-            </div>
+          <Link href="/" className="flex items-center flex-shrink-0">
+            <Image
+              src="/assets/accelq-logo.svg"
+              alt="ACCELQ"
+              width={120}
+              height={22}
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -143,7 +143,7 @@ export default function Navigation() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="px-3 py-1.5 rounded-md text-sm font-medium text-[#8b949e] hover:text-[#e6edf3] transition-colors"
+                  className="px-3 py-1.5 rounded-md text-sm font-medium text-[#8888a8] hover:text-[#eeeef5] transition-colors"
                 >
                   {item.label}
                 </Link>
@@ -153,7 +153,7 @@ export default function Navigation() {
                     onMouseEnter={() => setOpenMenu(item.label)}
                     onMouseLeave={() => setOpenMenu(null)}
                     onClick={() => setOpenMenu(openMenu === item.label ? null : item.label)}
-                    className="flex items-center gap-1 px-3 py-1.5 rounded-md text-sm font-medium text-[#8b949e] hover:text-[#e6edf3] transition-colors"
+                    className="flex items-center gap-1 px-3 py-1.5 rounded-md text-sm font-medium text-[#8888a8] hover:text-[#eeeef5] transition-colors"
                   >
                     {item.label}
                     <svg
@@ -187,11 +187,11 @@ export default function Navigation() {
                               <Link
                                 key={link.href}
                                 href={link.href}
-                                className="flex items-start gap-2 px-3 py-2 rounded-lg hover:bg-[#21262d] transition-colors group/link"
+                                className="flex items-start gap-2 px-3 py-2 rounded-lg hover:bg-[#1c1c27] transition-colors group/link"
                                 onClick={() => setOpenMenu(null)}
                               >
                                 <div>
-                                  <span className="block text-sm font-medium text-[#e6edf3] group-hover/link:text-[#58a6ff] transition-colors">
+                                  <span className="block text-sm font-medium text-[#e6edf3] group-hover/link:text-[#c084fc] transition-colors">
                                     {link.label}
                                   </span>
                                   {"desc" in link && link.desc && (
@@ -214,7 +214,7 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="https://app.accelq.com"
-              className="text-sm font-medium text-[#8b949e] hover:text-[#e6edf3] transition-colors px-2"
+              className="text-sm font-medium text-[#8888a8] hover:text-[#eeeef5] transition-colors px-2"
             >
               Sign In
             </Link>
@@ -225,7 +225,7 @@ export default function Navigation() {
 
           {/* Mobile hamburger */}
           <button
-            className="lg:hidden p-2 rounded-md text-[#8b949e] hover:text-[#e6edf3] hover:bg-[#21262d] transition-colors"
+            className="lg:hidden p-2 rounded-md text-[#8b949e] hover:text-[#e6edf3] hover:bg-[#1c1c27] transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -249,8 +249,8 @@ export default function Navigation() {
         <div
           className="lg:hidden animate-slide-down"
           style={{
-            background: "#0d1117",
-            borderTop: "1px solid #21262d",
+            background: "#09090f",
+            borderTop: "1px solid #2a2a3d",
             maxHeight: "80vh",
             overflowY: "auto",
           }}

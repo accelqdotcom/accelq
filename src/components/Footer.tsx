@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const FOOTER_LINKS = {
   Platform: [
@@ -68,8 +69,8 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "#0d1117",
-        borderTop: "1px solid #21262d",
+        background: "#06060c",
+        borderTop: "1px solid #2a2a3d",
       }}
     >
       {/* Main footer */}
@@ -77,27 +78,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div
-                style={{
-                  width: 32,
-                  height: 32,
-                  borderRadius: 8,
-                  background: "#21adc3",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexShrink: 0,
-                }}
-              >
-                <svg width="18" height="18" viewBox="0 0 28 28" fill="none">
-                  <path d="M5 14L9 10L13 14L17 8" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <circle cx="19" cy="20" r="3" fill="white" opacity="0.8" />
-                </svg>
-              </div>
-              <span style={{ fontWeight: 700, fontSize: 17, color: "#e6edf3" }}>ACCELQ</span>
+            <Link href="/" className="flex items-center mb-5">
+              <Image src="/assets/accelq-logo.svg" alt="ACCELQ" width={110} height={20} />
             </Link>
-            <p style={{ fontSize: 13, color: "#8b949e", lineHeight: 1.6, marginBottom: 20 }}>
+            <p style={{ fontSize: 13, color: "#8888a8", lineHeight: 1.65, marginBottom: 20 }}>
               The AI-native quality platform for teams who ship at the speed of AI development.
             </p>
             <div className="flex items-center gap-3">
@@ -108,9 +92,9 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  style={{ color: "#6e7681", transition: "color 0.15s ease" }}
+                  style={{ color: "#55556a", transition: "color 0.15s ease" }}
                   onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = "#e6edf3")}
-                  onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = "#6e7681")}
+                  onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = "#55556a")}
                 >
                   {s.icon}
                 </a>
@@ -121,7 +105,7 @@ export default function Footer() {
           {/* Link columns */}
           {Object.entries(FOOTER_LINKS).map(([group, links]) => (
             <div key={group}>
-              <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#6e7681", marginBottom: 12 }}>
+              <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#55556a", marginBottom: 12 }}>
                 {group}
               </p>
               <ul className="space-y-2">
@@ -129,9 +113,9 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      style={{ fontSize: 13, color: "#8b949e", transition: "color 0.15s ease" }}
-                      onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = "#58a6ff")}
-                      onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = "#8b949e")}
+                      style={{ fontSize: 13, color: "#8888a8", transition: "color 0.15s ease" }}
+                      onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = "#c084fc")}
+                      onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = "#8888a8")}
                     >
                       {link.label}
                     </Link>
@@ -144,9 +128,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div style={{ borderTop: "1px solid #21262d" }}>
+      <div style={{ borderTop: "1px solid #2a2a3d" }}>
         <div className="container-xl" style={{ padding: "20px 24px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
-          <p style={{ fontSize: 12, color: "#6e7681" }}>
+          <p style={{ fontSize: 12, color: "#55556a" }}>
             © {new Date().getFullYear()} ACCELQ Inc. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
@@ -154,9 +138,9 @@ export default function Footer() {
               <Link
                 key={t}
                 href={`/legal/${t.toLowerCase().replace(/ /g, "-")}`}
-                style={{ fontSize: 12, color: "#6e7681", transition: "color 0.15s ease" }}
-                onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = "#8b949e")}
-                onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = "#6e7681")}
+                style={{ fontSize: 12, color: "#55556a", transition: "color 0.15s ease" }}
+                onMouseEnter={(e) => ((e.target as HTMLAnchorElement).style.color = "#8888a8")}
+                onMouseLeave={(e) => ((e.target as HTMLAnchorElement).style.color = "#55556a")}
               >
                 {t}
               </Link>
@@ -173,7 +157,7 @@ export default function Footer() {
                 boxShadow: "0 0 6px rgba(46,160,67,0.6)",
               }}
             />
-            <span style={{ fontSize: 12, color: "#6e7681" }}>All systems operational</span>
+            <span style={{ fontSize: 12, color: "#55556a" }}>All systems operational</span>
           </div>
         </div>
       </div>
