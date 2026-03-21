@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="386" height="64" viewBox="0 0 386 64">
+  <g id="hero-products" transform="translate(-222 -457)">
+    <path id="web-product-i" d="M31.157,0H95.549L64.391,64H0Z" transform="translate(222 457)" fill="#11605b"/>
+    <path id="api-product-i" d="M34.729,0,69.457,64H0Z" transform="translate(311.549 457)" fill="#15908e"/>
+    <path id="manual-product-i" d="M0,0H61.006V64H0Z" transform="translate(392.549 457)" fill="#1fb0c3"/>
+    <path id="mobile-product-i" d="M0,0H41.225V64H0Z" transform="translate(472.532 457)" fill="#178c8e"/>
+    <path id="unified-product-i" d="M0,0H79.97V64H0Z" transform="translate(528.03 457)" fill="#0adac1"/>
+  </g>
+</svg>

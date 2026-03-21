@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="34.071" viewBox="0 0 34 34.071">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.781" y1="1.218" x2="0.268" y2="0.244" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fcb21e"/>
+      <stop offset="1" stop-color="#d02968"/>
+    </linearGradient>
+  </defs>
+  <g id="molecular-structure" transform="translate(-81.2 -11.194)">
+    <path id="Path_24913" data-name="Path 24913" d="M93.171,41.724V36.482l5.1-4.6,5.029,4.038v5.879l5.95,3.471,5.95-3.471V34.924l-5.95-3.471-4.533,2.621L99.4,29.824V24.441l4.817-2.763V14.665L98.2,11.194l-5.95,3.471v6.871L97.067,24.3v5.383l-4.888,4.462-4.958-2.833L81.2,34.853v6.871l5.95,3.471Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+    <path id="Path_24914" data-name="Path 24914" d="M513.96,157.576a3.019,3.019,0,1,1-3.019-3.019,3.019,3.019,0,0,1,3.019,3.019" transform="translate(-399.838 -134.325)" fill="url(#linear-gradient)"/>
+    <path id="Path_24915" data-name="Path 24915" d="M119.259,228.466a2.228,2.228,0,1,1-2.228-2.229,2.228,2.228,0,0,1,2.228,2.229" transform="translate(-31.445 -201.473)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

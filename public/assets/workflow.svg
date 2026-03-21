@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="34.044" viewBox="0 0 35 34.044">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="-2.078" x2="3.323" y2="2.76" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d23364"/>
+      <stop offset="0" stop-color="#e46646"/>
+      <stop offset="0.169" stop-color="#d7425b"/>
+      <stop offset="1" stop-color="#fba91f"/>
+    </linearGradient>
+  </defs>
+  <g id="workflow" transform="translate(-6 -6.4)">
+    <rect id="Rectangle_529" data-name="Rectangle 529" width="9.563" height="9.563" transform="translate(6.956 29.925)" fill="url(#linear-gradient)"/>
+    <path id="Path_24904" data-name="Path 24904" d="M35.042,18.736l-5.355-5.355a.924.924,0,0,1,0-1.339l5.355-5.355a.924.924,0,0,1,1.339,0l5.355,5.355a.924.924,0,0,1,0,1.339l-5.355,5.355A.924.924,0,0,1,35.042,18.736Z" transform="translate(-1.023 0)" fill="url(#linear-gradient)"/>
+    <circle id="Ellipse_157" data-name="Ellipse 157" cx="5.738" cy="5.738" r="5.738" transform="translate(6 6.974)" fill="url(#linear-gradient)"/>
+    <circle id="Ellipse_158" data-name="Ellipse 158" cx="5.738" cy="5.738" r="5.738" transform="translate(28.951 28.968)" fill="url(#linear-gradient)"/>
+    <g id="Group_2918" data-name="Group 2918" transform="translate(8.869 20.362)">
+      <rect id="Rectangle_530" data-name="Rectangle 530" width="1.913" height="4.781" transform="translate(1.913 2.869)" fill="url(#linear-gradient)"/>
+      <path id="Path_24905" data-name="Path 24905" d="M11.869,21,9,24.825h5.738Z" transform="translate(-9 -21)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_2919" data-name="Group 2919" transform="translate(19.388 9.843)">
+      <rect id="Rectangle_531" data-name="Rectangle 531" width="4.781" height="1.913" transform="translate(0 1.913)" fill="url(#linear-gradient)"/>
+      <path id="Path_24906" data-name="Path 24906" d="M27.825,12.869,24,10v5.738Z" transform="translate(-20.175 -10)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_2920" data-name="Group 2920" transform="translate(31.82 20.362)">
+      <rect id="Rectangle_532" data-name="Rectangle 532" width="1.913" height="4.781" transform="translate(1.913)" fill="url(#linear-gradient)"/>
+      <path id="Path_24907" data-name="Path 24907" d="M35.869,28.825,38.738,25H33Z" transform="translate(-33 -21.175)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

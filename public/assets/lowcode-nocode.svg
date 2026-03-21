@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="498.22" height="359.829" viewBox="0 0 498.22 359.829">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e7d23f"/>
+      <stop offset="1" stop-color="#84e4c0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-196.29" y1="123.885" x2="-195.633" y2="123.885" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="lowcode-nocode-illustration" transform="translate(-7128 -1325.305)">
+    <path id="Path_252" data-name="Path 252" d="M7340.521,1349.054c19.177,2.044,82.97,11.272,134.166,64.8a212.7,212.7,0,0,1,50.984,90.5" transform="translate(-16.442 -1.837)" fill="none" stroke="#999" stroke-width="0.75" stroke-dasharray="4"/>
+    <path id="Path_253" data-name="Path 253" d="M7483.5,1592.984c-4.7-27.532-10.054-50.427-14.49-67.475-7.289-28.006-12.388-47.229-23.614-71.759-12.026-26.284-23.512-42.112-26.833-46.59-9.362-12.624-18.48-24.712-34.347-35.879a125.022,125.022,0,0,0-40.787-18.743" transform="translate(-16.667 -2.107)" fill="none" stroke="#999" stroke-width="0.75" stroke-dasharray="4"/>
+    <path id="Path_254" data-name="Path 254" d="M7326.03,1362.37c-9.738,34.6-18.83,72.943-26.216,114.7-6.352,35.913-10.641,69.82-13.444,101.287" transform="translate(-12.252 -2.867)" fill="none" stroke="#999" stroke-width="0.75" stroke-dasharray="4"/>
+    <path id="Path_255" data-name="Path 255" d="M7274.21,1424.509c57.809,4.071,102.128,13.575,131.484,21.421,25.809,6.9,44.816,13.79,64.937,25.7a221.814,221.814,0,0,1,45.08,35.344" transform="translate(-11.312 -7.675)" fill="none" stroke="#999" stroke-width="0.75" stroke-dasharray="4"/>
+    <path id="Path_256" data-name="Path 256" d="M7243.382,1513.1c30.85.211,76.278.639,131.484,1.607,58.195,1.02,132,2.72,132.02,2.141.012-.352-27.4.333-64.937-4.284a450.719,450.719,0,0,1-103.041-25.169c-25.245-9.483-40.713-18.026-54.739-31.6a125.908,125.908,0,0,1-17.71-21.421" transform="translate(-8.926 -8.438)" fill="none" stroke="#999" stroke-width="0.75" stroke-dasharray="4"/>
+    <path id="Path_257" data-name="Path 257" d="M7446.385,1352.537c19.117,8.5,30.937,19.154,37.567,26.241,7.465,7.98,13.026,16.44,17.71,23.562a268.914,268.914,0,0,1,13.953,24.1c14.2,28.634,18.276,63.984,19.32,74.437" transform="translate(-24.632 -2.107)" fill="none" stroke="#999" stroke-width="0.75" stroke-dasharray="4"/>
+    <path id="Path_258" data-name="Path 258" d="M7531.037,1537.946a132.5,132.5,0,0,1-29.434,54.793c-30.254,33.576-68.736,40.7-80.812,42.437" transform="translate(-22.652 -16.451)" fill="none" stroke="#999" stroke-width="0.75" stroke-dasharray="4"/>
+    <path id="Path_259" data-name="Path 259" d="M7523.747,1414.642c5.339,1.665,14.357,5.385,20.929,13.923,9.3,12.085,8.182,26.647,6.977,42.306a122.882,122.882,0,0,1-8.586,36.415" transform="translate(-30.616 -6.911)" fill="none" stroke="#999" stroke-width="0.75" stroke-dasharray="4"/>
+    <path id="Path_260" data-name="Path 260" d="M7326.081,1603.839q-14.728,0-29.6-1.417a1.142,1.142,0,0,1-1-1.257,1.13,1.13,0,0,1,1.2-1.047c55.983,5.352,111-4.609,159.1-28.8a289.855,289.855,0,0,0,59.24-39.746,1.065,1.065,0,0,1,1.55.157,1.2,1.2,0,0,1-.15,1.628,291.979,291.979,0,0,1-59.69,40.046C7416.788,1593.49,7372.117,1603.839,7326.081,1603.839Z" transform="translate(-12.956 -15.937)" fill="url(#linear-gradient)"/>
+    <path id="Path_261" data-name="Path 261" d="M7417.271,1447.524l-3.613-3.7-1.407,4.973Z" transform="translate(-21.99 -9.169)" fill="#666"/>
+    <path id="Path_262" data-name="Path 262" d="M7381.136,1503.041l3.741,3.573,1.23-5.019Z" transform="translate(-19.584 -13.639)" fill="#666"/>
+    <path id="Path_263" data-name="Path 263" d="M7299.447,1479.916l5.16.431-2.207-4.675Z" transform="translate(-13.264 -11.633)" fill="#666"/>
+    <path id="Path_264" data-name="Path 264" d="M7456.176,1473.737l3.741,3.573,1.231-5.019Z" transform="translate(-25.389 -11.371)" fill="#666"/>
+    <path id="Path_265" data-name="Path 265" d="M7505.372,1597.489l3.74,3.573,1.231-5.019Z" transform="translate(-29.195 -20.945)" fill="#666"/>
+    <path id="Path_266" data-name="Path 266" d="M7551.614,1463.148l2.589,4.475,2.589-4.475Z" transform="translate(-32.773 -10.664)" fill="#666"/>
+    <path id="Path_267" data-name="Path 267" d="M7481.311,1379.1l5.086.971-1.7-4.881Z" transform="translate(-27.334 -3.859)" fill="#666"/>
+    <path id="Path_268" data-name="Path 268" d="M7480.25,1416.923l3.387-3.91-5.086-.971Z" transform="translate(-27.121 -6.71)" fill="#666"/>
+    <path id="Path_269" data-name="Path 269" d="M7373.413,1518.831V1524l4.485-2.584Z" transform="translate(-18.986 -14.972)" fill="#666"/>
+    <path id="Path_270" data-name="Path 270" d="M7423.009,1588.305l4.007,9.882,6.558-8.3Z" transform="translate(-22.823 -20.347)" fill="url(#linear-gradient-2)"/>
+    <g id="Group_54" data-name="Group 54" transform="translate(7229.924 1340.385)">
+      <ellipse id="Ellipse_109" data-name="Ellipse 109" cx="8.587" cy="8.568" rx="8.587" ry="8.568" transform="translate(228.859 252.634)" fill="#0f1115"/>
+      <ellipse id="Ellipse_110" data-name="Ellipse 110" cx="8.587" cy="8.568" rx="8.587" ry="8.568" transform="translate(148.359 274.055)" fill="#0f1115"/>
+      <ellipse id="Ellipse_111" data-name="Ellipse 111" cx="8.587" cy="8.568" rx="8.587" ry="8.568" transform="translate(13.655 67.881)" fill="#0f1115"/>
+      <ellipse id="Ellipse_112" data-name="Ellipse 112" cx="8.587" cy="8.568" rx="8.587" ry="8.568" transform="translate(77.519 2.012)" fill="#0f1115"/>
+      <ellipse id="Ellipse_113" data-name="Ellipse 113" cx="8.587" cy="8.568" rx="8.587" ry="8.568" transform="translate(172.509)" fill="#0f1115"/>
+      <ellipse id="Ellipse_114" data-name="Ellipse 114" cx="8.587" cy="8.568" rx="8.587" ry="8.568" transform="translate(244.422 60.384)" fill="#0f1115"/>
+      <ellipse id="Ellipse_115" data-name="Ellipse 115" cx="8.587" cy="8.568" rx="8.587" ry="8.568" transform="translate(0 156.642)" fill="#0f1115"/>
+    </g>
+    <ellipse id="Ellipse_116" data-name="Ellipse 116" cx="17.231" cy="17.067" rx="17.231" ry="17.067" transform="translate(7492.712 1494.283)" fill="#fbb03b"/>
+    <ellipse id="Ellipse_117" data-name="Ellipse 117" cx="8.587" cy="8.568" rx="8.587" ry="8.568" transform="translate(7501.316 1502.517)" fill="#11605b" stroke="#000" stroke-width="2"/>
+    <ellipse id="Ellipse_118" data-name="Ellipse 118" cx="13.573" cy="13.682" rx="13.573" ry="13.682" transform="translate(7260.158 1570.665)" fill="#fbb03b"/>
+    <ellipse id="Ellipse_119" data-name="Ellipse 119" cx="8.587" cy="8.568" rx="8.587" ry="8.568" transform="translate(7265.3 1575.624)" fill="#11605b" stroke="#000" stroke-width="2"/>
+    <text id="Payment_Info" data-name="Payment Info" transform="translate(7322.654 1641.134)" fill="#666" font-size="10.785" font-family="MyriadPro-Regular, Myriad Pro" letter-spacing="0.073em"><tspan x="29" y="8">Payment Info</tspan></text>
+    <text id="Checkout" transform="translate(7451.476 1597.169)" fill="#666" font-size="10.785" font-family="MyriadPro-Regular, Myriad Pro" letter-spacing="0.073em"><tspan x="39" y="8">Checkout</tspan></text>
+    <text id="Track_Order" data-name="Track Order" transform="translate(7459.779 1393.102)" fill="#666" font-size="10.785" font-family="MyriadPro-Regular, Myriad Pro" letter-spacing="0.073em"><tspan x="33" y="8">Track Order</tspan></text>
+    <text id="Search_Results" data-name="Search Results" transform="translate(7347.39 1325.305)" fill="#666" font-size="10.785" font-family="MyriadPro-Regular, Myriad Pro" letter-spacing="0.073em"><tspan x="26" y="8">Search Results</tspan></text>
+    <text id="Product_Description" data-name="Product Description" transform="translate(7181.601 1343.151)" fill="#666" font-size="10.785" font-family="MyriadPro-Regular, Myriad Pro" letter-spacing="0.073em"><tspan x="11" y="8">Product Description</tspan></text>
+    <text id="Offer_Zone" data-name="Offer Zone" transform="translate(7143.101 1410.78)" fill="#666" font-size="10.785" font-family="MyriadPro-Regular, Myriad Pro" letter-spacing="0.073em"><tspan x="36" y="8">Offer Zone</tspan></text>
+    <text id="My_Account" data-name="My Account" transform="translate(7128 1500.851)" fill="#666" font-size="10.785" font-family="MyriadPro-Regular, Myriad Pro" letter-spacing="0.073em"><tspan x="33" y="8">My Account</tspan></text>
+    <text id="Home_page" data-name="Home page" transform="translate(7210.271 1606.928)" fill="#666" font-size="10.785" font-family="MyriadPro-Regular, Myriad Pro" letter-spacing="0.073em"><tspan x="34" y="8">Home page</tspan></text>
+    <text id="Cartpage" transform="translate(7498.22 1506.016)" fill="#666" font-size="10.785" font-family="MyriadPro-Regular, Myriad Pro" letter-spacing="0.073em"><tspan x="39" y="8">Cartpage</tspan></text>
+  </g>
+</svg>

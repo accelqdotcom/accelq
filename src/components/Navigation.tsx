@@ -94,6 +94,21 @@ export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navRef = useRef<HTMLElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openDropdown = (label: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpenMenu(label);
+  };
+
+  const scheduleClose = () => {
+    closeTimer.current = setTimeout(() => setOpenMenu(null), 120);
+  };
+
+  const cancelClose = (label: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpenMenu(label);
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 12);
@@ -112,14 +127,16 @@ export default function Navigation() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
+  useEffect(() => {
+    return () => { if (closeTimer.current) clearTimeout(closeTimer.current); };
+  }, []);
+
   return (
     <nav
       ref={navRef}
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled
-          ? "rgba(9,9,15,0.97)"
-          : "rgba(9,9,15,0.75)",
+        background: scrolled ? "rgba(9,9,15,0.97)" : "rgba(9,9,15,0.75)",
         backdropFilter: "blur(16px)",
         borderBottom: scrolled ? "1px solid #2a2a3d" : "1px solid transparent",
       }}
@@ -128,13 +145,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
-            <Image
-              src="/assets/accelq-logo.svg"
-              alt="ACCELQ"
-              width={120}
-              height={22}
-              priority
-            />
+            <Image src="/assets/accelq-logo.svg" alt="ACCELQ" width={120} height={22} priority />
           </Link>
 
           {/* Desktop Nav */}
@@ -151,21 +162,15 @@ export default function Navigation() {
               ) : (
                 <div key={item.label} className="relative">
                   <button
-                    onMouseEnter={() => setOpenMenu(item.label)}
-                    onMouseLeave={() => setOpenMenu(null)}
+                    onMouseEnter={() => openDropdown(item.label)}
+                    onMouseLeave={scheduleClose}
                     onClick={() => setOpenMenu(openMenu === item.label ? null : item.label)}
                     className="flex items-center gap-1 px-3 py-1.5 rounded-md text-sm font-medium text-[#8888a8] hover:text-[#eeeef5] transition-colors"
                   >
                     {item.label}
                     <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 12 12"
-                      fill="none"
-                      style={{
-                        transform: openMenu === item.label ? "rotate(180deg)" : "rotate(0deg)",
-                        transition: "transform 0.15s ease",
-                      }}
+                      width="12" height="12" viewBox="0 0 12 12" fill="none"
+                      style={{ transform: openMenu === item.label ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.15s ease" }}
                     >
                       <path d="M2 4L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
@@ -174,10 +179,12 @@ export default function Navigation() {
                   {openMenu === item.label && item.items && (
                     <div
                       className="nav-dropdown"
-                      onMouseEnter={() => setOpenMenu(item.label)}
-                      onMouseLeave={() => setOpenMenu(null)}
+                      onMouseEnter={() => cancelClose(item.label)}
+                      onMouseLeave={scheduleClose}
                       style={{ left: item.items[0]?.links?.length > 4 ? "-80px" : "0" }}
                     >
+                      {/* invisible bridge covers the gap between button and dropdown */}
+                      <div style={{ position: "absolute", top: -8, left: 0, right: 0, height: 8 }} />
                       <div className="p-3">
                         {item.items.map((group) => (
                           <div key={group.group} className="mb-2 last:mb-0">
@@ -213,10 +220,7 @@ export default function Navigation() {
 
           {/* CTA buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link
-              href="https://app.accelq.com"
-              className="text-sm font-medium text-[#8888a8] hover:text-[#eeeef5] transition-colors px-2"
-            >
+            <Link href="https://app.accelq.com" className="text-sm font-medium text-[#8888a8] hover:text-[#eeeef5] transition-colors px-2">
               Sign In
             </Link>
             <Link href="/demo" className="btn-primary text-sm py-2 px-4">
@@ -249,12 +253,7 @@ export default function Navigation() {
       {mobileOpen && (
         <div
           className="lg:hidden animate-slide-down"
-          style={{
-            background: "#09090f",
-            borderTop: "1px solid #2a2a3d",
-            maxHeight: "80vh",
-            overflowY: "auto",
-          }}
+          style={{ background: "#09090f", borderTop: "1px solid #2a2a3d", maxHeight: "80vh", overflowY: "auto" }}
         >
           <div className="container-xl py-4 space-y-1">
             {NAV.map((item) =>
@@ -301,11 +300,7 @@ export default function Navigation() {
               <Link href="/demo" className="btn-primary justify-center" onClick={() => setMobileOpen(false)}>
                 Get a Demo
               </Link>
-              <Link
-                href="https://app.accelq.com"
-                className="btn-secondary justify-center"
-                onClick={() => setMobileOpen(false)}
-              >
+              <Link href="https://app.accelq.com" className="btn-secondary justify-center" onClick={() => setMobileOpen(false)}>
                 Sign In
               </Link>
             </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "@/components/Img";
 
 export const metadata: Metadata = {
   title: "Automate API — REST, GraphQL & SOAP Test Automation | ACCELQ",
@@ -41,28 +42,42 @@ const FEATURES = [
 
 export default function AutomateAPIPage() {
   return (
-    <div style={{ background: "#0d1117" }}>
+    <div style={{ background: "#09090f" }}>
       {/* HERO */}
-      <section style={{ padding: "100px 0 80px", position: "relative" }}>
-        <div style={{ position: "absolute", inset: 0 }} className="hero-gradient grid-pattern" />
-        <div className="container-xl" style={{ position: "relative", textAlign: "center" }}>
-          <span className="badge badge-blue" style={{ marginBottom: 20, display: "inline-flex" }}>API Test Automation</span>
-          <h1 style={{ fontSize: "clamp(2.25rem, 6vw, 3.5rem)", fontWeight: 900, lineHeight: 1.1, letterSpacing: "-0.04em", margin: "0 auto 20px", maxWidth: 800 }}>
-            API Testing With the Depth
-            <br /><span className="text-gradient-blue">Your Backend Deserves.</span>
-          </h1>
-          <p style={{ fontSize: "1.1rem", color: "#8b949e", maxWidth: 560, margin: "0 auto 36px", lineHeight: 1.7 }}>
-            REST, GraphQL, SOAP, gRPC — test every layer of your API surface without writing a line of code. From individual endpoints to complex orchestration flows.
-          </p>
-          <div style={{ display: "flex", gap: 12, justifyContent: "center" }}>
-            <Link href="/demo" className="btn-primary">Get a Demo</Link>
-            <Link href="/platform/unified" className="btn-secondary">Platform Overview</Link>
+      <section style={{ padding: "100px 0 80px", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 60% 40%, rgba(88,166,255,0.12) 0%, transparent 60%)" }} />
+        <div style={{ position: "absolute", inset: 0 }} className="grid-pattern" />
+        <div className="container-xl" style={{ position: "relative" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }}>
+            <div>
+              <span className="badge badge-cyan" style={{ marginBottom: 20, display: "inline-flex" }}>API Test Automation</span>
+              <h1 style={{ fontSize: "clamp(2.25rem, 5vw, 3.2rem)", fontWeight: 900, lineHeight: 1.1, letterSpacing: "-0.04em", marginBottom: 20 }}>
+                API Testing With the Depth
+                <br /><span className="text-gradient-cyan">Your Backend Deserves.</span>
+              </h1>
+              <p style={{ fontSize: "1.05rem", color: "#8888a8", maxWidth: 520, marginBottom: 36, lineHeight: 1.75 }}>
+                REST, GraphQL, SOAP, gRPC — test every layer of your API surface without writing a line of code. From individual endpoints to complex orchestration flows.
+              </p>
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                <Link href="/demo" className="btn-cta">Get a Demo</Link>
+                <Link href="/platform/unified" className="btn-secondary">Platform Overview</Link>
+              </div>
+            </div>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Image
+                src="/assets/api-illustration.svg"
+                alt="API test automation illustration"
+                width={460}
+                height={400}
+                style={{ maxWidth: "100%", height: "auto" }}
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* PROTOCOL COVERAGE */}
-      <section style={{ padding: "60px 0", borderTop: "1px solid #21262d" }}>
+      <section style={{ padding: "60px 0", borderTop: "1px solid #2a2a3d" }}>
         <div className="container-xl">
           <p style={{ textAlign: "center", fontSize: 13, color: "#6e7681", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 24 }}>Protocol coverage</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "center" }}>

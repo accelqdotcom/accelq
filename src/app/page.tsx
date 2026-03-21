@@ -332,6 +332,17 @@ export default function HomePage() {
             </p>
           </div>
 
+          {/* Products overview graphic */}
+          <div style={{ maxWidth: 720, margin: "0 auto 48px", borderRadius: 16, overflow: "hidden", border: "1px solid #2a2a3d", background: "#09090f", padding: 8 }}>
+            <Image
+              src="/assets/hero-products.svg"
+              alt="ACCELQ product channels — Web, API, Mobile, Manual"
+              width={720}
+              height={200}
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
+          </div>
+
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20 }}>
             {PILLARS.map((p) => (
               <div key={p.title} className="card-hover" style={{ background: "#09090f", border: `1px solid #2a2a3d`, borderRadius: 16, padding: 32, borderTop: `3px solid ${p.color}`, position: "relative", overflow: "hidden" }}>
@@ -366,19 +377,33 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div style={{ position: "relative" }}>
-            {/* Connecting line */}
-            <div style={{ position: "absolute", top: 36, left: "12.5%", right: "12.5%", height: 2, background: "linear-gradient(90deg, #7856ff, #00e5d3, #c084fc, #fccd00)", opacity: 0.4, zIndex: 0 }} />
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, position: "relative", zIndex: 1 }}>
-              {STEPS.map((s) => (
-                <div key={s.n} style={{ textAlign: "center", padding: "0 12px" }}>
-                  <div style={{ width: 72, height: 72, borderRadius: "50%", background: `${s.color}18`, border: `2px solid ${s.color}60`, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", fontSize: 18, fontWeight: 900, color: s.color, boxShadow: `0 0 20px ${s.color}20` }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
+            {/* Steps */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+              {STEPS.map((s, i) => (
+                <div key={s.n} style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
+                  <div style={{ width: 48, height: 48, borderRadius: "50%", background: `${s.color}18`, border: `2px solid ${s.color}60`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: 15, fontWeight: 900, color: s.color, boxShadow: `0 0 16px ${s.color}20` }}>
                     {s.n}
                   </div>
-                  <h3 style={{ fontSize: 18, fontWeight: 700, color: "#eeeef5", marginBottom: 10 }}>{s.title}</h3>
-                  <p style={{ fontSize: 13, color: "#8888a8", lineHeight: 1.65 }}>{s.desc}</p>
+                  <div>
+                    <h3 style={{ fontSize: 17, fontWeight: 700, color: "#eeeef5", marginBottom: 6 }}>{s.title}</h3>
+                    <p style={{ fontSize: 13, color: "#8888a8", lineHeight: 1.65 }}>{s.desc}</p>
+                  </div>
+                  {i < STEPS.length - 1 && (
+                    <div style={{ display: "none" }} />
+                  )}
                 </div>
               ))}
+            </div>
+            {/* Lifecycle illustration */}
+            <div style={{ borderRadius: 16, overflow: "hidden", border: "1px solid #2a2a3d", background: "#13131a", padding: 8 }}>
+              <Image
+                src="/assets/lifecycle.svg"
+                alt="ACCELQ quality lifecycle"
+                width={560}
+                height={480}
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
             </div>
           </div>
         </div>
@@ -438,6 +463,17 @@ export default function HomePage() {
           <div style={{ textAlign: "center", marginBottom: 40 }}>
             <span className="badge badge-cyan" style={{ marginBottom: 12, display: "inline-flex" }}>Full-Stack Coverage</span>
             <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: "#eeeef5" }}>One platform. Every layer.</h2>
+            <p style={{ color: "#8888a8", fontSize: 14, marginTop: 10 }}>Integrates with your entire ecosystem — cloud, enterprise, and everything in between.</p>
+          </div>
+          {/* Integrations universe graphic */}
+          <div style={{ maxWidth: 860, margin: "0 auto 48px", borderRadius: 16, overflow: "hidden", border: "1px solid #2a2a3d" }}>
+            <Image
+              src="/assets/integrations-universe.png"
+              alt="ACCELQ integrations ecosystem"
+              width={860}
+              height={480}
+              style={{ width: "100%", height: "auto", display: "block" }}
+            />
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center" }}>
             {TECH_TILES.map((t) => (

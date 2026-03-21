@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "@/components/Img";
 
 export const metadata: Metadata = {
   title: "Salesforce Test Automation — No-Code Testing for Every Salesforce Cloud",
@@ -10,28 +11,39 @@ const COVERAGE = ["Sales Cloud", "Service Cloud", "Marketing Cloud", "CPQ & Bill
 
 export default function SalesforcePage() {
   return (
-    <div style={{ background: "#0d1117" }}>
+    <div style={{ background: "#09090f" }}>
 
       {/* HERO */}
       <section style={{ padding: "100px 0 80px", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 30% 50%, rgba(0,161,224,0.1) 0%, transparent 60%)" }} />
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 30% 50%, rgba(0,161,224,0.12) 0%, transparent 60%)" }} />
         <div style={{ position: "absolute", inset: 0 }} className="grid-pattern" />
         <div className="container-xl" style={{ position: "relative" }}>
-          <div style={{ maxWidth: 720 }}>
-            <span className="badge" style={{ background: "rgba(0,161,224,0.12)", border: "1px solid rgba(0,161,224,0.35)", color: "#00a1e0", marginBottom: 20, display: "inline-flex", padding: "4px 10px", borderRadius: 999, fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>
-              Salesforce Test Automation
-            </span>
-            <h1 style={{ fontSize: "clamp(2.25rem, 6vw, 3.5rem)", fontWeight: 900, lineHeight: 1.1, letterSpacing: "-0.04em", marginBottom: 20, color: "#e6edf3" }}>
-              Test Every Salesforce Release
-              <br />
-              <span style={{ background: "linear-gradient(135deg, #00a1e0, #21adc3)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>With Confidence.</span>
-            </h1>
-            <p style={{ fontSize: "1.1rem", color: "#8b949e", lineHeight: 1.7, marginBottom: 36, maxWidth: 580 }}>
-              From Sales Cloud to Service Cloud to custom LWC components — no-code automation that keeps pace with Salesforce&apos;s 3-releases-a-year cadence. No Apex. No Selenium. No maintenance nightmare.
-            </p>
-            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <Link href="/demo" className="btn-primary">Get a Salesforce Demo</Link>
-              <Link href="/platform/live" className="btn-secondary">Explore ACCELQ LIVE</Link>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }}>
+            <div>
+              <span className="badge" style={{ background: "rgba(0,161,224,0.12)", border: "1px solid rgba(0,161,224,0.35)", color: "#00a1e0", marginBottom: 20, display: "inline-flex", padding: "4px 10px", borderRadius: 999, fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>
+                Salesforce Test Automation
+              </span>
+              <h1 style={{ fontSize: "clamp(2.25rem, 5vw, 3.2rem)", fontWeight: 900, lineHeight: 1.1, letterSpacing: "-0.04em", marginBottom: 20, color: "#eeeef5" }}>
+                Test Every Salesforce Release
+                <br />
+                <span style={{ background: "linear-gradient(135deg, #00a1e0, #21adc3)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>With Confidence.</span>
+              </h1>
+              <p style={{ fontSize: "1.05rem", color: "#8888a8", lineHeight: 1.75, marginBottom: 36, maxWidth: 520 }}>
+                From Sales Cloud to Service Cloud to custom LWC components — no-code automation that keeps pace with Salesforce&apos;s 3-releases-a-year cadence. No Apex. No Selenium. No maintenance nightmare.
+              </p>
+              <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                <Link href="/demo" className="btn-cta">Get a Salesforce Demo</Link>
+                <Link href="/platform/live" className="btn-secondary">Explore ACCELQ LIVE</Link>
+              </div>
+            </div>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Image
+                src="/assets/salesforce-rocket.svg"
+                alt="Salesforce test automation illustration"
+                width={420}
+                height={400}
+                style={{ maxWidth: "100%", height: "auto" }}
+              />
             </div>
           </div>
         </div>
