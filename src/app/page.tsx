@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Image from "@/components/Img";
 
 const STATS = [
   { value: "1B+", label: "Test Executions Annually", color: "#7856ff" },

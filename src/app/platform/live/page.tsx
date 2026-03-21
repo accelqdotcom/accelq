@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "@/components/Img";
 
 export const metadata: Metadata = {
   title: "ACCELQ LIVE — Pre-Built Test Assets for SAP, Salesforce & More",
