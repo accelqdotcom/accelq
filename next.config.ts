@@ -3,8 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Static export for GitHub Pages hosting
   output: "export",
-  // If hosted at https://username.github.io/accelq/ uncomment:
-  // basePath: "/accelq",
+  // Hosted at https://accelqdotcom.github.io/accelq/
+  basePath: "/accelq",
   // Disable image optimization (not supported in static export)
   images: {
     unoptimized: true,
