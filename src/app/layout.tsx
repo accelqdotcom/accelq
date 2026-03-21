@@ -4,6 +4,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: { index: false, follow: false },
+  },
   title: {
     default: "ACCELQ — AI-Native Test Automation for the Modern Dev Era",
     template: "%s | ACCELQ",
