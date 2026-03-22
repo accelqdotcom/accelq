@@ -113,18 +113,18 @@ export default function HomePage() {
 
         <div className="container-xl" style={{ position: "relative", textAlign: "center" }}>
           <div style={{ marginBottom: 24 }}>
-            <span className="badge badge-brand">The AI Testing Gap Is Real</span>
+            <span className="badge badge-brand">Business Assurance Intelligence for AI-native Teams</span>
           </div>
 
           <h1 style={{ fontSize: "clamp(2.75rem, 8vw, 5rem)", fontWeight: 900, lineHeight: 1.02, letterSpacing: "-0.04em", margin: "0 auto 28px", maxWidth: 960 }}>
-            <span style={{ color: "#eeeef5" }}>Ship at AI Speed.</span>
+            <span style={{ color: "#eeeef5" }}>Your AI writes code.</span>
             <br />
-            <span className="text-gradient-brand">Without Breaking Things.</span>
+            <span className="text-gradient-brand">Who validates intent?</span>
           </h1>
 
-          <p style={{ fontSize: "clamp(1rem, 2.5vw, 1.2rem)", color: "#8888a8", maxWidth: 620, margin: "0 auto 44px", lineHeight: 1.75 }}>
-            Your AI coding tools just 10x&rsquo;d your team&apos;s output. Your test coverage didn&apos;t.
-            ACCELQ is the no-code, AI-native quality platform that closes the gap — automatically.
+          <p style={{ fontSize: "clamp(1rem, 2.5vw, 1.2rem)", color: "#8888a8", maxWidth: 660, margin: "0 auto 44px", lineHeight: 1.75 }}>
+            AI tools generate code. They can&apos;t validate whether it does what the business actually needs.
+            ACCELQ is the <strong style={{ color: "#eeeef5", fontWeight: 600 }}>independent business assurance layer</strong> — always on, always validating, always learning.
           </p>
 
           <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginBottom: 52 }}>
@@ -354,11 +354,160 @@ export default function HomePage() {
           </div>
 
           <div style={{ marginTop: 32, padding: "32px 40px", background: "linear-gradient(135deg, rgba(120,86,255,0.08), rgba(229,73,255,0.05))", border: "1px solid rgba(120,86,255,0.25)", borderRadius: 14, textAlign: "center" }}>
-            <p style={{ fontSize: "clamp(1.05rem, 2.2vw, 1.3rem)", color: "#eeeef5", lineHeight: 1.7, maxWidth: 720, margin: "0 auto" }}>
-              &ldquo;We&apos;re generating code <strong style={{ color: "#7856ff" }}>5x faster</strong> with AI. We&apos;re testing{" "}
-              <strong style={{ color: "#f87171" }}>0.5x as thoroughly</strong>. Something has to give.&rdquo;
+            <p style={{ fontSize: "clamp(1.05rem, 2.2vw, 1.25rem)", color: "#eeeef5", lineHeight: 1.75, maxWidth: 760, margin: "0 auto" }}>
+              The core problem: <strong style={{ color: "#c084fc" }}>AI that writes code cannot validate that code.</strong>{" "}
+              It shares the same blind spots, the same assumptions, the same context. You need an <strong style={{ color: "#eeeef5" }}>independent validation layer</strong> — one that speaks business process, not just code syntax.
             </p>
-            <p style={{ fontSize: 13, color: "#55556a", marginTop: 12 }}>— Common sentiment across engineering teams, 2025</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── THE NEW VALUE PROPOSITION ── */}
+      <section className="section-light" style={{ padding: "100px 0" }}>
+        <div className="container-xl">
+          {/* Header */}
+          <div style={{ textAlign: "center", marginBottom: 72 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "rgba(120,86,255,0.08)", border: "1px solid rgba(120,86,255,0.2)", borderRadius: 6, padding: "6px 16px", marginBottom: 20 }}>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.5L11 5 8.5 7.5 9.2 11 6 9.3 2.8 11 3.5 7.5 1 5l3.5-.5z" fill="#7856ff" /></svg>
+              <span style={{ fontSize: 11, fontWeight: 700, color: "#7856ff", letterSpacing: "0.08em", textTransform: "uppercase" }}>The New Value Proposition</span>
+            </div>
+            <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.75rem)", fontWeight: 900, color: "#0f0f1a", lineHeight: 1.1, letterSpacing: "-0.03em", marginBottom: 16 }}>
+              From test automation tool<br />
+              <span style={{ color: "#7856ff" }}>→ business assurance intelligence</span>
+            </h2>
+            <p style={{ color: "#4a4a6a", fontSize: "1.05rem", maxWidth: 600, margin: "0 auto", lineHeight: 1.75 }}>
+              The shift in AI-native development demands a completely different approach to quality. Here&apos;s what that looks like.
+            </p>
+          </div>
+
+          {/* Layer 1: Intent Validation */}
+          <div style={{ marginBottom: 16 }}>
+            <div style={{ background: "#7856ff", borderRadius: "14px 14px 0 0", padding: "18px 32px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "rgba(255,255,255,0.6)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>Layer 01</div>
+                <h3 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#ffffff", margin: 0 }}>Intent validation, not just code validation</h3>
+              </div>
+              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", maxWidth: 320, textAlign: "right", margin: 0, lineHeight: 1.6 }}>
+                Does it do what the business needs — not just what AI wrote?
+              </p>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, background: "#e8e8f0" }}>
+              {[
+                {
+                  title: "Business process as the unit of truth",
+                  desc: "Code is disposable — it can be regenerated from specs at any time. Business processes are stable. ACCELQ anchors validation to what the business intends, not what the code happens to do today.",
+                  icon: "🏛",
+                },
+                {
+                  title: "Independent validation layer",
+                  desc: "Tests that run on the same AI that wrote the code share its blind spots. ACCELQ operates as a genuinely separate system — catching the gaps that AI coding tools are structurally unable to see.",
+                  icon: "🔍",
+                },
+              ].map((c) => (
+                <div key={c.title} className="card-light" style={{ padding: 32, borderRadius: 0, border: "none", boxShadow: "none" }}>
+                  <div style={{ fontSize: 28, marginBottom: 16 }}>{c.icon}</div>
+                  <h4 style={{ fontSize: 16, fontWeight: 700, color: "#0f0f1a", marginBottom: 10 }}>{c.title}</h4>
+                  <p style={{ fontSize: 14, color: "#4a4a6a", lineHeight: 1.75, margin: 0 }}>{c.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Layer 2: Quality at Generation Speed */}
+          <div style={{ marginBottom: 16 }}>
+            <div style={{ background: "#0f172a", borderRadius: 0, padding: "18px 32px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "rgba(255,255,255,0.4)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>Layer 02</div>
+                <h3 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#ffffff", margin: 0 }}>Quality at generation speed</h3>
+              </div>
+              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", maxWidth: 320, textAlign: "right", margin: 0, lineHeight: 1.6 }}>
+                No-code isn&apos;t a convenience — it&apos;s a survival requirement
+              </p>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, background: "#e8e8f0" }}>
+              {[
+                {
+                  title: "Design-first = spec-first",
+                  desc: "Specification-driven development is what ACCELQ always applied to QA — design test intent before implementation, not after. In the AI era, this is the only model that scales: specs are stable, code is ephemeral.",
+                  icon: "📐",
+                  accent: "#00e5d3",
+                },
+                {
+                  title: "Agentic quality, human judgment",
+                  desc: "AI agents handle the speed — continuous discovery, generation, and self-healing. Humans handle correctness — approving release gates, validating business outcomes, setting risk thresholds. Both are essential.",
+                  icon: "🤝",
+                  accent: "#fccd00",
+                },
+              ].map((c) => (
+                <div key={c.title} className="card-light" style={{ padding: 32, borderRadius: 0, border: "none", boxShadow: "none", borderTop: `3px solid ${c.accent}` }}>
+                  <div style={{ fontSize: 28, marginBottom: 16 }}>{c.icon}</div>
+                  <h4 style={{ fontSize: 16, fontWeight: 700, color: "#0f0f1a", marginBottom: 10 }}>{c.title}</h4>
+                  <p style={{ fontSize: 14, color: "#4a4a6a", lineHeight: 1.75, margin: 0 }}>{c.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Layer 3: Continuous Assurance */}
+          <div style={{ marginBottom: 40 }}>
+            <div style={{ background: "#1a3a2a", borderRadius: 0, padding: "18px 32px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "rgba(255,255,255,0.4)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>Layer 03</div>
+                <h3 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#ffffff", margin: 0 }}>Continuous assurance, not just testing</h3>
+              </div>
+              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", maxWidth: 320, textAlign: "right", margin: 0, lineHeight: 1.6 }}>
+                Always on, always validating, always learning
+              </p>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 2, background: "#e8e8f0" }}>
+              {[
+                {
+                  title: "Governance & auditability",
+                  desc: "Full traceability of intent — from business requirement through test execution to outcome. Every decision is explainable, every result is attributable.",
+                  icon: "📋",
+                  accent: "#7856ff",
+                },
+                {
+                  title: "Architectural guardrails",
+                  desc: "Continuous validation prevents pattern erosion as AI-generated code accumulates. Quality gates embedded in every pipeline stage, not bolted on at the end.",
+                  icon: "🛡",
+                  accent: "#00e5d3",
+                },
+                {
+                  title: "Risk intelligence",
+                  desc: "Not everything needs testing equally. ACCELQ learns which areas carry the highest business risk and prioritizes coverage where it matters most — intelligently.",
+                  icon: "🎯",
+                  accent: "#fccd00",
+                },
+              ].map((c) => (
+                <div key={c.title} className="card-light" style={{ padding: 28, borderRadius: 0, border: "none", boxShadow: "none", borderTop: `3px solid ${c.accent}` }}>
+                  <div style={{ fontSize: 28, marginBottom: 14 }}>{c.icon}</div>
+                  <h4 style={{ fontSize: 15, fontWeight: 700, color: "#0f0f1a", marginBottom: 8 }}>{c.title}</h4>
+                  <p style={{ fontSize: 13, color: "#4a4a6a", lineHeight: 1.75, margin: 0 }}>{c.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div style={{ borderRadius: "0 0 14px 14px", background: "#e8e8f0", padding: 2 }}>
+              <div style={{ borderRadius: "0 0 12px 12px", background: "#fff" }} />
+            </div>
+          </div>
+
+          {/* Core value proposition */}
+          <div style={{ background: "linear-gradient(135deg, #0f0f1a 0%, #1a0a2e 100%)", borderRadius: 16, padding: "40px 48px", textAlign: "center", position: "relative", overflow: "hidden" }}>
+            <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 50% 0%, rgba(120,86,255,0.2) 0%, transparent 60%)", pointerEvents: "none" }} />
+            <div style={{ position: "relative" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#7856ff", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16 }}>Core Value Proposition</div>
+              <p style={{ fontSize: "clamp(1.2rem, 2.5vw, 1.6rem)", fontWeight: 800, color: "#eeeef5", lineHeight: 1.4, margin: "0 auto 24px", maxWidth: 700, letterSpacing: "-0.02em" }}>
+                The independent business assurance layer<br />for AI-native development
+              </p>
+              <p style={{ fontSize: 14, color: "#8888a8", maxWidth: 540, margin: "0 auto 28px", lineHeight: 1.75 }}>
+                Not a testing tool. Not a QA platform. A permanent quality infrastructure that evolves alongside your codebase — autonomously.
+              </p>
+              <Link href="/demo" className="btn-cta" style={{ fontSize: 14, padding: "12px 28px" }}>
+                See it in action
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -369,10 +518,10 @@ export default function HomePage() {
           <div style={{ textAlign: "center", marginBottom: 64 }}>
             <span className="badge badge-cyan" style={{ marginBottom: 16, display: "inline-flex" }}>The Solution</span>
             <h2 className="section-title" style={{ color: "#eeeef5", marginBottom: 16 }}>
-              ACCELQ: The Quality Intelligence Platform
+              One platform delivers all three layers
             </h2>
-            <p style={{ color: "#8888a8", fontSize: "1.05rem", maxWidth: 620, margin: "0 auto" }}>
-              The only platform that lets your entire team — engineers, QA analysts, and business owners — own quality together, at AI speed.
+            <p style={{ color: "#8888a8", fontSize: "1.05rem", maxWidth: 640, margin: "0 auto" }}>
+              Intent validation, generation-speed quality, and continuous assurance — unified in a single AI-native platform your entire team can use without writing test code.
             </p>
           </div>
 
@@ -683,10 +832,10 @@ export default function HomePage() {
         <div style={{ position: "absolute", bottom: -1, left: 0, right: 0, height: 1 }} className="neon-line" />
         <div className="container-xl" style={{ position: "relative", textAlign: "center" }}>
           <h2 style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)", fontWeight: 900, color: "#eeeef5", marginBottom: 16, letterSpacing: "-0.025em" }}>
-            Ready to close the AI testing gap?
+            Build the assurance layer your AI stack is missing
           </h2>
-          <p style={{ fontSize: "1.1rem", color: "#8888a8", marginBottom: 40, maxWidth: 480, margin: "0 auto 40px" }}>
-            Join 50+ Fortune 100 companies shipping faster without breaking things.
+          <p style={{ fontSize: "1.1rem", color: "#8888a8", marginBottom: 40, maxWidth: 560, margin: "0 auto 40px", lineHeight: 1.75 }}>
+            50+ Fortune 100 companies already run ACCELQ as their independent quality infrastructure. See what continuous business assurance looks like for your team.
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/demo" className="btn-cta" style={{ fontSize: 16, padding: "14px 36px" }}>
