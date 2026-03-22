@@ -487,6 +487,40 @@ a { color: inherit; text-decoration: none; }
   .feature-row { grid-template-columns: 1fr; gap: 32px; }
 }
 
+/* ===== LIGHT SECTIONS ===== */
+.section-light {
+  background: #ffffff;
+  color: #0f0f1a;
+}
+.section-light-warm {
+  background: #f8f7ff;
+  color: #0f0f1a;
+}
+.section-light-blue {
+  background: linear-gradient(135deg, #f0f4ff 0%, #faf8ff 100%);
+  color: #0f0f1a;
+}
+.section-light h1, .section-light h2, .section-light h3,
+.section-light-warm h1, .section-light-warm h2, .section-light-warm h3,
+.section-light-blue h1, .section-light-blue h2, .section-light-blue h3 {
+  color: #0f0f1a;
+}
+.text-dark { color: #0f0f1a; }
+.text-dark-muted { color: #4a4a6a; }
+.text-dark-subtle { color: #7878a0; }
+
+.card-light {
+  background: #ffffff;
+  border: 1px solid #e8e8f0;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(15,15,26,0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card-light:hover {
+  box-shadow: 0 8px 32px rgba(120,86,255,0.12);
+  transform: translateY(-2px);
+}
+
 /* ===== AGENT NODE (for Autopilot diagrams) ===== */
 .agent-node {
   border-radius: 50%;

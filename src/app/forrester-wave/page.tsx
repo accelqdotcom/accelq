@@ -69,7 +69,7 @@ export default function ForresterWavePage() {
             <div style={{ position: "relative" }}>
               <div style={{ borderRadius: 16, overflow: "hidden", border: "1px solid #2a2a3d", boxShadow: "0 24px 80px rgba(120,86,255,0.15)" }}>
                 <Image
-                  src="/assets/forrester-wave-chart.png"
+                  src="/assets/forrester-wave-correct.png"
                   alt="Forrester Wave Q4 2025 — ACCELQ Leader"
                   width={680}
                   height={480}

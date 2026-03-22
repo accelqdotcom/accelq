@@ -14,6 +14,7 @@ const NAV = [
           { label: "Unified Test Automation", href: "/platform/unified", desc: "End-to-end, no-code automation across every layer" },
           { label: "ACCELQ LIVE", href: "/platform/live", desc: "Pre-built test assets for SAP, Salesforce & more" },
           { label: "Autopilot", href: "/platform/autopilot", desc: "Agentic AI across the full quality lifecycle" },
+          { label: "Converse", href: "/platform/converse", desc: "Conversational quality command center" },
         ],
       },
     ],

@@ -139,8 +139,19 @@ export default function HomePage() {
             Trusted by 50+ Fortune 100 companies &nbsp;·&nbsp; 1B+ test executions annually &nbsp;·&nbsp; No credit card required
           </p>
 
+          {/* Hero product image */}
+          <div style={{ marginTop: 64, maxWidth: 940, margin: "64px auto 16px" }}>
+            <Image
+              src="/assets/autopilot-hero.jpg"
+              alt="ACCELQ Autopilot — Multi Model Automation and ACCELQ LIVE"
+              width={940}
+              height={400}
+              style={{ width: "100%", height: "auto", borderRadius: 16, border: "1px solid #2a2a3d", boxShadow: "0 24px 60px rgba(0,0,0,0.5), 0 0 60px rgba(120,86,255,0.08)", display: "block" }}
+            />
+          </div>
+
           {/* Dashboard mockup */}
-          <div style={{ marginTop: 64, maxWidth: 940, margin: "64px auto 0" }}>
+          <div style={{ maxWidth: 940, margin: "0 auto" }}>
             <div className="terminal-window" style={{ boxShadow: "0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px #2a2a3d, 0 0 80px rgba(120,86,255,0.08)" }}>
               <div className="terminal-chrome">
                 <div style={{ display: "flex", gap: 6 }}>
@@ -217,7 +228,7 @@ export default function HomePage() {
             <div style={{ position: "relative" }}>
               <div style={{ borderRadius: 16, overflow: "hidden", border: "1px solid rgba(120,86,255,0.3)", boxShadow: "0 20px 60px rgba(120,86,255,0.15), 0 0 0 1px rgba(120,86,255,0.1)" }}>
                 <Image
-                  src="/assets/forrester-wave-chart.png"
+                  src="/assets/forrester-wave-correct.png"
                   alt="Forrester Wave Q4 2025 — ACCELQ Leader"
                   width={680}
                   height={480}
@@ -426,26 +437,26 @@ export default function HomePage() {
       </section>
 
       {/* ── WHO IT'S FOR ── */}
-      <section style={{ padding: "100px 0", background: "#13131a", borderTop: "1px solid #2a2a3d" }}>
+      <section className="section-light-blue" style={{ padding: "100px 0" }}>
         <div className="container-xl">
           <div style={{ textAlign: "center", marginBottom: 64 }}>
-            <h2 className="section-title" style={{ color: "#eeeef5", marginBottom: 16 }}>Built for your whole team</h2>
-            <p style={{ color: "#8888a8", fontSize: "1.05rem", maxWidth: 520, margin: "0 auto" }}>
+            <h2 className="section-title" style={{ color: "#0f0f1a", marginBottom: 16 }}>Built for your whole team</h2>
+            <p style={{ color: "#4a4a6a", fontSize: "1.05rem", maxWidth: 520, margin: "0 auto" }}>
               ACCELQ is the first testing platform that genuinely works for engineers, QA, and business teams alike.
             </p>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 20 }}>
             {PERSONAS.map((p) => (
-              <div key={p.title} className="card-hover" style={{ padding: 28, background: "#09090f", border: "1px solid #2a2a3d", borderRadius: 14, borderLeft: `4px solid ${p.color}` }}>
+              <div key={p.title} className="card-light" style={{ padding: 28, borderLeft: `4px solid ${p.color}` }}>
                 <div style={{ width: 48, height: 48, borderRadius: 12, background: `${p.color}15`, border: `1px solid ${p.color}30`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18 }}>
                   {p.icon}
                 </div>
-                <h3 style={{ fontSize: 18, fontWeight: 700, color: "#eeeef5", marginBottom: 10 }}>{p.title}</h3>
-                <p style={{ fontSize: 14, color: "#8888a8", lineHeight: 1.7, marginBottom: 18 }}>{p.desc}</p>
+                <h3 style={{ fontSize: 18, fontWeight: 700, color: "#0f0f1a", marginBottom: 10 }}>{p.title}</h3>
+                <p style={{ fontSize: 14, color: "#4a4a6a", lineHeight: 1.7, marginBottom: 18 }}>{p.desc}</p>
                 <ul style={{ listStyle: "none", padding: 0 }}>
                   {p.bullets.map((b) => (
-                    <li key={b} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "#8888a8", marginBottom: 6 }}>
+                    <li key={b} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "#4a4a6a", marginBottom: 6 }}>
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3 3 6-6" stroke={p.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                       {b}
                     </li>
@@ -486,7 +497,7 @@ export default function HomePage() {
       </section>
 
       {/* ── TESTIMONIAL ── */}
-      <section style={{ padding: "100px 0", background: "#13131a", borderTop: "1px solid #2a2a3d" }}>
+      <section className="section-light" style={{ padding: "100px 0" }}>
         <div className="container-xl">
           <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center" }}>
             <div style={{ display: "flex", justifyContent: "center", gap: 4, marginBottom: 28 }}>
@@ -494,7 +505,7 @@ export default function HomePage() {
                 <svg key={i} width="22" height="22" viewBox="0 0 20 20" fill="#fccd00"><path d="M10 1l2.39 6.26H19l-5.19 3.77 1.97 6.26L10 13.51l-5.78 3.78 1.97-6.26L1 7.26h6.61z" /></svg>
               ))}
             </div>
-            <blockquote style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)", color: "#eeeef5", lineHeight: 1.75, fontStyle: "italic", marginBottom: 28 }}>
+            <blockquote style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)", color: "#0f0f1a", lineHeight: 1.75, fontStyle: "italic", marginBottom: 28 }}>
               &ldquo;We&apos;ve been generating code 5x faster with AI tools. ACCELQ is the only reason our release quality hasn&apos;t degraded.
               It&apos;s the quality layer we didn&apos;t know we needed — and now can&apos;t live without.&rdquo;
             </blockquote>

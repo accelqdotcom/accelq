@@ -8,6 +8,7 @@ const FOOTER_LINKS = {
     { label: "Unified Test Automation", href: "/platform/unified" },
     { label: "ACCELQ LIVE", href: "/platform/live" },
     { label: "Autopilot (AI)", href: "/platform/autopilot" },
+    { label: "Converse", href: "/platform/converse" },
     { label: "CI/CD Integrations", href: "/platform/integrations" },
   ],
   Products: [
