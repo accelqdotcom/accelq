@@ -135,9 +135,32 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <p style={{ fontSize: 13, color: "#55556a" }}>
-            Trusted by 50+ Fortune 100 companies &nbsp;·&nbsp; 1B+ test executions annually &nbsp;·&nbsp; No credit card required
-          </p>
+          {/* Client logo scroll */}
+          <div style={{ width: "100%", maxWidth: 700, margin: "0 auto" }}>
+            <p style={{ fontSize: 11, color: "#55556a", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16, textAlign: "center" }}>Trusted by Fortune 100 companies worldwide</p>
+            <div className="logo-marquee-wrap">
+              <div className="logo-marquee-track">
+                {[
+                  "client-anthem.svg", "client-frontier.svg", "client-intel.svg",
+                  "client-intuit.svg", "client-pfizer.svg", "client-unitedairlines.svg",
+                  "client-unitedhealth.svg", "client-wellsfargo.svg",
+                  "client-anthem.svg", "client-frontier.svg", "client-intel.svg",
+                  "client-intuit.svg", "client-pfizer.svg", "client-unitedairlines.svg",
+                  "client-unitedhealth.svg", "client-wellsfargo.svg",
+                ].map((logo, i) => (
+                  <div key={i} style={{ padding: "0 32px", flexShrink: 0 }}>
+                    <Image
+                      src={`/assets/logos/${logo}`}
+                      alt={logo.replace("client-", "").replace(".svg", "")}
+                      width={110}
+                      height={30}
+                      style={{ height: 28, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.35, display: "block" }}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
 
           {/* Hero product image */}
           <div style={{ marginTop: 64, maxWidth: 940, margin: "64px auto 16px" }}>
@@ -203,15 +226,25 @@ export default function HomePage() {
       </section>
 
       {/* ── LOGO BAR ── */}
-      <section style={{ padding: "36px 0", borderTop: "1px solid #1c1c27", borderBottom: "1px solid #1c1c27" }}>
-        <div className="container-xl">
-          <p style={{ textAlign: "center", fontSize: 11, color: "#55556a", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 20 }}>
-            Trusted by engineering and QA teams at
-          </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center" }}>
-            {["Fortune 100 Bank", "Global Insurance Co.", "Tier-1 Telco", "Enterprise SaaS", "Retail Giant", "Healthcare Leader", "Government Agency", "Automotive OEM"].map((name) => (
-              <div key={name} style={{ padding: "5px 14px", background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 6, fontSize: 12, color: "#8888a8" }}>
-                {name}
+      <section style={{ padding: "48px 0", borderTop: "1px solid #1c1c27", borderBottom: "1px solid #1c1c27" }}>
+        <div className="logo-marquee-wrap">
+          <div className="logo-marquee-track">
+            {[
+              "client-anthem.svg", "client-frontier.svg", "client-intel.svg",
+              "client-intuit.svg", "client-pfizer.svg", "client-unitedairlines.svg",
+              "client-unitedhealth.svg", "client-wellsfargo.svg",
+              "client-anthem.svg", "client-frontier.svg", "client-intel.svg",
+              "client-intuit.svg", "client-pfizer.svg", "client-unitedairlines.svg",
+              "client-unitedhealth.svg", "client-wellsfargo.svg",
+            ].map((logo, i) => (
+              <div key={i} style={{ padding: "0 48px", flexShrink: 0 }}>
+                <Image
+                  src={`/assets/logos/${logo}`}
+                  alt={logo.replace("client-", "").replace(".svg", "")}
+                  width={120}
+                  height={36}
+                  style={{ height: 32, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.4, display: "block" }}
+                />
               </div>
             ))}
           </div>

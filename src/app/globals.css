@@ -241,6 +241,11 @@ a { color: inherit; text-decoration: none; }
 @keyframes spin-slow    { from { transform: rotate(0deg) } to { transform: rotate(360deg) } }
 @keyframes dash         { to { stroke-dashoffset: 0 } }
 @keyframes gradientMove { 0%,100% { background-position: 0% 50% } 50% { background-position: 100% 50% } }
+@keyframes marquee      { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+
+.logo-marquee-wrap { overflow: hidden; mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%); }
+.logo-marquee-track { display: flex; align-items: center; width: max-content; animation: marquee 32s linear infinite; }
+.logo-marquee-track:hover { animation-play-state: paused; }
 
 .animate-fade-in    { animation: fadeIn 0.5s ease-out; }
 .animate-slide-up   { animation: slideUp 0.5s ease-out; }
