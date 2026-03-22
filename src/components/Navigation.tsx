@@ -71,6 +71,7 @@ const NAV = [
       },
     ],
   },
+  { label: "Why ACCELQ", href: "/why-accelq" },
   { label: "Pricing", href: "/pricing" },
   { label: "Partners", href: "/partners" },
   {

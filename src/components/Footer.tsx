@@ -27,6 +27,7 @@ const FOOTER_LINKS = {
     { label: "ETL Testing", href: "/enterprise/etl" },
   ],
   Company: [
+    { label: "Why ACCELQ", href: "/why-accelq" },
     { label: "About Us", href: "/company/about" },
     { label: "Careers", href: "/company/careers" },
     { label: "Forrester Wave™ Leader", href: "/forrester-wave" },
