@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "@/components/Img";
 
+const BASE = process.env.NODE_ENV === "production" ? "/accelq" : "";
+
 const STATS = [
   { value: "1B+", label: "Test Executions Annually", color: "#7856ff" },
   { value: "50+", label: "Fortune 100 Customers", color: "#fccd00" },
@@ -149,12 +151,11 @@ export default function HomePage() {
                   "client-unitedhealth.svg", "client-wellsfargo.svg",
                 ].map((logo, i) => (
                   <div key={i} style={{ padding: "0 32px", flexShrink: 0 }}>
-                    <Image
-                      src={`/assets/logos/${logo}`}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`${BASE}/assets/logos/${logo}`}
                       alt={logo.replace("client-", "").replace(".svg", "")}
-                      width={110}
-                      height={30}
-                      style={{ height: 28, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.35, display: "block" }}
+                      style={{ height: 28, width: "auto", display: "block", mixBlendMode: "screen", opacity: 0.7 }}
                     />
                   </div>
                 ))}
@@ -238,12 +239,11 @@ export default function HomePage() {
               "client-unitedhealth.svg", "client-wellsfargo.svg",
             ].map((logo, i) => (
               <div key={i} style={{ padding: "0 48px", flexShrink: 0 }}>
-                <Image
-                  src={`/assets/logos/${logo}`}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${BASE}/assets/logos/${logo}`}
                   alt={logo.replace("client-", "").replace(".svg", "")}
-                  width={120}
-                  height={36}
-                  style={{ height: 32, width: "auto", filter: "brightness(0) invert(1)", opacity: 0.4, display: "block" }}
+                  style={{ height: 32, width: "auto", display: "block", mixBlendMode: "screen", opacity: 0.7 }}
                 />
               </div>
             ))}
