@@ -466,15 +466,49 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            {/* Lifecycle illustration */}
-            <div style={{ borderRadius: 16, overflow: "hidden", border: "1px solid #2a2a3d", background: "#13131a", padding: 8 }}>
-              <Image
-                src="/assets/lifecycle.svg"
-                alt="ACCELQ quality lifecycle"
-                width={560}
-                height={480}
-                style={{ width: "100%", height: "auto", display: "block" }}
-              />
+            {/* Pipeline diagram */}
+            <div style={{ background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 16, padding: 28 }}>
+              {/* Top bar — live indicator */}
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 24, paddingBottom: 16, borderBottom: "1px solid #2a2a3d" }}>
+                <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e", boxShadow: "0 0 6px rgba(34,197,94,0.8)" }} />
+                <span style={{ fontSize: 11, color: "#55556a", fontFamily: "monospace" }}>accelq · autopilot · e-commerce-platform · run #847</span>
+              </div>
+              {/* Pipeline stages */}
+              {[
+                { label: "Jira Story", sub: "PROJ-2341", color: "#7856ff", icon: "📋", status: "source" },
+                { label: "Discover", sub: "12 risks found", color: "#7856ff", icon: "🔍", status: "done" },
+                { label: "Generate", sub: "47 tests created", color: "#fccd00", icon: "⚡", status: "done" },
+                { label: "Execute", sub: "parallel · 3 envs", color: "#00e5d3", icon: "▶", status: "running" },
+                { label: "Self-Heal", sub: "2 auto-repaired", color: "#f87171", icon: "🔧", status: "done" },
+                { label: "Ship", sub: "quality: PASS", color: "#22c55e", icon: "✓", status: "pass" },
+              ].map((stage, i, arr) => (
+                <div key={stage.label}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "12px 0" }}>
+                    <div style={{ width: 36, height: 36, borderRadius: 10, background: `${stage.color}15`, border: `1.5px solid ${stage.color}50`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, flexShrink: 0 }}>
+                      {stage.icon}
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontSize: 13, fontWeight: 700, color: "#eeeef5" }}>{stage.label}</div>
+                      <div style={{ fontSize: 11, color: "#55556a", fontFamily: "monospace" }}>{stage.sub}</div>
+                    </div>
+                    <div style={{ fontSize: 10, fontWeight: 700, padding: "3px 9px", borderRadius: 5, background: stage.status === "running" ? "rgba(0,229,211,0.12)" : stage.status === "pass" ? "rgba(34,197,94,0.12)" : `${stage.color}12`, color: stage.status === "running" ? "#00e5d3" : stage.status === "pass" ? "#22c55e" : stage.color, border: `1px solid ${stage.status === "running" ? "rgba(0,229,211,0.3)" : stage.status === "pass" ? "rgba(34,197,94,0.3)" : `${stage.color}30`}` }}>
+                      {stage.status === "running" ? "RUNNING" : stage.status === "pass" ? "PASS" : stage.status === "source" ? "INPUT" : "✓ DONE"}
+                    </div>
+                  </div>
+                  {i < arr.length - 1 && (
+                    <div style={{ marginLeft: 17, width: 2, height: 8, background: `linear-gradient(${stage.color}, ${arr[i+1].color})`, opacity: 0.4, borderRadius: 1 }} />
+                  )}
+                </div>
+              ))}
+              {/* Bottom metric */}
+              <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid #2a2a3d", display: "flex", gap: 20 }}>
+                {[{ val: "4m 12s", label: "Total runtime" }, { val: "47/47", label: "Tests passed" }, { val: "94%", label: "Coverage" }].map((m) => (
+                  <div key={m.label}>
+                    <div style={{ fontSize: 16, fontWeight: 800, color: "#22c55e" }}>{m.val}</div>
+                    <div style={{ fontSize: 10, color: "#55556a" }}>{m.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -536,15 +570,51 @@ export default function HomePage() {
             <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: "#eeeef5" }}>One platform. Every layer.</h2>
             <p style={{ color: "#8888a8", fontSize: 14, marginTop: 10 }}>Integrates with your entire ecosystem — cloud, enterprise, and everything in between.</p>
           </div>
-          {/* Integrations universe graphic */}
-          <div style={{ maxWidth: 860, margin: "0 auto 48px", borderRadius: 16, overflow: "hidden", border: "1px solid #2a2a3d" }}>
-            <Image
-              src="/assets/integrations-universe.png"
-              alt="ACCELQ integrations ecosystem"
-              width={860}
-              height={480}
-              style={{ width: "100%", height: "auto", display: "block" }}
-            />
+          {/* Platform coverage architecture diagram */}
+          <div style={{ maxWidth: 860, margin: "0 auto 48px", background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 16, padding: 32 }}>
+            {/* ACCELQ platform label */}
+            <div style={{ textAlign: "center", marginBottom: 24 }}>
+              <span style={{ fontSize: 11, fontWeight: 700, color: "#55556a", letterSpacing: "0.12em", textTransform: "uppercase" }}>ACCELQ Unified Platform</span>
+            </div>
+            {/* Rows of coverage layers */}
+            {[
+              {
+                label: "Frontend & Apps",
+                color: "#7856ff",
+                items: ["Web Apps", "Desktop Apps", "Mobile iOS", "Mobile Android", "PWA"],
+              },
+              {
+                label: "APIs & Services",
+                color: "#00e5d3",
+                items: ["REST / HTTP", "GraphQL", "SOAP / WSDL", "gRPC", "WebSocket", "Kafka"],
+              },
+              {
+                label: "Enterprise & ERP",
+                color: "#fccd00",
+                items: ["SAP Fiori / S4HANA", "Salesforce", "ServiceNow", "Oracle Fusion", "Workday", "MS Dynamics"],
+              },
+              {
+                label: "Data & Backend",
+                color: "#f87171",
+                items: ["ETL Pipelines", "Databases", "Mainframe / AS400", "Middleware", "Email & PDF"],
+              },
+            ].map((row) => (
+              <div key={row.label} style={{ marginBottom: 12 }}>
+                <div style={{ fontSize: 10, fontWeight: 700, color: row.color, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8 }}>{row.label}</div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                  {row.items.map((item) => (
+                    <div key={item} style={{ padding: "6px 14px", background: `${row.color}0d`, border: `1px solid ${row.color}30`, borderRadius: 7, fontSize: 12, color: row.color, fontWeight: 500 }}>
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+            {/* Bottom — AI layer */}
+            <div style={{ marginTop: 20, padding: "14px 20px", background: "linear-gradient(135deg, rgba(120,86,255,0.1), rgba(229,73,255,0.07))", border: "1px solid rgba(120,86,255,0.25)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <span style={{ fontSize: 12, fontWeight: 700, color: "#c084fc" }}>✦ Autopilot AI — Self-healing · Auto-generation · Coverage intelligence</span>
+              <span style={{ fontSize: 11, color: "#55556a" }}>across all layers</span>
+            </div>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center" }}>
             {TECH_TILES.map((t) => (
