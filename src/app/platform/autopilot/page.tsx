@@ -295,6 +295,68 @@ export default function AutopilotPage() {
         </div>
       </section>
 
+      {/* CONVERSE — light section */}
+      <section className="section-light" style={{ padding: "100px 0" }}>
+        <div className="container-xl">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
+            {/* Left — copy */}
+            <div>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(120,86,255,0.1)", border: "1px solid rgba(120,86,255,0.25)", borderRadius: 6, padding: "5px 12px", marginBottom: 20 }}>
+                <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#7856ff", display: "inline-block", boxShadow: "0 0 6px rgba(120,86,255,0.8)" }} />
+                <span style={{ fontSize: 11, fontWeight: 700, color: "#7856ff", letterSpacing: "0.08em", textTransform: "uppercase" }}>Introducing Converse</span>
+              </div>
+              <h2 style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.4rem)", fontWeight: 900, color: "#0f0f1a", lineHeight: 1.15, letterSpacing: "-0.03em", marginBottom: 20 }}>
+                Talk to your agents.<br />Drive quality by conversation.
+              </h2>
+              <p style={{ fontSize: "1.05rem", color: "#4a4a6a", lineHeight: 1.8, marginBottom: 28 }}>
+                Autopilot agents are powerful — but Converse puts you in the driver&apos;s seat. Ask questions, trigger agent workflows, get go/no-go decisions, and orchestrate your entire QA lifecycle through simple dialogue.
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 32 }}>
+                {[
+                  { color: "#7856ff", text: "\"What's blocking the Jaguar release?\" — instant risk summary" },
+                  { color: "#00e5d3", text: "\"Run impact analysis on PR #2341\" — agents activated" },
+                  { color: "#fccd00", text: "\"Log this in Jira and notify Slack\" — done automatically" },
+                ].map((item) => (
+                  <div key={item.text} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
+                    <div style={{ width: 8, height: 8, borderRadius: "50%", background: item.color, marginTop: 5, flexShrink: 0, boxShadow: `0 0 6px ${item.color}` }} />
+                    <span style={{ fontSize: 14, color: "#0f0f1a", fontStyle: "italic", lineHeight: 1.6 }}>{item.text}</span>
+                  </div>
+                ))}
+              </div>
+              <Link href="/platform/converse" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 700, color: "#7856ff", textDecoration: "none" }}>
+                Explore ACCELQ Converse
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              </Link>
+            </div>
+
+            {/* Right — chat UI */}
+            <div style={{ background: "#0f0f1a", borderRadius: 18, overflow: "hidden", boxShadow: "0 24px 64px rgba(15,15,26,0.18)" }}>
+              <div style={{ background: "#1c1c27", borderBottom: "1px solid #2a2a3d", padding: "12px 20px", display: "flex", alignItems: "center", gap: 10 }}>
+                <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#7856ff", display: "inline-block", boxShadow: "0 0 6px rgba(120,86,255,0.9)" }} />
+                <span style={{ fontSize: 12, color: "#55556a" }}>ACCELQ Converse · Autopilot Mode</span>
+              </div>
+              <div style={{ padding: "24px 20px", display: "flex", flexDirection: "column", gap: 14 }}>
+                {[
+                  { who: "You", msg: "Run full regression for the checkout flow.", right: true },
+                  { who: "Discover Agent", msg: "Scanning 847 tests linked to checkout. Found 12 high-risk paths based on recent code churn.", right: false, color: "#7856ff" },
+                  { who: "Generate Agent", msg: "3 new tests created for edge cases in /api/payment. Running now.", right: false, color: "#fccd00" },
+                  { who: "Analyze Agent", msg: "All passed ✓. One flaky test auto-healed. Coverage: 94%. Release risk: LOW.", right: false, color: "#c084fc" },
+                  { who: "You", msg: "Great. Notify the release manager.", right: true },
+                  { who: "Converse", msg: "Done — @sarah.kim notified via Slack with full test report attached.", right: false, color: "#00e5d3" },
+                ].map((m, i) => (
+                  <div key={i} style={{ display: "flex", justifyContent: m.right ? "flex-end" : "flex-start" }}>
+                    <div style={{ maxWidth: "80%", padding: "10px 14px", borderRadius: m.right ? "14px 14px 3px 14px" : "14px 14px 14px 3px", background: m.right ? "rgba(120,86,255,0.2)" : "#13131a", border: `1px solid ${m.right ? "rgba(120,86,255,0.35)" : "#2a2a3d"}` }}>
+                      <div style={{ fontSize: 9, fontWeight: 700, color: m.color || "#7856ff", marginBottom: 4, textTransform: "uppercase", letterSpacing: "0.07em" }}>{m.who}</div>
+                      <div style={{ fontSize: 12, color: "#eeeef5", lineHeight: 1.55 }}>{m.msg}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section style={{ padding: "80px 0", textAlign: "center", background: "#07070e", borderTop: "1px solid #2a2a3d" }}>
         <div className="container-xl">

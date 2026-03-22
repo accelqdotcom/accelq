@@ -375,6 +375,66 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── CONVERSE TEASER ── */}
+      <section className="section-light" style={{ padding: "100px 0" }}>
+        <div className="container-xl">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
+            {/* Chat UI */}
+            <div style={{ background: "#0f0f1a", borderRadius: 18, overflow: "hidden", boxShadow: "0 24px 64px rgba(15,15,26,0.15)" }}>
+              <div style={{ background: "#1c1c27", borderBottom: "1px solid #2a2a3d", padding: "12px 20px", display: "flex", alignItems: "center", gap: 10 }}>
+                <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#7856ff", boxShadow: "0 0 6px rgba(120,86,255,0.9)", display: "inline-block" }} />
+                <span style={{ fontSize: 12, color: "#55556a" }}>ACCELQ Converse · Release: Jaguar v4.2</span>
+              </div>
+              <div style={{ padding: "24px 20px", display: "flex", flexDirection: "column", gap: 14 }}>
+                {[
+                  { who: "You", msg: "What's our quality exposure for the Jaguar release?", right: true },
+                  { who: "Converse", msg: "847 tests passed. 1 critical blocker in International Checkout logged 3h ago. Code churn score: HIGH. Recommend hold.", right: false, color: "#c084fc" },
+                  { who: "You", msg: "Log it in Jira and alert #payments-dev in Slack.", right: true },
+                  { who: "Converse", msg: "Done. JAGUAR-2341 created (P0). @payments-dev notified with full defect context and impact analysis.", right: false, color: "#c084fc" },
+                ].map((m, i) => (
+                  <div key={i} style={{ display: "flex", justifyContent: m.right ? "flex-end" : "flex-start" }}>
+                    <div style={{ maxWidth: "80%", padding: "10px 14px", borderRadius: m.right ? "14px 14px 3px 14px" : "14px 14px 14px 3px", background: m.right ? "rgba(120,86,255,0.2)" : "#13131a", border: `1px solid ${m.right ? "rgba(120,86,255,0.35)" : "#2a2a3d"}` }}>
+                      <div style={{ fontSize: 9, fontWeight: 700, color: m.color || "#7856ff", marginBottom: 4, textTransform: "uppercase", letterSpacing: "0.07em" }}>{m.who}</div>
+                      <div style={{ fontSize: 12, color: "#eeeef5", lineHeight: 1.55 }}>{m.msg}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Copy */}
+            <div>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(120,86,255,0.1)", border: "1px solid rgba(120,86,255,0.25)", borderRadius: 6, padding: "5px 12px", marginBottom: 20 }}>
+                <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#7856ff", display: "inline-block", boxShadow: "0 0 6px rgba(120,86,255,0.8)" }} />
+                <span style={{ fontSize: 11, fontWeight: 700, color: "#7856ff", letterSpacing: "0.08em", textTransform: "uppercase" }}>New — ACCELQ Converse</span>
+              </div>
+              <h2 style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", fontWeight: 900, color: "#0f0f1a", lineHeight: 1.12, letterSpacing: "-0.03em", marginBottom: 20 }}>
+                Command your entire quality lifecycle. By conversation.
+              </h2>
+              <p style={{ fontSize: "1.05rem", color: "#4a4a6a", lineHeight: 1.8, marginBottom: 28 }}>
+                Ask questions, trigger agent workflows, get go/no-go decisions, and orchestrate cross-tool actions — all through simple dialogue. Converse is the brain on top of Autopilot.
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 32 }}>
+                {[
+                  "Strategic test planning via natural language",
+                  "Impact analysis on any code change or release",
+                  "Instant go/no-go release readiness decisions",
+                  "Drives Jira, Slack, Teams, ServiceNow automatically",
+                ].map((item) => (
+                  <div key={item} style={{ display: "flex", gap: 12, alignItems: "center" }}>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="#7856ff" strokeWidth="1.5" /><path d="M5 8l2.5 2.5L11 5.5" stroke="#7856ff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                    <span style={{ fontSize: 14, color: "#0f0f1a" }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <Link href="/platform/converse" className="btn-cta" style={{ fontSize: 14, padding: "12px 24px", display: "inline-flex" }}>
+                Explore ACCELQ Converse
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── HOW IT WORKS ── */}
       <section style={{ padding: "100px 0" }}>
         <div className="container-xl">
