@@ -114,11 +114,11 @@ export default function HomePage() {
         <div className="container-xl" style={{ position: "relative", textAlign: "center" }}>
 
           {/* Headline */}
-          <h1 style={{ fontSize: "clamp(2.6rem, 7vw, 4.8rem)", fontWeight: 900, lineHeight: 1.05, letterSpacing: "-0.04em", margin: "0 auto 24px", maxWidth: 860 }}>
-            <span style={{ color: "#eeeef5", display: "block" }}>The Definitive Platform for</span>
+          <h1 style={{ fontSize: "clamp(2.6rem, 7vw, 4.8rem)", fontWeight: 900, lineHeight: 1.05, letterSpacing: "-0.04em", margin: "0 auto 24px", maxWidth: 900 }}>
             <span style={{ display: "block", background: "linear-gradient(90deg, #00e5d3 0%, #22d3ee 60%, #00b4d8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
               Agentic Quality Assurance
             </span>
+            <span style={{ color: "#eeeef5", display: "block" }}>Platform for Enterprise Depth</span>
           </h1>
 
           <p style={{ fontSize: "clamp(0.95rem, 2vw, 1.1rem)", color: "#8888a8", maxWidth: 580, margin: "0 auto 44px", lineHeight: 1.8 }}>
