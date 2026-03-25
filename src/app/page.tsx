@@ -107,39 +107,81 @@ export default function HomePage() {
       {/* ── HERO ── */}
       <section className="hero-gradient grid-pattern" style={{ padding: "110px 0 80px", position: "relative", overflow: "hidden" }}>
         {/* Glow orbs */}
-        <div style={{ position: "absolute", top: -120, left: "10%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(120,86,255,0.15) 0%, transparent 65%)", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", top: -60, right: "8%", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(229,73,255,0.10) 0%, transparent 65%)", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", bottom: 0, left: "50%", transform: "translateX(-50%)", width: 800, height: 200, borderRadius: "50%", background: "radial-gradient(ellipse, rgba(0,229,211,0.05) 0%, transparent 70%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", top: -100, left: "15%", width: 600, height: 600, borderRadius: "50%", background: "radial-gradient(circle, rgba(0,229,211,0.10) 0%, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", top: -80, right: "10%", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(120,86,255,0.12) 0%, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", bottom: 0, left: "50%", transform: "translateX(-50%)", width: 900, height: 300, background: "radial-gradient(ellipse, rgba(0,229,211,0.04) 0%, transparent 70%)", pointerEvents: "none" }} />
 
         <div className="container-xl" style={{ position: "relative", textAlign: "center" }}>
-          <div style={{ marginBottom: 24 }}>
-            <span className="badge badge-brand">Business Assurance Intelligence for AI-native Teams</span>
-          </div>
 
-          <h1 style={{ fontSize: "clamp(2.75rem, 8vw, 5rem)", fontWeight: 900, lineHeight: 1.02, letterSpacing: "-0.04em", margin: "0 auto 28px", maxWidth: 960 }}>
-            <span style={{ color: "#eeeef5" }}>Your AI writes code.</span>
-            <br />
-            <span className="text-gradient-brand">Who validates intent?</span>
+          {/* Headline */}
+          <h1 style={{ fontSize: "clamp(2.6rem, 7vw, 4.8rem)", fontWeight: 900, lineHeight: 1.05, letterSpacing: "-0.04em", margin: "0 auto 24px", maxWidth: 860 }}>
+            <span style={{ color: "#eeeef5", display: "block" }}>The Definitive Platform for</span>
+            <span style={{ display: "block", background: "linear-gradient(90deg, #00e5d3 0%, #22d3ee 60%, #00b4d8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+              Agentic Quality Assurance
+            </span>
           </h1>
 
-          <p style={{ fontSize: "clamp(1rem, 2.5vw, 1.2rem)", color: "#8888a8", maxWidth: 660, margin: "0 auto 44px", lineHeight: 1.75 }}>
-            AI tools generate code. They can&apos;t validate whether it does what the business actually needs.
-            ACCELQ is the <strong style={{ color: "#eeeef5", fontWeight: 600 }}>independent business assurance layer</strong> — always on, always validating, always learning.
+          <p style={{ fontSize: "clamp(0.95rem, 2vw, 1.1rem)", color: "#8888a8", maxWidth: 580, margin: "0 auto 44px", lineHeight: 1.8 }}>
+            Agentic AI across the lifecycle. Every modality, every enterprise app.<br />
+            The only platform where it&apos;s all built in — not stitched together.
           </p>
 
-          <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginBottom: 52 }}>
-            <Link href="/demo" className="btn-cta" style={{ fontSize: 16, padding: "13px 32px" }}>
-              Get a Demo
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          {/* Autopilot chat input UI */}
+          <div style={{ maxWidth: 620, margin: "0 auto 44px", background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 16, overflow: "hidden", boxShadow: "0 24px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,229,211,0.08)" }}>
+            {/* Top bar */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px 18px", borderBottom: "1px solid #2a2a3d" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#00e5d3", boxShadow: "0 0 6px rgba(0,229,211,0.8)", display: "inline-block" }} />
+                <span style={{ fontSize: 11, fontWeight: 700, color: "#00e5d3", letterSpacing: "0.08em" }}>AUT CONTEXT: ACME</span>
+              </div>
+              <div style={{ display: "flex", gap: 4 }}>
+                {["#55556a", "#55556a", "#55556a"].map((c, i) => <div key={i} style={{ width: 4, height: 4, borderRadius: "50%", background: c }} />)}
+              </div>
+              <div style={{ background: "#7856ff", borderRadius: 6, padding: "4px 12px" }}>
+                <span style={{ fontSize: 11, fontWeight: 800, color: "#fff", letterSpacing: "0.08em" }}>AUTOPILOT</span>
+              </div>
+            </div>
+            {/* Input row */}
+            <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "20px 18px", borderBottom: "1px solid #1c1c27" }}>
+              <div style={{ width: 36, height: 36, borderRadius: 8, background: "rgba(0,229,211,0.12)", border: "1px solid rgba(0,229,211,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#00e5d3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              </div>
+              <span style={{ flex: 1, fontSize: 15, color: "#8888a8", textAlign: "left" }}>Generate a regression suite for my mobile checkout flow...</span>
+              <div style={{ width: 32, height: 32, borderRadius: 8, background: "#00e5d3", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="#09090f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              </div>
+            </div>
+            {/* Lifecycle tabs */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-around", padding: "10px 18px" }}>
+              {[
+                { label: "DISCOVERY", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="#55556a" strokeWidth="2"/><path d="M21 21l-4.35-4.35" stroke="#55556a" strokeWidth="2" strokeLinecap="round"/></svg> },
+                { label: "GENERATION", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z" stroke="#55556a" strokeWidth="2" strokeLinejoin="round"/></svg> },
+                { label: "RECONCILIATION", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M4 4v5h5M20 20v-5h-5" stroke="#55556a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M20 9A9 9 0 0 0 5.5 5.5M4 15a9 9 0 0 0 14.5 3.5" stroke="#55556a" strokeWidth="2" strokeLinecap="round"/></svg> },
+                { label: "OPTIMIZATION", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01z" stroke="#55556a" strokeWidth="2" strokeLinejoin="round"/></svg> },
+                { label: "EXECUTION", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><polygon points="5,3 19,12 5,21" stroke="#55556a" strokeWidth="2" strokeLinejoin="round"/></svg> },
+                { label: "INSIGHTS", icon: <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#55556a" strokeWidth="2" strokeLinecap="round"/></svg> },
+              ].map((tab) => (
+                <div key={tab.label} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
+                  {tab.icon}
+                  <span style={{ fontSize: 9, fontWeight: 700, color: "#55556a", letterSpacing: "0.06em" }}>{tab.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTAs */}
+          <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginBottom: 64 }}>
+            <Link href="/platform/autopilot" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#00e5d3", color: "#09090f", fontSize: 13, fontWeight: 800, padding: "13px 28px", borderRadius: 8, letterSpacing: "0.06em", textDecoration: "none", textTransform: "uppercase" }}>
+              Explore the Agentic Era
             </Link>
-            <Link href="/platform/autopilot" className="btn-secondary" style={{ fontSize: 16, padding: "13px 32px" }}>
-              See How It Works
+            <Link href="/demo" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "transparent", color: "#eeeef5", fontSize: 13, fontWeight: 700, padding: "13px 28px", borderRadius: 8, border: "1px solid #3d3d56", letterSpacing: "0.06em", textDecoration: "none", textTransform: "uppercase" }}>
+              Book a Demo
             </Link>
           </div>
 
-          {/* Client logo scroll */}
-          <div style={{ width: "100%", maxWidth: 700, margin: "0 auto" }}>
-            <p style={{ fontSize: 11, color: "#55556a", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16, textAlign: "center" }}>Trusted by Fortune 100 companies worldwide</p>
+          {/* Logo scroll */}
+          <div style={{ marginBottom: 72 }}>
+            <p style={{ fontSize: 11, color: "#3d3d56", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 20 }}>Trusted by global enterprises</p>
             <div className="logo-marquee-wrap">
               <div className="logo-marquee-track">
                 {[
@@ -150,12 +192,12 @@ export default function HomePage() {
                   "client-intuit.svg", "client-pfizer.svg", "client-unitedairlines.svg",
                   "client-unitedhealth.svg", "client-wellsfargo.svg",
                 ].map((logo, i) => (
-                  <div key={i} style={{ padding: "0 32px", flexShrink: 0 }}>
+                  <div key={i} style={{ padding: "0 36px", flexShrink: 0 }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={`${BASE}/assets/logos/${logo}`}
                       alt={logo.replace("client-", "").replace(".svg", "")}
-                      style={{ height: 28, width: "auto", display: "block", mixBlendMode: "screen", opacity: 0.7 }}
+                      style={{ height: 26, width: "auto", display: "block", mixBlendMode: "screen", opacity: 0.55 }}
                     />
                   </div>
                 ))}
@@ -163,90 +205,93 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Hero product image */}
-          <div style={{ marginTop: 64, maxWidth: 940, margin: "64px auto 16px" }}>
-            <Image
-              src="/assets/autopilot-hero.jpg"
-              alt="ACCELQ Autopilot — Multi Model Automation and ACCELQ LIVE"
-              width={940}
-              height={400}
-              style={{ width: "100%", height: "auto", borderRadius: 16, border: "1px solid #2a2a3d", boxShadow: "0 24px 60px rgba(0,0,0,0.5), 0 0 60px rgba(120,86,255,0.08)", display: "block" }}
-            />
-          </div>
+          {/* 3 feature cards */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, textAlign: "left" }}>
 
-          {/* Dashboard mockup */}
-          <div style={{ maxWidth: 940, margin: "0 auto" }}>
-            <div className="terminal-window" style={{ boxShadow: "0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px #2a2a3d, 0 0 80px rgba(120,86,255,0.08)" }}>
-              <div className="terminal-chrome">
-                <div style={{ display: "flex", gap: 6 }}>
-                  {["#f87171", "#fbbf24", "#22c55e"].map((c) => <div key={c} style={{ width: 12, height: 12, borderRadius: "50%", background: c, opacity: 0.85 }} />)}
-                </div>
-                <div style={{ flex: 1, background: "#1c1c27", borderRadius: 6, padding: "4px 14px", textAlign: "center", fontSize: 12, color: "#55556a" }}>
-                  app.accelq.com — Test Suite · E-Commerce Platform · Autopilot Mode
-                </div>
-                <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
-                  <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e", boxShadow: "0 0 6px rgba(34,197,94,0.8)" }} />
-                  <span style={{ fontSize: 11, color: "#22c55e" }}>Live</span>
-                </div>
-              </div>
-              {/* Stats row */}
-              <div style={{ padding: "20px 24px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 12 }}>
+            {/* Card 1: Lifecycle Governance */}
+            <div style={{ background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 14, padding: 24, overflow: "hidden" }}>
+              <div style={{ fontSize: 11, fontWeight: 800, color: "#7856ff", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>Lifecycle Governance</div>
+              <p style={{ fontSize: 12, color: "#55556a", lineHeight: 1.6, marginBottom: 20 }}>End-to-end lifecycle governance from coverage planning through release confidence</p>
+              {/* Mini dashboard */}
+              <div style={{ background: "#09090f", border: "1px solid #1c1c27", borderRadius: 10, padding: "14px 16px", marginBottom: 12 }}>
+                <div style={{ fontSize: 10, fontWeight: 700, color: "#55556a", marginBottom: 10, letterSpacing: "0.06em" }}>COVERAGE</div>
                 {[
-                  { label: "Tests Passed", val: "847", sub: "↑ 23 new this run", color: "#22c55e" },
-                  { label: "AI Self-Healed", val: "14", sub: "auto-repaired", color: "#7856ff" },
-                  { label: "Coverage", val: "94%", sub: "+12% this sprint", color: "#00e5d3" },
-                  { label: "Time Saved", val: "6.2h", sub: "vs. manual", color: "#fccd00" },
-                ].map((s) => (
-                  <div key={s.label} style={{ background: "#09090f", border: "1px solid #2a2a3d", borderRadius: 10, padding: "14px 16px" }}>
-                    <div style={{ fontSize: 11, color: "#55556a", marginBottom: 4 }}>{s.label}</div>
-                    <div style={{ fontSize: 26, fontWeight: 800, color: s.color, lineHeight: 1 }}>{s.val}</div>
-                    <div style={{ fontSize: 11, color: "#8888a8", marginTop: 4 }}>{s.sub}</div>
+                  { label: "AUT", val: 82, color: "#7856ff" },
+                  { label: "API", val: 91, color: "#00e5d3" },
+                  { label: "MAIL", val: 67, color: "#fccd00" },
+                ].map((b) => (
+                  <div key={b.label} style={{ marginBottom: 8 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 3 }}>
+                      <span style={{ fontSize: 10, color: "#8888a8" }}>{b.label}</span>
+                      <span style={{ fontSize: 10, color: b.color, fontWeight: 700 }}>{b.val}%</span>
+                    </div>
+                    <div style={{ height: 4, background: "#1c1c27", borderRadius: 2, overflow: "hidden" }}>
+                      <div style={{ width: `${b.val}%`, height: "100%", background: b.color, borderRadius: 2 }} />
+                    </div>
                   </div>
                 ))}
               </div>
-              {/* Test run */}
-              <div style={{ padding: "0 24px 24px", display: "flex", flexDirection: "column", gap: 5 }}>
-                {[
-                  { name: "Checkout → Payment → Confirmation", status: "pass", time: "2.3s", tag: null },
-                  { name: "User Login → Cart → Checkout", status: "pass", time: "1.8s", tag: { label: "AI healed", color: "#7856ff" } },
-                  { name: "API: POST /orders — schema validation", status: "pass", time: "0.4s", tag: null },
-                  { name: "Mobile: iOS Safari checkout flow", status: "pass", time: "3.1s", tag: null },
-                  { name: "SAP: Sales Order — business process", status: "pass", time: "4.2s", tag: { label: "LIVE asset", color: "#00e5d3" } },
-                ].map((t) => (
-                  <div key={t.name} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 14px", background: "#09090f", borderRadius: 7, border: "1px solid #1c1c27" }}>
-                    <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3 3 6-6" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                    <span style={{ fontSize: 12, color: "#eeeef5", flex: 1 }}>{t.name}</span>
-                    {t.tag && <span style={{ fontSize: 10, background: `${t.tag.color}18`, border: `1px solid ${t.tag.color}40`, color: t.tag.color, padding: "2px 7px", borderRadius: 4, whiteSpace: "nowrap" }}>{t.tag.label}</span>}
-                    <span style={{ fontSize: 11, color: "#55556a" }}>{t.time}</span>
-                  </div>
-                ))}
+              <div style={{ display: "flex", alignItems: "center", gap: 10, background: "#0a1f12", border: "1px solid rgba(34,197,94,0.3)", borderRadius: 8, padding: "10px 14px" }}>
+                <div style={{ width: 32, height: 32, borderRadius: "50%", background: "rgba(34,197,94,0.15)", border: "2px solid #22c55e", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, fontWeight: 900, color: "#22c55e" }}>96</div>
+                <div>
+                  <div style={{ fontSize: 10, fontWeight: 800, color: "#22c55e", letterSpacing: "0.06em" }}>Release: GO</div>
+                  <div style={{ fontSize: 10, color: "#55556a" }}>96% coverage · Compliance cleared</div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ── LOGO BAR ── */}
-      <section style={{ padding: "48px 0", borderTop: "1px solid #1c1c27", borderBottom: "1px solid #1c1c27" }}>
-        <div className="logo-marquee-wrap">
-          <div className="logo-marquee-track">
-            {[
-              "client-anthem.svg", "client-frontier.svg", "client-intel.svg",
-              "client-intuit.svg", "client-pfizer.svg", "client-unitedairlines.svg",
-              "client-unitedhealth.svg", "client-wellsfargo.svg",
-              "client-anthem.svg", "client-frontier.svg", "client-intel.svg",
-              "client-intuit.svg", "client-pfizer.svg", "client-unitedairlines.svg",
-              "client-unitedhealth.svg", "client-wellsfargo.svg",
-            ].map((logo, i) => (
-              <div key={i} style={{ padding: "0 48px", flexShrink: 0 }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={`${BASE}/assets/logos/${logo}`}
-                  alt={logo.replace("client-", "").replace(".svg", "")}
-                  style={{ height: 32, width: "auto", display: "block", mixBlendMode: "screen", opacity: 0.7 }}
-                />
+            {/* Card 2: Multi Channel Automation */}
+            <div style={{ background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 14, padding: 24 }}>
+              <div style={{ fontSize: 11, fontWeight: 800, color: "#00e5d3", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>Multi Channel Automation</div>
+              <p style={{ fontSize: 12, color: "#55556a", lineHeight: 1.6, marginBottom: 24 }}>Unified platform for Enterprise stack across Web, Mobile, API, Desktop & Backend</p>
+              {/* Tech icons */}
+              <div style={{ display: "flex", justifyContent: "center", gap: 16, marginBottom: 24 }}>
+                {[
+                  { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#00e5d3" strokeWidth="1.5"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="#00e5d3" strokeWidth="1.5"/></svg>, label: "Web" },
+                  { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="7" y="2" width="10" height="20" rx="3" stroke="#00e5d3" strokeWidth="1.5"/><circle cx="12" cy="17" r="1" fill="#00e5d3"/></svg>, label: "Mobile" },
+                  { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M8 6l-4 6 4 6M16 6l4 6-4 6" stroke="#00e5d3" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>, label: "API" },
+                  { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="14" rx="2" stroke="#00e5d3" strokeWidth="1.5"/><path d="M8 22h8M12 18v4" stroke="#00e5d3" strokeWidth="1.5" strokeLinecap="round"/></svg>, label: "Desktop" },
+                ].map((t) => (
+                  <div key={t.label} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+                    <div style={{ width: 52, height: 52, borderRadius: 12, background: "rgba(0,229,211,0.08)", border: "1px solid rgba(0,229,211,0.2)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      {t.icon}
+                    </div>
+                    <span style={{ fontSize: 10, color: "#55556a", fontWeight: 600 }}>{t.label}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+              <div style={{ borderTop: "1px solid #1c1c27", paddingTop: 16 }}>
+                <p style={{ fontSize: 12, color: "#8888a8", textAlign: "center", margin: 0 }}>One test. One flow. Every technology in your stack.</p>
+              </div>
+            </div>
+
+            {/* Card 3: Enterprise Stack Coverage */}
+            <div style={{ background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 14, padding: 24 }}>
+              <div style={{ fontSize: 11, fontWeight: 800, color: "#fccd00", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>Enterprise Stack Coverage</div>
+              <p style={{ fontSize: 12, color: "#55556a", lineHeight: 1.6, marginBottom: 20 }}>Revolutionary approach to Business Assurance in multi-cloud packaged app environment</p>
+              {/* ACCELQ LIVE badge */}
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(0,229,211,0.08)", border: "1px solid rgba(0,229,211,0.2)", borderRadius: 6, padding: "4px 10px", marginBottom: 16 }}>
+                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#00e5d3", display: "inline-block" }} />
+                <span style={{ fontSize: 11, fontWeight: 800, color: "#00e5d3", letterSpacing: "0.08em" }}>ACCELQ LIVE</span>
+              </div>
+              {/* Enterprise app logos as text */}
+              <div style={{ display: "flex", gap: 8, marginBottom: 20, flexWrap: "wrap" }}>
+                {[
+                  { name: "Salesforce", color: "#00a1e0" },
+                  { name: "Oracle", color: "#f80000" },
+                  { name: "SAP", color: "#0070f2" },
+                  { name: "ServiceNow", color: "#62d84e" },
+                ].map((app) => (
+                  <div key={app.name} style={{ padding: "4px 10px", background: `${app.color}12`, border: `1px solid ${app.color}35`, borderRadius: 5, fontSize: 11, fontWeight: 700, color: app.color }}>
+                    {app.name}
+                  </div>
+                ))}
+              </div>
+              <div style={{ borderTop: "1px solid #1c1c27", paddingTop: 16 }}>
+                <p style={{ fontSize: 12, color: "#8888a8", margin: 0 }}>Business processes that span systems, validated end-to-end</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
