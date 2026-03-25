@@ -41,32 +41,35 @@ const PLATFORM_PRODUCTS = [
 ];
 
 /* ─── PRODUCTS ──────────────────────────────────────────────── */
+const PTEAL = "#0d9e80";
 const PRODUCT_ITEMS = [
   {
-    href: "/products/web", name: "Automate Web", color: "#00b4ff",
-    desc: "No-code web, desktop & cloud app automation",
-    tags: ["Web", "Desktop", "Cloud"],
-    icon: <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><rect x="2" y="4" width="18" height="14" rx="3" stroke="#00b4ff" strokeWidth="1.5"/><line x1="2" y1="9" x2="20" y2="9" stroke="#00b4ff" strokeWidth="1" opacity=".5"/><circle cx="5.5" cy="6.5" r="1" fill="#00b4ff" opacity=".6"/><circle cx="8.5" cy="6.5" r="1" fill="#00b4ff" opacity=".6"/></svg>,
+    href: "/products/web", name: "Automate Web",
+    desc: "Codeless-AI record & instant playback across Web, Cloud ERP Apps & more",
+    icon: <svg width="32" height="28" viewBox="0 0 32 28" fill="none"><path d="M6 2L26 2L22 26L2 26Z" fill={PTEAL} opacity="0.85"/><path d="M10 8L20 8L18 20L8 20Z" fill="#fff" opacity="0.3"/></svg>,
   },
   {
-    href: "/products/api", name: "Automate API", color: "#10b981",
-    desc: "REST, SOAP, GraphQL, Kafka & microservices testing",
-    tags: ["REST", "GraphQL", "Kafka"],
-    icon: <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M7 6l-4 5 4 5M15 6l4 5-4 5" stroke="#10b981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><line x1="10" y1="4" x2="12" y2="18" stroke="#10b981" strokeWidth="1" opacity=".5"/></svg>,
+    href: "/products/mobile", name: "Automate Mobile",
+    desc: "Zero-setup, cloud-native codeless automation for real-device apps on iOS & Android",
+    icon: <svg width="26" height="30" viewBox="0 0 26 30" fill="none"><rect x="3" y="1" width="20" height="28" rx="3" fill={PTEAL} opacity="0.85"/><rect x="7" y="5" width="12" height="16" rx="1" fill="#fff" opacity="0.3"/><circle cx="13" cy="25" r="2" fill="#fff" opacity="0.3"/></svg>,
   },
   {
-    href: "/products/mobile", name: "Automate Mobile", color: "#f59e0b",
-    desc: "Real-device native & browser testing for iOS & Android",
-    tags: ["iOS", "Android", "Native"],
-    icon: <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><rect x="6" y="1" width="10" height="20" rx="3" stroke="#f59e0b" strokeWidth="1.5"/><circle cx="11" cy="17" r="1" fill="#f59e0b"/><line x1="8" y1="5" x2="14" y2="5" stroke="#f59e0b" strokeWidth="1" opacity=".5"/></svg>,
+    href: "/products/api", name: "Automate API",
+    desc: "REST, SOAP, GraphQL, Kafka, MQs, Microservices, SSH & Backend — fully codeless",
+    icon: <svg width="30" height="28" viewBox="0 0 30 28" fill="none"><path d="M15 1L29 27H1Z" fill={PTEAL} opacity="0.85"/><path d="M15 9L22 23H8Z" fill="#fff" opacity="0.25"/></svg>,
   },
   {
-    href: "/products/manual", name: "ACCELQ Manual", color: "#a855f7",
-    desc: "Integrated test management, planning & execution",
-    tags: ["Test Plans", "Execution", "Reporting"],
-    icon: <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><rect x="3" y="2" width="16" height="18" rx="2" stroke="#a855f7" strokeWidth="1.5"/><line x1="7" y1="7" x2="15" y2="7" stroke="#a855f7" strokeWidth="1" opacity=".6"/><line x1="7" y1="11" x2="15" y2="11" stroke="#a855f7" strokeWidth="1" opacity=".4"/><line x1="7" y1="15" x2="12" y2="15" stroke="#a855f7" strokeWidth="1" opacity=".4"/></svg>,
+    href: "/products/web", name: "Automate Desktop",
+    desc: "Native Windows & legacy desktop application testing with no-code design-first approach",
+    icon: <svg width="30" height="28" viewBox="0 0 30 28" fill="none"><rect x="1" y="1" width="28" height="20" rx="2" fill={PTEAL} opacity="0.85"/><rect x="4" y="4" width="22" height="14" rx="1" fill="#fff" opacity="0.25"/><rect x="11" y="23" width="8" height="2" rx="1" fill={PTEAL} opacity="0.6"/><rect x="8" y="26" width="14" height="2" rx="1" fill={PTEAL} opacity="0.4"/></svg>,
+  },
+  {
+    href: "/products/manual", name: "Test Management",
+    desc: "Unified planning, execution, traceability & collaboration across the quality lifecycle",
+    icon: <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" rx="3" fill={PTEAL} opacity="0.85"/><rect x="5" y="5" width="18" height="18" rx="1" fill="#fff" opacity="0.25"/><line x1="9" y1="11" x2="19" y2="11" stroke="#fff" strokeWidth="1.5" opacity="0.5"/><line x1="9" y1="15" x2="16" y2="15" stroke="#fff" strokeWidth="1.5" opacity="0.5"/><line x1="9" y1="19" x2="14" y2="19" stroke="#fff" strokeWidth="1.5" opacity="0.4"/></svg>,
   },
 ];
+const UNIFIED_TAGS = ["Web", "API", "Mobile", "Desktop", "LIVE/ERP", "DB", "Virtualization", "Mainframe"];
 
 /* ─── ENTERPRISE ────────────────────────────────────────────── */
 const ENTERPRISE_ITEMS = [
@@ -305,38 +308,187 @@ function PlatformDropdown() {
 
 /* ─── PRODUCTS DROPDOWN ─────────────────────────────────────── */
 function ProductsDropdown() {
-  const [hovered, setHovered] = useState<string | null>(null);
-  const [unifiedHovered, setUnifiedHovered] = useState(false);
+  const [hovered, setHovered]       = useState<string | null>(null);
+  const [apHovered, setApHovered]   = useState(false);
+  const [unifiedHov, setUnifiedHov] = useState(false);
+
   return (
-    <MegaShell width={520}>
-      <MegaHeader label="Test Automation" />
-      <div style={{ padding: "8px 14px 4px" }}>
-        {PRODUCT_ITEMS.map(p => (
-          <ProductRow key={p.href} item={p} hovered={hovered === p.href} onHover={() => setHovered(p.href)} onLeave={() => setHovered(null)} />
-        ))}
-      </div>
-      {/* Unified featured footer item */}
-      <div style={{ padding: "4px 14px 8px" }}>
+    <MegaShell width={860}>
+      {/* Autopilot banner */}
+      <div style={{ padding: "12px 16px 8px" }}>
         <Link
-          href="/products/unified"
-          onMouseEnter={() => setUnifiedHovered(true)}
-          onMouseLeave={() => setUnifiedHovered(false)}
+          href="/platform/autopilot"
+          onMouseEnter={() => setApHovered(true)}
+          onMouseLeave={() => setApHovered(false)}
           style={{
-            display: "flex", alignItems: "center", justifyContent: "space-between",
-            padding: "12px 16px", borderRadius: 12, textDecoration: "none",
-            background: unifiedHovered ? "rgba(0,229,211,0.07)" : "rgba(0,229,211,0.03)",
-            border: `1px solid ${unifiedHovered ? "rgba(0,229,211,0.25)" : "rgba(0,229,211,0.1)"}`,
-            transition: "all 0.2s",
+            display: "flex", alignItems: "center", gap: 12, padding: "12px 16px",
+            borderRadius: 14, textDecoration: "none", transition: "all 0.25s",
+            border: `1px solid ${apHovered ? "rgba(168,85,247,0.35)" : "rgba(255,255,255,0.06)"}`,
+            background: apHovered ? "rgba(168,85,247,0.05)" : "rgba(255,255,255,0.015)",
+            position: "relative", overflow: "hidden",
           }}
         >
-          <div>
-            <span style={{ fontSize: 11, fontWeight: 700, color: "#00e5d3", letterSpacing: "0.06em", textTransform: "uppercase", display: "block", marginBottom: 2 }}>ACCELQ Unified</span>
-            <span style={{ fontSize: 12, color: "#6b6960" }}>Full-stack: Web + API + Mobile + Desktop + Manual</span>
+          {apHovered && (
+            <div style={{ position: "absolute", inset: -2, borderRadius: 16, pointerEvents: "none",
+              background: "conic-gradient(from 0deg, rgba(168,85,247,0.18), rgba(0,180,255,0.15), rgba(16,185,129,0.1), rgba(245,158,11,0.08), rgba(168,85,247,0.18))",
+              animation: "rotateConic 5s linear infinite", filter: "blur(6px)", opacity: 0.6 }} />
+          )}
+          <div style={{ width: 34, height: 34, borderRadius: 10, flexShrink: 0, zIndex: 1,
+            background: "linear-gradient(135deg, rgba(168,85,247,0.2), rgba(0,180,255,0.15))",
+            border: "1px solid rgba(168,85,247,0.25)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            transform: apHovered ? "scale(1.08)" : "scale(1)", transition: "transform 0.2s" }}>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <circle cx="9" cy="9" r="3" stroke="url(#apg2)" strokeWidth="1.5"/>
+              <path d="M9 2V5M9 13V16M2 9H5M13 9H16" stroke="url(#apg2)" strokeWidth="1" strokeLinecap="round" opacity=".6"/>
+              <path d="M4.5 4.5L6.2 6.2M11.8 11.8L13.5 13.5M4.5 13.5L6.2 11.8M11.8 6.2L13.5 4.5" stroke="url(#apg2)" strokeWidth=".8" strokeLinecap="round" opacity=".4"/>
+              <defs><linearGradient id="apg2" x1="2" y1="2" x2="16" y2="16"><stop stopColor="#a855f7"/><stop offset="1" stopColor="#00b4ff"/></linearGradient></defs>
+            </svg>
           </div>
-          <span style={{ fontSize: 12, color: unifiedHovered ? "#00e5d3" : "rgba(255,255,255,0.2)", transition: "color 0.2s" }}>→</span>
+          <div style={{ flex: 1, position: "relative", zIndex: 1 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 2 }}>
+              <span style={{
+                fontSize: 15, fontWeight: 700,
+                background: apHovered ? "linear-gradient(90deg, #c084fc, #60a5fa, #34d399)" : "linear-gradient(90deg, #d0cec6, #d0cec6)",
+                backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
+                backgroundSize: apHovered ? "200% auto" : "100% auto",
+                animation: apHovered ? "shimmer 3s linear infinite" : "none",
+              }}>Autopilot</span>
+              <span style={{ fontSize: 9.5, fontWeight: 600, color: "#a855f7", background: "rgba(168,85,247,0.1)", padding: "2px 8px", borderRadius: 5, letterSpacing: "0.04em" }}>AGENTIC AI</span>
+            </div>
+            <div style={{ fontSize: 12.5, color: "#6b6960", lineHeight: 1.4 }}>
+              The intelligence layer — AI agents that discover, generate, execute & maintain tests autonomously across the entire lifecycle
+            </div>
+          </div>
+          <span style={{ fontSize: 13, color: apHovered ? "#c084fc" : "rgba(255,255,255,0.2)", transition: "color 0.2s", zIndex: 1 }}>→</span>
         </Link>
       </div>
-      <MegaFooter left="One test. Every layer." right="All products" rightHref="/products/unified" />
+
+      {/* Two-column body */}
+      <div style={{ display: "flex", padding: "0 10px 10px" }}>
+
+        {/* Left: product grid */}
+        <div style={{ flex: "1 1 530px", padding: "4px", position: "relative" }}>
+          {/* Section label */}
+          <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 14px 10px" }}>
+            <span style={{ fontSize: 10.5, fontWeight: 600, letterSpacing: "0.07em", color: "rgba(255,255,255,0.22)", textTransform: "uppercase" }}>Automate by Channel</span>
+            <div style={{ flex: 1, height: 1, background: "rgba(255,255,255,0.04)" }} />
+            <span style={{ fontSize: 9.5, fontWeight: 500, color: "rgba(168,85,247,0.4)", display: "flex", alignItems: "center", gap: 4 }}>
+              <svg width="10" height="10" viewBox="0 0 18 18" fill="none" style={{ opacity: 0.5 }}><circle cx="9" cy="9" r="3" stroke="#a855f7" strokeWidth="1.5"/><path d="M9 2V5M9 13V16M2 9H5M13 9H16" stroke="#a855f7" strokeWidth="1" strokeLinecap="round" opacity=".6"/></svg>
+              Autopilot-powered
+            </span>
+          </div>
+
+          {/* Thread + grid */}
+          <div style={{ position: "relative" }}>
+            <div style={{ position: "absolute", left: 10, top: 8, bottom: 8, width: 1,
+              background: "linear-gradient(to bottom, rgba(168,85,247,0.25), rgba(168,85,247,0.08), rgba(168,85,247,0.25))" }} />
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, paddingLeft: 8 }}>
+              {PRODUCT_ITEMS.map(p => (
+                <Link
+                  key={p.name}
+                  href={p.href}
+                  onMouseEnter={() => setHovered(p.name)}
+                  onMouseLeave={() => setHovered(null)}
+                  style={{
+                    display: "flex", alignItems: "flex-start", gap: 12, padding: "12px 14px",
+                    borderRadius: 10, textDecoration: "none", transition: "background 0.2s",
+                    background: hovered === p.name ? `rgba(13,158,128,0.06)` : "transparent",
+                    position: "relative",
+                  }}
+                >
+                  {/* Thread node */}
+                  <div style={{
+                    position: "absolute", left: -4, top: "50%", transform: "translateY(-50%)",
+                    width: 8, height: 8, borderRadius: "50%", transition: "all 0.25s",
+                    background: hovered === p.name ? "rgba(168,85,247,0.5)" : "rgba(168,85,247,0.12)",
+                    border: hovered === p.name ? "1.5px solid rgba(168,85,247,0.7)" : "1.5px solid rgba(168,85,247,0.2)",
+                  }} />
+                  <div style={{ width: 38, height: 38, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+                    transform: hovered === p.name ? "scale(1.08)" : "scale(1)", opacity: hovered === p.name ? 1 : 0.75, transition: "all 0.2s" }}>
+                    {p.icon}
+                  </div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ color: hovered === p.name ? PTEAL : "#e2e0d8", fontSize: 13.5, fontWeight: 600, marginBottom: 3, transition: "color 0.2s" }}>
+                      {p.name}
+                      <span style={{ marginLeft: 5, opacity: hovered === p.name ? 1 : 0, transition: "opacity 0.2s", fontSize: 11, color: PTEAL }}>→</span>
+                    </div>
+                    <div style={{ color: "#7a786f", fontSize: 12, lineHeight: 1.45 }}>{p.desc}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Teal divider */}
+        <div style={{ width: 1, background: "linear-gradient(to bottom, transparent, rgba(13,158,128,0.15), rgba(13,158,128,0.15), transparent)", margin: "10px 0" }} />
+
+        {/* Right: ACCELQ Unified panel */}
+        <div style={{ flex: "0 0 268px", padding: "4px 8px" }}>
+          <Link
+            href="/products/unified"
+            onMouseEnter={() => setUnifiedHov(true)}
+            onMouseLeave={() => setUnifiedHov(false)}
+            style={{
+              display: "block", padding: "18px 16px 16px", borderRadius: 14,
+              textDecoration: "none", transition: "all 0.3s", height: "100%",
+              border: `1px solid ${unifiedHov ? "rgba(13,158,128,0.3)" : "rgba(255,255,255,0.06)"}`,
+              background: unifiedHov ? "linear-gradient(160deg, rgba(13,158,128,0.06), rgba(0,180,255,0.03))" : "rgba(255,255,255,0.015)",
+              position: "relative",
+            }}
+          >
+            {unifiedHov && (
+              <div style={{ position: "absolute", top: -1, left: -1, right: -1, height: 3, borderRadius: "14px 14px 0 0",
+                background: `linear-gradient(90deg, ${PTEAL}, #00b4ff, ${PTEAL})`,
+                backgroundSize: "200% auto", animation: "shimmer 2s linear infinite" }} />
+            )}
+            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
+              <div style={{ transform: unifiedHov ? "scale(1.06)" : "scale(1)", transition: "transform 0.2s" }}>
+                <svg width="36" height="32" viewBox="0 0 36 32" fill="none">
+                  <circle cx="18" cy="16" r="14" fill={PTEAL} opacity="0.15"/>
+                  <circle cx="18" cy="16" r="10" fill={PTEAL} opacity="0.5"/>
+                  <circle cx="18" cy="16" r="5" fill={PTEAL}/>
+                  <circle cx="12" cy="8" r="2.5" fill="#0d9e80" opacity="0.7"/>
+                </svg>
+              </div>
+              <div style={{ fontSize: 17, fontWeight: 700, color: unifiedHov ? PTEAL : "#e2e0d8", transition: "color 0.2s", lineHeight: 1.2 }}>ACCELQ Unified</div>
+            </div>
+            <div style={{ fontSize: 13, fontWeight: 600, color: "#b0aea4", lineHeight: 1.45, marginBottom: 6 }}>
+              AI-powered unified platform with embedded test management
+            </div>
+            <div style={{ fontSize: 12, color: "#7a786f", lineHeight: 1.5, marginBottom: 14 }}>
+              Full-stack automation in a single seamless flow
+            </div>
+            <div style={{ display: "flex", gap: 5, flexWrap: "wrap", marginBottom: 14 }}>
+              {UNIFIED_TAGS.map(tag => (
+                <span key={tag} style={{ fontSize: 10.5, fontWeight: 500, color: PTEAL,
+                  background: "rgba(13,158,128,0.08)", border: "1px solid rgba(13,158,128,0.12)",
+                  padding: "3px 8px", borderRadius: 5, opacity: unifiedHov ? 1 : 0.6, transition: "opacity 0.2s" }}>{tag}</span>
+              ))}
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 6, padding: "6px 10px", borderRadius: 8,
+              background: "rgba(168,85,247,0.04)", border: "1px solid rgba(168,85,247,0.08)", marginBottom: 14 }}>
+              <svg width="12" height="12" viewBox="0 0 18 18" fill="none" style={{ opacity: 0.6 }}><circle cx="9" cy="9" r="3" stroke="#a855f7" strokeWidth="1.5"/><path d="M9 2V5M9 13V16M2 9H5M13 9H16" stroke="#a855f7" strokeWidth="1" strokeLinecap="round" opacity=".6"/></svg>
+              <span style={{ fontSize: 10.5, color: "rgba(168,85,247,0.7)", fontWeight: 500 }}>Powered by Autopilot</span>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 600,
+              color: unifiedHov ? PTEAL : "rgba(255,255,255,0.25)", transition: "color 0.2s" }}>
+              Explore Unified <span style={{ fontSize: 15 }}>→</span>
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div style={{ padding: "11px 22px 14px", borderTop: "1px solid rgba(255,255,255,0.05)",
+        display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <span style={{ fontSize: 12, color: "rgba(255,255,255,0.18)" }}>All products unified on one cloud platform</span>
+        <div style={{ display: "flex", gap: 16 }}>
+          <Link href="/products/unified" style={{ fontSize: 12, fontWeight: 500, color: "rgba(255,255,255,0.32)", textDecoration: "none" }}>Compare products</Link>
+          <Link href="/pricing" style={{ fontSize: 12, fontWeight: 600, color: "#00b4ff", textDecoration: "none" }}>View pricing →</Link>
+        </div>
+      </div>
     </MegaShell>
   );
 }
