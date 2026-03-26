@@ -365,117 +365,109 @@ export default function HomePage() {
       </section>
 
       {/* ── AUTOPILOT ECOSYSTEM ── */}
-      <section style={{ padding: "100px 0", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", top: "20%", left: "50%", transform: "translateX(-50%)", width: 800, height: 600, background: "radial-gradient(ellipse, rgba(0,229,211,0.04) 0%, transparent 65%)", pointerEvents: "none" }} />
+      <section style={{ padding: "96px 0", position: "relative", overflow: "hidden", borderTop: "1px solid #1c1c27" }}>
+        <div style={{ position: "absolute", top: "30%", left: "50%", transform: "translateX(-50%)", width: 800, height: 600, background: "radial-gradient(ellipse, rgba(14,165,233,0.06) 0%, transparent 65%)", pointerEvents: "none" }} />
         <div className="container-xl" style={{ position: "relative" }}>
 
           {/* Header */}
-          <div style={{ textAlign: "center", marginBottom: 72 }}>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(0,229,211,0.08)", border: "1px solid rgba(0,229,211,0.25)", borderRadius: 6, padding: "6px 14px", marginBottom: 20 }}>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#00e5d3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              <span style={{ fontSize: 11, fontWeight: 700, color: "#00e5d3", letterSpacing: "0.08em", textTransform: "uppercase" }}>Agentic AI Platform</span>
-            </div>
+          <div style={{ textAlign: "center", marginBottom: 80 }}>
+            <div style={{ fontSize: 11, fontWeight: 700, color: "#38bdf8", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16, fontFamily: "monospace" }}>System Architecture</div>
             <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.75rem)", fontWeight: 900, color: "#eeeef5", lineHeight: 1.1, letterSpacing: "-0.03em", marginBottom: 16 }}>
-              Autopilot Ecosystem
+              The Autopilot Ecosystem
             </h2>
-            <p style={{ color: "#8888a8", fontSize: "1.05rem", maxWidth: 560, margin: "0 auto", lineHeight: 1.75 }}>
-              A complete agentic layer across every dimension of quality engineering — from execution to intelligence.
+            <p style={{ color: "#8888a8", fontSize: "1.05rem", maxWidth: 580, margin: "0 auto", lineHeight: 1.75 }}>
+              Designed as a unified architectural stack, Autopilot coordinates everything from deep AI foundation layers to external enterprise operational tools.
             </p>
           </div>
 
-          {/* Grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "160px 1fr 48px 1fr", gap: 0, alignItems: "stretch" }}>
+          {/* Stack */}
+          <div style={{ display: "flex", flexDirection: "column", maxWidth: 860, margin: "0 auto" }}>
 
             {/* ── ROW 1: TARGET INTERFACES ── */}
-            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", paddingRight: 32, paddingBottom: 16 }}>
-              <div style={{ fontSize: 11, fontWeight: 800, color: "#eeeef5", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 6 }}>Target Interfaces</div>
-              <div style={{ fontSize: 11, color: "#55556a", lineHeight: 1.5 }}>Cross-Platform Validation</div>
-            </div>
-            {/* Card 1 */}
-            <div style={{ background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 14, padding: "28px 32px", marginBottom: 12 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 14 }}>
-                <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(0,229,211,0.12)", border: "1px solid rgba(0,229,211,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#00e5d3" strokeWidth="2"/><path d="M2 7h20M8 3v4M16 3v4" stroke="#00e5d3" strokeWidth="2" strokeLinecap="round"/><path d="M7 17l-3 4h16l-3-4" stroke="#00e5d3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                </div>
-                <h3 style={{ fontSize: 17, fontWeight: 800, color: "#eeeef5", margin: 0 }}>Omnichannel Output</h3>
+            <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
+              <div style={{ width: 180, flexShrink: 0, textAlign: "right" }}>
+                <div style={{ fontSize: 10, fontWeight: 800, color: "#8888a8", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 4, fontFamily: "monospace" }}>Target Interfaces</div>
+                <div style={{ fontSize: 10, color: "#3d3d56" }}>Cross-Platform Validation</div>
               </div>
-              <p style={{ fontSize: 13, color: "#8888a8", lineHeight: 1.7, margin: 0 }}>Drive execution natively across Web, Mobile, API, and Desktop environments.</p>
-            </div>
-            {/* Center connector col row 1 */}
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", paddingBottom: 12 }}>
-              <div style={{ width: 1, flex: 1, background: "rgba(0,229,211,0.15)" }} />
-            </div>
-            {/* Card 2 */}
-            <div style={{ background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 14, padding: "28px 32px", marginBottom: 12 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 14 }}>
-                <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(34,197,94,0.1)", border: "1px solid rgba(34,197,94,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#22c55e" strokeWidth="2"/><circle cx="9" cy="9" r="2" stroke="#22c55e" strokeWidth="2"/><circle cx="15" cy="9" r="2" stroke="#22c55e" strokeWidth="2"/><path d="M7 15c.5-1.5 2.5-2 5-2s4.5.5 5 2" stroke="#22c55e" strokeWidth="2" strokeLinecap="round"/></svg>
+              <div style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                {/* Card 1 */}
+                <div style={{ background: "rgba(19,19,26,0.8)", border: "1px solid #2a2a3d", borderRadius: 12, padding: "20px 22px", transition: "border-color 0.2s" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M2 3h20v14H2zM8 3v14M2 8h20" stroke="#38bdf8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M7 17l-3 4h16l-3-4" stroke="#38bdf8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    <h3 style={{ fontSize: 14, fontWeight: 700, color: "#eeeef5", margin: 0 }}>Omnichannel Output</h3>
+                  </div>
+                  <p style={{ fontSize: 12, color: "#8888a8", lineHeight: 1.6, margin: 0 }}>Drive execution natively across Web, Mobile, API, and Desktop environments.</p>
                 </div>
-                <h3 style={{ fontSize: 17, fontWeight: 800, color: "#eeeef5", margin: 0 }}>LLM App Testing</h3>
+                {/* Card 2 */}
+                <div style={{ background: "rgba(19,19,26,0.8)", border: "1px solid #2a2a3d", borderRadius: 12, padding: "20px 22px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#4ade80" strokeWidth="2"/><circle cx="9" cy="9" r="1.5" fill="#4ade80"/><circle cx="15" cy="9" r="1.5" fill="#4ade80"/><path d="M8 15c.8-1.2 2.2-2 4-2s3.2.8 4 2" stroke="#4ade80" strokeWidth="2" strokeLinecap="round"/></svg>
+                    <h3 style={{ fontSize: 14, fontWeight: 700, color: "#eeeef5", margin: 0 }}>LLM App Testing</h3>
+                  </div>
+                  <p style={{ fontSize: 12, color: "#8888a8", lineHeight: 1.6, margin: 0 }}>Validate next-gen Generative AI apps and Model Context Protocols (MCP).</p>
+                </div>
               </div>
-              <p style={{ fontSize: 13, color: "#8888a8", lineHeight: 1.7, margin: 0 }}>Validate next-gen Generative AI apps and Model Context Protocols (MCP).</p>
             </div>
+
+            {/* Vertical pipe connector */}
+            <div style={{ width: 2, height: 32, background: "linear-gradient(to bottom, rgba(56,189,248,0.5), transparent)", margin: "0 auto 0 calc(180px + 32px + 50%)" }} />
 
             {/* ── ROW 2: ORCHESTRATION ── */}
-            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", paddingRight: 32, paddingBottom: 16 }}>
-              <div style={{ fontSize: 11, fontWeight: 800, color: "#7856ff", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 6 }}>Orchestration</div>
-              <div style={{ fontSize: 11, color: "#55556a", lineHeight: 1.5 }}>Integration &amp; Routing</div>
-            </div>
-            {/* Card 3 */}
-            <div style={{ background: "#13131a", border: "1px solid rgba(0,229,211,0.2)", borderRadius: 14, padding: "28px 32px", marginBottom: 12, boxShadow: "0 0 0 1px rgba(0,229,211,0.06), 0 8px 32px rgba(0,229,211,0.04)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 14 }}>
-                <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(0,229,211,0.12)", border: "1px solid rgba(0,229,211,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1" stroke="#00e5d3" strokeWidth="2"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="#00e5d3" strokeWidth="2"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="#00e5d3" strokeWidth="2"/><rect x="14" y="14" width="7" height="7" rx="1" stroke="#00e5d3" strokeWidth="2"/></svg>
-                </div>
-                <h3 style={{ fontSize: 17, fontWeight: 800, color: "#eeeef5", margin: 0 }}>Enterprise Agents</h3>
+            <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
+              <div style={{ width: 180, flexShrink: 0, textAlign: "right" }}>
+                <div style={{ fontSize: 10, fontWeight: 800, color: "#8888a8", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 4, fontFamily: "monospace" }}>Orchestration</div>
+                <div style={{ fontSize: 10, color: "#3d3d56" }}>Integration &amp; Routing</div>
               </div>
-              <p style={{ fontSize: 13, color: "#8888a8", lineHeight: 1.7, margin: 0 }}>Specialized metadata knowledge for Salesforce, MS Dynamics, Workday, and more.</p>
-            </div>
-            {/* Center connector col row 2 — ACCELQ LIVE badge */}
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", paddingBottom: 12 }}>
-              <div style={{ width: 1, flex: 1, background: "rgba(0,229,211,0.15)" }} />
-              <div style={{ background: "#00e5d3", borderRadius: 20, padding: "5px 10px", whiteSpace: "nowrap", fontSize: 9, fontWeight: 800, color: "#09090f", letterSpacing: "0.08em", transform: "rotate(90deg)", margin: "8px 0" }}>ACCELQ LIVE</div>
-              <div style={{ width: 1, flex: 1, background: "rgba(0,229,211,0.15)" }} />
-            </div>
-            {/* Card 4 */}
-            <div style={{ background: "#13131a", border: "1px solid rgba(0,229,211,0.2)", borderRadius: 14, padding: "28px 32px", marginBottom: 12, boxShadow: "0 0 0 1px rgba(0,229,211,0.06), 0 8px 32px rgba(0,229,211,0.04)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 14 }}>
-                <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(0,229,211,0.12)", border: "1px solid rgba(0,229,211,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#00e5d3" strokeWidth="2"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" stroke="#00e5d3" strokeWidth="2" strokeLinecap="round"/></svg>
+              <div style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, position: "relative" }}>
+                {/* Horizontal line between cards */}
+                <div style={{ position: "absolute", top: "50%", left: 0, right: 0, height: 1, background: "rgba(42,42,61,0.5)", zIndex: 0 }} />
+                {/* Card 3 — Enterprise Agents with ACCELQ LIVE badge */}
+                <div style={{ background: "rgba(14,165,233,0.06)", border: "1px solid rgba(56,189,248,0.35)", borderRadius: 12, padding: "20px 22px", position: "relative", zIndex: 1, boxShadow: "0 0 20px rgba(14,165,233,0.08)" }}>
+                  <div style={{ position: "absolute", top: -10, right: -10, background: "#38bdf8", color: "#09090f", fontSize: 9, fontWeight: 800, padding: "3px 8px", borderRadius: 99, letterSpacing: "0.08em", textTransform: "uppercase" }}>ACCELQ Live</div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1" stroke="#38bdf8" strokeWidth="2"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="#38bdf8" strokeWidth="2"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="#38bdf8" strokeWidth="2"/><rect x="14" y="14" width="7" height="7" rx="1" stroke="#38bdf8" strokeWidth="2"/></svg>
+                    <h3 style={{ fontSize: 14, fontWeight: 700, color: "#eeeef5", margin: 0 }}>Enterprise Agents</h3>
+                  </div>
+                  <p style={{ fontSize: 12, color: "#8888a8", lineHeight: 1.6, margin: 0 }}>Specialized metadata knowledge for Salesforce, MS Dynamics, Workday, and more.</p>
                 </div>
-                <h3 style={{ fontSize: 17, fontWeight: 800, color: "#eeeef5", margin: 0 }}>Universal MCP Layer</h3>
+                {/* Card 4 */}
+                <div style={{ background: "rgba(19,19,26,0.8)", border: "1px solid #2a2a3d", borderRadius: 12, padding: "20px 22px", position: "relative", zIndex: 1 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="2" stroke="#60a5fa" strokeWidth="2"/><circle cx="19" cy="12" r="2" stroke="#60a5fa" strokeWidth="2"/><circle cx="12" cy="5" r="2" stroke="#60a5fa" strokeWidth="2"/><path d="M7 12h5M14 12h3M12 7v3" stroke="#60a5fa" strokeWidth="2" strokeLinecap="round"/></svg>
+                    <h3 style={{ fontSize: 14, fontWeight: 700, color: "#eeeef5", margin: 0 }}>Universal MCP Layer</h3>
+                  </div>
+                  <p style={{ fontSize: 12, color: "#8888a8", lineHeight: 1.6, margin: 0 }}>Expose Autopilot capabilities securely to external workflows (Teams, Slack, GitHub).</p>
+                </div>
               </div>
-              <p style={{ fontSize: 13, color: "#8888a8", lineHeight: 1.7, margin: 0 }}>Expose Autopilot capabilities securely to external workflows (Teams, Slack, GitHub).</p>
             </div>
 
+            {/* Vertical pipe connector */}
+            <div style={{ width: 2, height: 32, background: "linear-gradient(to bottom, rgba(56,189,248,0.5), transparent)", margin: "0 auto 0 calc(180px + 32px + 50%)" }} />
+
             {/* ── ROW 3: INTELLIGENCE CORE ── */}
-            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", paddingRight: 32 }}>
-              <div style={{ fontSize: 11, fontWeight: 800, color: "#c084fc", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 6 }}>Intelligence Core</div>
-              <div style={{ fontSize: 11, color: "#55556a", lineHeight: 1.5 }}>Data &amp; Semantic Foundation</div>
-            </div>
-            {/* Card 5 */}
-            <div style={{ background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 14, padding: "28px 32px" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 14 }}>
-                <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(0,229,211,0.12)", border: "1px solid rgba(0,229,211,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 17l4-8 4 4 4-6 4 4" stroke="#00e5d3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M3 21h18" stroke="#00e5d3" strokeWidth="2" strokeLinecap="round"/></svg>
-                </div>
-                <h3 style={{ fontSize: 17, fontWeight: 800, color: "#eeeef5", margin: 0 }}>Elastic Analytics</h3>
+            <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
+              <div style={{ width: 180, flexShrink: 0, textAlign: "right" }}>
+                <div style={{ fontSize: 10, fontWeight: 800, color: "#c084fc", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 4, fontFamily: "monospace" }}>Intelligence Core</div>
+                <div style={{ fontSize: 10, color: "rgba(192,132,252,0.4)" }}>Data &amp; Semantic Foundation</div>
               </div>
-              <p style={{ fontSize: 13, color: "#8888a8", lineHeight: 1.7, margin: 0 }}>Massive-scale historical data processing to detect flakiness and execution anomalies.</p>
-            </div>
-            {/* Center connector col row 3 */}
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-              <div style={{ width: 1, flex: 1, background: "rgba(0,229,211,0.15)" }} />
-            </div>
-            {/* Card 6 */}
-            <div style={{ background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 14, padding: "28px 32px" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 14 }}>
-                <div style={{ width: 40, height: 40, borderRadius: 10, background: "rgba(192,132,252,0.1)", border: "1px solid rgba(192,132,252,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 11V6a3 3 0 0 0-6 0v5" stroke="#c084fc" strokeWidth="2" strokeLinecap="round"/><path d="M6 11V8a3 3 0 0 1 6 0" stroke="#c084fc" strokeWidth="2" strokeLinecap="round"/><rect x="2" y="11" width="20" height="11" rx="3" stroke="#c084fc" strokeWidth="2"/></svg>
+              <div style={{ flex: 1, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                {/* Card 5 — bottom yellow accent */}
+                <div style={{ background: "rgba(19,19,26,0.8)", border: "1px solid #2a2a3d", borderBottom: "2px solid rgba(250,204,21,0.45)", borderRadius: 12, padding: "20px 22px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 17l4-7 4 4 3-5 4 4" stroke="#facc15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M3 21h18" stroke="#facc15" strokeWidth="2" strokeLinecap="round"/></svg>
+                    <h3 style={{ fontSize: 14, fontWeight: 700, color: "#eeeef5", margin: 0 }}>Elastic Analytics</h3>
+                  </div>
+                  <p style={{ fontSize: 12, color: "#8888a8", lineHeight: 1.6, margin: 0 }}>Massive-scale historical data processing to detect flakiness and execution anomalies.</p>
                 </div>
-                <h3 style={{ fontSize: 17, fontWeight: 800, color: "#eeeef5", margin: 0 }}>Semantic Help</h3>
+                {/* Card 6 — bottom pink accent */}
+                <div style={{ background: "rgba(19,19,26,0.8)", border: "1px solid #2a2a3d", borderBottom: "2px solid rgba(236,72,153,0.45)", borderRadius: 12, padding: "20px 22px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M17 8C17 11.866 14.314 15 11 15H7M7 15l3-3M7 15l3 3" stroke="#f472b6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><circle cx="17" cy="5" r="3" stroke="#f472b6" strokeWidth="2"/></svg>
+                    <h3 style={{ fontSize: 14, fontWeight: 700, color: "#eeeef5", margin: 0 }}>Semantic Help</h3>
+                  </div>
+                  <p style={{ fontSize: 12, color: "#8888a8", lineHeight: 1.6, margin: 0 }}>Context-aware best-practices assistant for continuous user enablement and learning.</p>
+                </div>
               </div>
-              <p style={{ fontSize: 13, color: "#8888a8", lineHeight: 1.7, margin: 0 }}>Context-aware best-practices assistant for continuous user enablement and learning.</p>
             </div>
 
           </div>
