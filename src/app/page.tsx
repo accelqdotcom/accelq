@@ -113,13 +113,13 @@ export default function HomePage() {
 
             {/* Left — wave chart */}
             <div style={{ position: "relative" }}>
-              <div style={{ borderRadius: 16, overflow: "hidden", border: "1px solid rgba(120,86,255,0.3)", boxShadow: "0 20px 60px rgba(120,86,255,0.15), 0 0 0 1px rgba(120,86,255,0.1)" }}>
+              <div style={{ borderRadius: 16, overflow: "hidden", border: "1px solid rgba(120,86,255,0.3)", boxShadow: "0 20px 60px rgba(120,86,255,0.15), 0 0 0 1px rgba(120,86,255,0.1)", height: 380 }}>
                 <Image
                   src="/assets/forrester-wave-correct.png"
                   alt="Forrester Wave Q4 2025 — ACCELQ Leader"
                   width={680}
                   height={480}
-                  style={{ width: "100%", height: "auto", display: "block" }}
+                  style={{ width: "100%", height: "140%", objectFit: "cover", objectPosition: "center 30%", display: "block" }}
                 />
               </div>
             </div>
