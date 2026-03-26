@@ -122,9 +122,6 @@ export default function HomePage() {
                   style={{ width: "100%", height: "auto", display: "block" }}
                 />
               </div>
-              <div style={{ position: "absolute", top: -16, right: -16, background: "#09090f", border: "1px solid rgba(252,205,0,0.4)", borderRadius: 12, padding: "12px 16px", boxShadow: "0 8px 32px rgba(0,0,0,0.6)", display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
-                <Image src="/assets/forrester-wave-badge.svg" alt="Forrester Wave Leader" width={80} height={64} />
-              </div>
             </div>
 
             {/* Right — positioning headline */}
