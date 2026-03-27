@@ -100,70 +100,58 @@ export default function UnifiedPage() {
         </div>
       </section>
 
-      {/* ── AUTOPILOT ON UNIFIED ── */}
-      <section style={{ padding: "88px 0", background: "#0a0a12", borderTop: "1px solid #1c1c2e", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", top: "30%", left: "50%", transform: "translateX(-50%)", width: 800, height: 500, background: "radial-gradient(ellipse, rgba(120,86,255,0.07) 0%, transparent 65%)", pointerEvents: "none" }} />
-        <div className="container-xl" style={{ position: "relative" }}>
-          <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(120,86,255,0.1)", border: "1px solid rgba(120,86,255,0.25)", borderRadius: 6, padding: "5px 14px", marginBottom: 16 }}>
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#7856ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              <span style={{ fontSize: 11, fontWeight: 700, color: "#7856ff", letterSpacing: "0.08em", textTransform: "uppercase" }}>Agentic Layer</span>
-            </div>
-            <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", fontWeight: 800, color: "#eeeef5", marginBottom: 10 }}>
-              Autopilot runs on top of Unified
-            </h2>
-            <p style={{ color: "#8888a8", maxWidth: 500, margin: "0 auto", fontSize: 14, lineHeight: 1.75 }}>
-              AI agents operate across the full quality lifecycle — using Unified as the execution fabric underneath.
-            </p>
-          </div>
+      {/* ── AGENTIC LAYER ── */}
+      <section style={{ padding: "80px 0", borderTop: "1px solid #21262d" }}>
+        <div className="container-xl">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
 
-          {/* Lifecycle flow */}
-          <div style={{ display: "flex", alignItems: "stretch", gap: 0, maxWidth: 960, margin: "0 auto 48px", background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 16, overflow: "hidden" }}>
-            {[
-              { stage: "DISCOVER", desc: "Reads specs, stories & app structure", color: "#7856ff", icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="#7856ff" strokeWidth="2"/><path d="M21 21l-4.35-4.35" stroke="#7856ff" strokeWidth="2" strokeLinecap="round"/></svg> },
-              { stage: "GENERATE", desc: "Creates tests from natural language", color: "#00e5d3", icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#00e5d3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg> },
-              { stage: "EXECUTE", desc: "Runs across all 5 Unified engines", color: "#22d3ee", icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><polygon points="5,3 19,12 5,21" stroke="#22d3ee" strokeWidth="2" strokeLinejoin="round"/></svg> },
-              { stage: "SELF-HEAL", desc: "Repairs tests when app changes", color: "#a855f7", icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 4v5h5M20 20v-5h-5" stroke="#a855f7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M20 9A9 9 0 0 0 5.5 5.5M4 15a9 9 0 0 0 14.5 3.5" stroke="#a855f7" strokeWidth="2" strokeLinecap="round"/></svg> },
-              { stage: "INSIGHTS", desc: "Risk, coverage & quality intelligence", color: "#fccd00", icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#fccd00" strokeWidth="2" strokeLinecap="round"/></svg> },
-            ].map((s, i, arr) => (
-              <div key={s.stage} style={{ flex: 1, padding: "24px 20px", borderRight: i < arr.length - 1 ? "1px solid #2a2a3d" : "none", position: "relative" }}>
-                {/* Arrow connector */}
-                {i < arr.length - 1 && (
-                  <div style={{ position: "absolute", right: -8, top: "50%", transform: "translateY(-50%)", width: 14, height: 14, zIndex: 2, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1l6 5-6 5" stroke="#3d3d56" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            {/* Left: lifecycle as plain text list */}
+            <div>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(120,86,255,0.08)", border: "1px solid rgba(120,86,255,0.18)", borderRadius: 6, padding: "4px 12px", marginBottom: 20 }}>
+                <span style={{ fontSize: 11, fontWeight: 700, color: "#7856ff", letterSpacing: "0.08em", textTransform: "uppercase" }}>Agentic AI</span>
+              </div>
+              <h2 style={{ fontSize: "clamp(1.4rem, 2.8vw, 2rem)", fontWeight: 800, color: "#e6edf3", marginBottom: 12, lineHeight: 1.25 }}>
+                Autopilot agents run your entire quality lifecycle
+              </h2>
+              <p style={{ fontSize: 14, color: "#8b949e", lineHeight: 1.75, marginBottom: 28 }}>
+                From reading a story ticket to closing a defect — AI agents work autonomously across all five Unified engines, no human handoff required.
+              </p>
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                {[
+                  { stage: "Discover", desc: "Reads specs, stories & app structure automatically" },
+                  { stage: "Generate", desc: "Writes test cases from natural language requirements" },
+                  { stage: "Execute", desc: "Runs tests across all 5 engines in parallel" },
+                  { stage: "Self-Heal", desc: "Detects app changes and repairs broken tests" },
+                  { stage: "Insights", desc: "Surfaces risk, coverage gaps & quality signals" },
+                ].map((s, i, arr) => (
+                  <div key={s.stage} style={{ display: "flex", gap: 14, alignItems: "flex-start", padding: "13px 0", borderBottom: i < arr.length - 1 ? "1px solid #21262d" : "none" }}>
+                    <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#7856ff", marginTop: 5, flexShrink: 0 }} />
+                    <div>
+                      <span style={{ fontSize: 13, fontWeight: 700, color: "#c9d1d9" }}>{s.stage}</span>
+                      <span style={{ fontSize: 13, color: "#6e7681" }}> — {s.desc}</span>
+                    </div>
                   </div>
-                )}
-                <div style={{ width: 32, height: 32, borderRadius: 8, background: `${s.color}15`, border: `1px solid ${s.color}30`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 10 }}>
-                  {s.icon}
-                </div>
-                <div style={{ fontSize: 10, fontWeight: 800, color: s.color, letterSpacing: "0.1em", marginBottom: 4 }}>{s.stage}</div>
-                <div style={{ fontSize: 11, color: "#55556a", lineHeight: 1.5 }}>{s.desc}</div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
 
-          {/* Unified platform layer below */}
-          <div style={{ maxWidth: 960, margin: "0 auto" }}>
-            <div style={{ textAlign: "center", marginBottom: 12 }}>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 10, color: "#3d3d56", letterSpacing: "0.08em", textTransform: "uppercase", fontWeight: 700 }}>
-                <div style={{ width: 20, height: 1, background: "#3d3d56" }} />
-                Autopilot executes on all Unified engines
-                <div style={{ width: 20, height: 1, background: "#3d3d56" }} />
+            {/* Right: minimal architecture diagram */}
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <div style={{ width: "100%", maxWidth: 320, padding: "20px 24px", background: "rgba(120,86,255,0.05)", border: "1px solid rgba(120,86,255,0.18)", borderRadius: 12, textAlign: "center" }}>
+                <div style={{ fontSize: 11, fontWeight: 800, color: "#7856ff", letterSpacing: "0.1em", marginBottom: 4 }}>AUTOPILOT</div>
+                <div style={{ fontSize: 12, color: "#8b949e" }}>Agentic AI · Discover · Generate · Self-Heal</div>
+              </div>
+              <div style={{ width: 2, height: 28, background: "linear-gradient(to bottom, rgba(120,86,255,0.35), rgba(13,158,128,0.35))" }} />
+              <div style={{ width: "100%", maxWidth: 320, padding: "20px 24px", background: "rgba(13,158,128,0.04)", border: "1px solid rgba(13,158,128,0.18)", borderRadius: 12 }}>
+                <div style={{ fontSize: 11, fontWeight: 800, color: PTEAL, letterSpacing: "0.1em", marginBottom: 14, textAlign: "center" }}>UNIFIED EXECUTION</div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                  {["Web", "API", "Mobile", "Desktop", "Test Management"].map((e) => (
+                    <div key={e} style={{ fontSize: 12, color: "#8b949e", padding: "7px 14px", background: "#161b22", border: "1px solid #30363d", borderRadius: 6 }}>{e}</div>
+                  ))}
+                </div>
               </div>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 8 }}>
-              {[
-                { label: "Web", color: "#21adc3" },
-                { label: "API", color: "#58a6ff" },
-                { label: "Mobile", color: "#2ea043" },
-                { label: "Desktop", color: "#8b949e" },
-                { label: "Test Mgmt", color: "#a371f7" },
-              ].map((e) => (
-                <div key={e.label} style={{ background: "#13131a", border: `1px solid ${e.color}30`, borderTop: `2px solid ${e.color}`, borderRadius: 8, padding: "10px 12px", textAlign: "center" }}>
-                  <div style={{ fontSize: 12, fontWeight: 700, color: e.color }}>{e.label}</div>
-                </div>
-              ))}
-            </div>
+
           </div>
         </div>
       </section>
@@ -174,15 +162,11 @@ export default function UnifiedPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
             <div>
               <span className="badge badge-teal" style={{ marginBottom: 16, display: "inline-flex" }}>Full Stack Coverage</span>
-              <h2 style={{ fontSize: "clamp(1.4rem, 2.8vw, 2rem)", fontWeight: 800, color: "#e6edf3", marginBottom: 16, lineHeight: 1.2 }}>10 technology domains. One interface.</h2>
+              <h2 style={{ fontSize: "clamp(1.4rem, 2.8vw, 2rem)", fontWeight: 800, color: "#e6edf3", marginBottom: 16, lineHeight: 1.2 }}>Every technology domain. One interface.</h2>
               <p style={{ fontSize: 14, color: "#8b949e", lineHeight: 1.75, marginBottom: 24 }}>
                 No tool switching. No context switching. Autopilot agents operate across every domain through the same Unified execution layer.
               </p>
               <div style={{ display: "flex", gap: 10 }}>
-                <div style={{ textAlign: "center", padding: "12px 20px", background: "#161b22", border: "1px solid #30363d", borderRadius: 10 }}>
-                  <div style={{ fontSize: 22, fontWeight: 900, color: "#21adc3" }}>10</div>
-                  <div style={{ fontSize: 10, color: "#6e7681", marginTop: 2 }}>Tech domains</div>
-                </div>
                 <div style={{ textAlign: "center", padding: "12px 20px", background: "#161b22", border: "1px solid #30363d", borderRadius: 10 }}>
                   <div style={{ fontSize: 22, fontWeight: 900, color: "#7856ff" }}>1</div>
                   <div style={{ fontSize: 10, color: "#6e7681", marginTop: 2 }}>Interface</div>
@@ -295,7 +279,7 @@ export default function UnifiedPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 2 }}>
             {[
               { val: "5", label: "Test engines", sub: "Web · API · Mobile · Desktop · Manual", color: PTEAL },
-              { val: "10", label: "Tech domains", sub: "Web to mainframe to enterprise apps", color: "#58a6ff" },
+              { val: "5+", label: "Tech categories", sub: "Web · APIs · Mobile · Enterprise · Data", color: "#58a6ff" },
               { val: "1", label: "CI/CD connection", sub: "All test types, one pipeline trigger", color: "#a371f7" },
               { val: "0", label: "Code required", sub: "No-code from design to execution", color: "#00e5d3" },
             ].map((s, i) => (
