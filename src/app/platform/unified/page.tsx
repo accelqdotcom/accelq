@@ -97,6 +97,27 @@ export default function UnifiedPage() {
               </Link>
             ))}
           </div>
+
+          {/* Autopilot spanning bar */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 12, marginTop: 0 }}>
+            {[0,1,2,3,4].map((i) => (
+              <div key={i} style={{ display: "flex", justifyContent: "center" }}>
+                <div style={{ width: 1, height: 16, background: "linear-gradient(to bottom, #30363d, rgba(120,86,255,0.4))" }} />
+              </div>
+            ))}
+          </div>
+          <Link href="/platform/autopilot" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "18px 28px", background: "rgba(120,86,255,0.07)", border: "1px solid rgba(120,86,255,0.22)", borderRadius: 12, textDecoration: "none", gap: 16 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+              <div style={{ width: 36, height: 36, borderRadius: 10, background: "rgba(120,86,255,0.12)", border: "1px solid rgba(120,86,255,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#7856ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </div>
+              <div>
+                <div style={{ fontSize: 13, fontWeight: 800, color: "#c9d1d9", marginBottom: 2 }}>Autopilot — Agentic AI Layer</div>
+                <div style={{ fontSize: 12, color: "#6e7681" }}>Discover · Generate · Execute · Self-Heal · Insights — runs autonomously across all five engines</div>
+              </div>
+            </div>
+            <div style={{ fontSize: 12, color: "#7856ff", fontWeight: 600, whiteSpace: "nowrap" }}>Explore Autopilot →</div>
+          </Link>
         </div>
       </section>
 
