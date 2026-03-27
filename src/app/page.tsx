@@ -437,8 +437,7 @@ export default function HomePage() {
 
           {/* Header */}
           <div style={{ textAlign: "center", marginBottom: 80 }}>
-            <div style={{ fontSize: 11, fontWeight: 700, color: "#38bdf8", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 16, fontFamily: "monospace" }}>System Architecture</div>
-            <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.75rem)", fontWeight: 900, color: "#eeeef5", lineHeight: 1.1, letterSpacing: "-0.03em", marginBottom: 16 }}>
+<h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.75rem)", fontWeight: 900, color: "#eeeef5", lineHeight: 1.1, letterSpacing: "-0.03em", marginBottom: 16 }}>
               The Autopilot Ecosystem
             </h2>
             <p style={{ color: "#8888a8", fontSize: "1.05rem", maxWidth: 580, margin: "0 auto", lineHeight: 1.75 }}>
