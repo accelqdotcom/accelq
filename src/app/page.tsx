@@ -351,6 +351,85 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── HOW IT WORKS ── */}
+      <section style={{ padding: "100px 0" }}>
+        <div className="container-xl">
+          <div style={{ textAlign: "center", marginBottom: 64 }}>
+            <span className="badge badge-brand" style={{ marginBottom: 16, display: "inline-flex" }}>Lifecycle-First Quality</span>
+            <h2 className="section-title" style={{ color: "#eeeef5", marginBottom: 16 }}>
+              From Spec to Production, Automatically
+            </h2>
+            <p style={{ color: "#8888a8", fontSize: "1.05rem", maxWidth: 520, margin: "0 auto" }}>
+              ACCELQ connects intent to coverage across your entire development lifecycle.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
+            {/* Steps */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+              {STEPS.map((s, i) => (
+                <div key={s.n} style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
+                  <div style={{ width: 48, height: 48, borderRadius: "50%", background: `${s.color}18`, border: `2px solid ${s.color}60`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: 15, fontWeight: 900, color: s.color, boxShadow: `0 0 16px ${s.color}20` }}>
+                    {s.n}
+                  </div>
+                  <div>
+                    <h3 style={{ fontSize: 17, fontWeight: 700, color: "#eeeef5", marginBottom: 6 }}>{s.title}</h3>
+                    <p style={{ fontSize: 13, color: "#8888a8", lineHeight: 1.65 }}>{s.desc}</p>
+                  </div>
+                  {i < STEPS.length - 1 && (
+                    <div style={{ display: "none" }} />
+                  )}
+                </div>
+              ))}
+            </div>
+            {/* Pipeline diagram */}
+            <div style={{ background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 16, padding: 28 }}>
+              {/* Top bar — live indicator */}
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 24, paddingBottom: 16, borderBottom: "1px solid #2a2a3d" }}>
+                <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e", boxShadow: "0 0 6px rgba(34,197,94,0.8)" }} />
+                <span style={{ fontSize: 11, color: "#55556a", fontFamily: "monospace" }}>accelq · autopilot · e-commerce-platform · run #847</span>
+              </div>
+              {/* Pipeline stages */}
+              {[
+                { label: "Jira Story", sub: "PROJ-2341", color: "#7856ff", icon: "📋", status: "source" },
+                { label: "Discover", sub: "12 risks found", color: "#7856ff", icon: "🔍", status: "done" },
+                { label: "Generate", sub: "47 tests created", color: "#fccd00", icon: "⚡", status: "done" },
+                { label: "Execute", sub: "parallel · 3 envs", color: "#00e5d3", icon: "▶", status: "running" },
+                { label: "Self-Heal", sub: "2 auto-repaired", color: "#f87171", icon: "🔧", status: "done" },
+                { label: "Ship", sub: "quality: PASS", color: "#22c55e", icon: "✓", status: "pass" },
+              ].map((stage, i, arr) => (
+                <div key={stage.label}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "12px 0" }}>
+                    <div style={{ width: 36, height: 36, borderRadius: 10, background: `${stage.color}15`, border: `1.5px solid ${stage.color}50`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, flexShrink: 0 }}>
+                      {stage.icon}
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontSize: 13, fontWeight: 700, color: "#eeeef5" }}>{stage.label}</div>
+                      <div style={{ fontSize: 11, color: "#55556a", fontFamily: "monospace" }}>{stage.sub}</div>
+                    </div>
+                    <div style={{ fontSize: 10, fontWeight: 700, padding: "3px 9px", borderRadius: 5, background: stage.status === "running" ? "rgba(0,229,211,0.12)" : stage.status === "pass" ? "rgba(34,197,94,0.12)" : `${stage.color}12`, color: stage.status === "running" ? "#00e5d3" : stage.status === "pass" ? "#22c55e" : stage.color, border: `1px solid ${stage.status === "running" ? "rgba(0,229,211,0.3)" : stage.status === "pass" ? "rgba(34,197,94,0.3)" : `${stage.color}30`}` }}>
+                      {stage.status === "running" ? "RUNNING" : stage.status === "pass" ? "PASS" : stage.status === "source" ? "INPUT" : "✓ DONE"}
+                    </div>
+                  </div>
+                  {i < arr.length - 1 && (
+                    <div style={{ marginLeft: 17, width: 2, height: 8, background: `linear-gradient(${stage.color}, ${arr[i+1].color})`, opacity: 0.4, borderRadius: 1 }} />
+                  )}
+                </div>
+              ))}
+              {/* Bottom metric */}
+              <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid #2a2a3d", display: "flex", gap: 20 }}>
+                {[{ val: "4m 12s", label: "Total runtime" }, { val: "47/47", label: "Tests passed" }, { val: "94%", label: "Coverage" }].map((m) => (
+                  <div key={m.label}>
+                    <div style={{ fontSize: 16, fontWeight: 800, color: "#22c55e" }}>{m.val}</div>
+                    <div style={{ fontSize: 10, color: "#55556a" }}>{m.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── AUTOPILOT ECOSYSTEM ── */}
       <section style={{ padding: "96px 0", position: "relative", overflow: "hidden", borderTop: "1px solid #1c1c27" }}>
         <div style={{ position: "absolute", top: "30%", left: "50%", transform: "translateX(-50%)", width: 800, height: 600, background: "radial-gradient(ellipse, rgba(14,165,233,0.06) 0%, transparent 65%)", pointerEvents: "none" }} />
@@ -457,85 +536,6 @@ export default function HomePage() {
               </div>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* ── HOW IT WORKS ── */}
-      <section style={{ padding: "100px 0" }}>
-        <div className="container-xl">
-          <div style={{ textAlign: "center", marginBottom: 64 }}>
-            <span className="badge badge-brand" style={{ marginBottom: 16, display: "inline-flex" }}>Lifecycle-First Quality</span>
-            <h2 className="section-title" style={{ color: "#eeeef5", marginBottom: 16 }}>
-              From Spec to Production, Automatically
-            </h2>
-            <p style={{ color: "#8888a8", fontSize: "1.05rem", maxWidth: 520, margin: "0 auto" }}>
-              ACCELQ connects intent to coverage across your entire development lifecycle.
-            </p>
-          </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
-            {/* Steps */}
-            <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
-              {STEPS.map((s, i) => (
-                <div key={s.n} style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
-                  <div style={{ width: 48, height: 48, borderRadius: "50%", background: `${s.color}18`, border: `2px solid ${s.color}60`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: 15, fontWeight: 900, color: s.color, boxShadow: `0 0 16px ${s.color}20` }}>
-                    {s.n}
-                  </div>
-                  <div>
-                    <h3 style={{ fontSize: 17, fontWeight: 700, color: "#eeeef5", marginBottom: 6 }}>{s.title}</h3>
-                    <p style={{ fontSize: 13, color: "#8888a8", lineHeight: 1.65 }}>{s.desc}</p>
-                  </div>
-                  {i < STEPS.length - 1 && (
-                    <div style={{ display: "none" }} />
-                  )}
-                </div>
-              ))}
-            </div>
-            {/* Pipeline diagram */}
-            <div style={{ background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 16, padding: 28 }}>
-              {/* Top bar — live indicator */}
-              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 24, paddingBottom: 16, borderBottom: "1px solid #2a2a3d" }}>
-                <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e", boxShadow: "0 0 6px rgba(34,197,94,0.8)" }} />
-                <span style={{ fontSize: 11, color: "#55556a", fontFamily: "monospace" }}>accelq · autopilot · e-commerce-platform · run #847</span>
-              </div>
-              {/* Pipeline stages */}
-              {[
-                { label: "Jira Story", sub: "PROJ-2341", color: "#7856ff", icon: "📋", status: "source" },
-                { label: "Discover", sub: "12 risks found", color: "#7856ff", icon: "🔍", status: "done" },
-                { label: "Generate", sub: "47 tests created", color: "#fccd00", icon: "⚡", status: "done" },
-                { label: "Execute", sub: "parallel · 3 envs", color: "#00e5d3", icon: "▶", status: "running" },
-                { label: "Self-Heal", sub: "2 auto-repaired", color: "#f87171", icon: "🔧", status: "done" },
-                { label: "Ship", sub: "quality: PASS", color: "#22c55e", icon: "✓", status: "pass" },
-              ].map((stage, i, arr) => (
-                <div key={stage.label}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "12px 0" }}>
-                    <div style={{ width: 36, height: 36, borderRadius: 10, background: `${stage.color}15`, border: `1.5px solid ${stage.color}50`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, flexShrink: 0 }}>
-                      {stage.icon}
-                    </div>
-                    <div style={{ flex: 1 }}>
-                      <div style={{ fontSize: 13, fontWeight: 700, color: "#eeeef5" }}>{stage.label}</div>
-                      <div style={{ fontSize: 11, color: "#55556a", fontFamily: "monospace" }}>{stage.sub}</div>
-                    </div>
-                    <div style={{ fontSize: 10, fontWeight: 700, padding: "3px 9px", borderRadius: 5, background: stage.status === "running" ? "rgba(0,229,211,0.12)" : stage.status === "pass" ? "rgba(34,197,94,0.12)" : `${stage.color}12`, color: stage.status === "running" ? "#00e5d3" : stage.status === "pass" ? "#22c55e" : stage.color, border: `1px solid ${stage.status === "running" ? "rgba(0,229,211,0.3)" : stage.status === "pass" ? "rgba(34,197,94,0.3)" : `${stage.color}30`}` }}>
-                      {stage.status === "running" ? "RUNNING" : stage.status === "pass" ? "PASS" : stage.status === "source" ? "INPUT" : "✓ DONE"}
-                    </div>
-                  </div>
-                  {i < arr.length - 1 && (
-                    <div style={{ marginLeft: 17, width: 2, height: 8, background: `linear-gradient(${stage.color}, ${arr[i+1].color})`, opacity: 0.4, borderRadius: 1 }} />
-                  )}
-                </div>
-              ))}
-              {/* Bottom metric */}
-              <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid #2a2a3d", display: "flex", gap: 20 }}>
-                {[{ val: "4m 12s", label: "Total runtime" }, { val: "47/47", label: "Tests passed" }, { val: "94%", label: "Coverage" }].map((m) => (
-                  <div key={m.label}>
-                    <div style={{ fontSize: 16, fontWeight: 800, color: "#22c55e" }}>{m.val}</div>
-                    <div style={{ fontSize: 10, color: "#55556a" }}>{m.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
