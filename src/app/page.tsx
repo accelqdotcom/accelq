@@ -180,19 +180,6 @@ export default function HomePage() {
 
         <div className="container-xl" style={{ position: "relative", textAlign: "center" }}>
 
-          {/* Headline */}
-          <h1 style={{ fontSize: "clamp(2.6rem, 7vw, 4.8rem)", fontWeight: 900, lineHeight: 1.05, letterSpacing: "-0.04em", margin: "0 auto 24px", maxWidth: 900 }}>
-            <span style={{ display: "block", background: "linear-gradient(90deg, #00e5d3 0%, #22d3ee 60%, #00b4d8 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-              Agentic Quality Assurance
-            </span>
-            <span style={{ color: "#eeeef5", display: "block" }}>Platform for Enterprise Depth</span>
-          </h1>
-
-          <p style={{ fontSize: "clamp(0.95rem, 2vw, 1.1rem)", color: "#8888a8", maxWidth: 580, margin: "0 auto 44px", lineHeight: 1.8 }}>
-            Agentic AI across the lifecycle. Every modality, every enterprise app.<br />
-            The only platform where it&apos;s all built in — not stitched together.
-          </p>
-
           {/* Autopilot chat input UI */}
           <div style={{ maxWidth: 620, margin: "0 auto 44px", background: "#13131a", border: "1px solid #2a2a3d", borderRadius: 16, overflow: "hidden", boxShadow: "0 24px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,229,211,0.08)" }}>
             {/* Top bar */}
