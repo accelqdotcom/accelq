@@ -36,17 +36,95 @@ const PRODUCTS = [
   },
 ];
 
-const COVERAGE = [
-  { label: "Web Apps", color: "#58a6ff" },
-  { label: "REST & SOAP APIs", color: "#21adc3" },
-  { label: "Mobile iOS/Android", color: "#a371f7" },
-  { label: "Desktop Apps", color: "#2ea043" },
-  { label: "Mainframe / AS400", color: "#8b949e" },
-  { label: "Business & Enterprise Apps", color: "#1a6abb" },
-  { label: "Kafka & Middleware", color: "#d29922" },
-  { label: "Databases", color: "#a371f7" },
-  { label: "ETL Pipelines", color: "#58a6ff" },
-  { label: "PDF, Email & Files", color: "#21adc3" },
+const TECH_DOMAINS = [
+  {
+    label: "Web Applications",
+    color: "#58a6ff",
+    tech: "Chrome · Firefox · Safari · Edge",
+    caps: ["Cross-browser parallel execution", "SPA, dynamic & shadow DOM support", "Visual regression & pixel diffing"],
+    agentic: "Autopilot maps UI flows directly from design specs or Jira stories",
+    icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#58a6ff" strokeWidth="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="#58a6ff" strokeWidth="1.8"/></svg>,
+  },
+  {
+    label: "REST & GraphQL APIs",
+    color: "#21adc3",
+    tech: "REST · GraphQL · OpenAPI 3.0 · Swagger",
+    caps: ["Codeless request chaining & assertions", "Contract & schema validation", "OAuth, JWT & API key auth flows"],
+    agentic: "Autopilot generates full test suites from OpenAPI or GraphQL schemas",
+    icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h7" stroke="#21adc3" strokeWidth="1.8" strokeLinecap="round"/></svg>,
+  },
+  {
+    label: "SOAP & Web Services",
+    color: "#22d3ee",
+    tech: "SOAP · WSDL · XML · WS-Security",
+    caps: ["WSDL-driven test generation", "XML payload & namespace validation", "Enterprise SOA & ESB coverage"],
+    agentic: "Autopilot parses WSDL definitions and drafts scenario coverage",
+    icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#22d3ee" strokeWidth="1.8"/><path d="M8 9l4 3-4 3M13 15h3" stroke="#22d3ee" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+  },
+  {
+    label: "Mobile — iOS & Android",
+    color: "#a371f7",
+    tech: "iOS · Android · React Native · Flutter",
+    caps: ["Real device cloud, no emulator limits", "Native, hybrid & cross-platform apps", "Gesture, biometric & deep-link testing"],
+    agentic: "Autopilot self-heals tests when screens or navigation flows change",
+    icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="5" y="2" width="14" height="20" rx="2" stroke="#a371f7" strokeWidth="1.8"/><circle cx="12" cy="18" r="1" fill="#a371f7"/></svg>,
+  },
+  {
+    label: "Desktop Applications",
+    color: "#2ea043",
+    tech: "Windows · .NET · Java Swing · Electron",
+    caps: ["Native control & widget recognition", "Legacy thick client, no instrumentation", "Win32, WPF & modern desktop apps"],
+    agentic: "Autopilot detects layout shifts and repairs locators automatically",
+    icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#2ea043" strokeWidth="1.8"/><path d="M8 21h8M12 17v4" stroke="#2ea043" strokeWidth="1.8" strokeLinecap="round"/></svg>,
+  },
+  {
+    label: "Mainframe & AS/400",
+    color: "#8b949e",
+    tech: "z/OS · AS/400 · CICS · IMS · COBOL",
+    caps: ["Green screen & terminal automation", "3270/5250 emulation, no agent needed", "Host transaction & batch job validation"],
+    agentic: "Autopilot learns screen maps and generates end-to-end host flows",
+    icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="#8b949e" strokeWidth="1.8"/><path d="M6 9h4M6 12h6M6 15h3" stroke="#8b949e" strokeWidth="1.8" strokeLinecap="round"/></svg>,
+  },
+  {
+    label: "Business & Enterprise Apps",
+    color: "#1a6abb",
+    tech: "SAP · Salesforce · ServiceNow · Oracle",
+    caps: ["SAP Fiori + SAP GUI, no add-ons", "Salesforce Lightning & Flow testing", "ServiceNow ITSM workflow validation"],
+    agentic: "Autopilot understands business process flows and tests end-to-end scenarios",
+    icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="#1a6abb" strokeWidth="1.8"/><path d="M9 22V12h6v10" stroke="#1a6abb" strokeWidth="1.8" strokeLinecap="round"/></svg>,
+  },
+  {
+    label: "Event Streaming & Middleware",
+    color: "#d29922",
+    tech: "Kafka · IBM MQ · RabbitMQ · AWS SNS/SQS",
+    caps: ["Produce, consume & assert message flows", "Schema registry & Avro validation", "End-to-end async event chain testing"],
+    agentic: "Autopilot traces event propagation across producers and consumers",
+    icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="2" stroke="#d29922" strokeWidth="1.8"/><circle cx="19" cy="6" r="2" stroke="#d29922" strokeWidth="1.8"/><circle cx="19" cy="18" r="2" stroke="#d29922" strokeWidth="1.8"/><path d="M7 11.5l10-4M7 12.5l10 4" stroke="#d29922" strokeWidth="1.8" strokeLinecap="round"/></svg>,
+  },
+  {
+    label: "Databases",
+    color: "#f78166",
+    tech: "SQL Server · Oracle · PostgreSQL · MongoDB",
+    caps: ["Query result & row-level validation", "Pre/post test data state management", "Cross-DB integrity & referential checks"],
+    agentic: "Autopilot verifies data side-effects after every test step automatically",
+    icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3" stroke="#f78166" strokeWidth="1.8"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" stroke="#f78166" strokeWidth="1.8"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3" stroke="#f78166" strokeWidth="1.8"/></svg>,
+  },
+  {
+    label: "ETL & Data Pipelines",
+    color: "#00e5d3",
+    tech: "Informatica · Talend · dbt · Apache Spark",
+    caps: ["Source-to-target transformation validation", "Pipeline regression & data drift detection", "Reconciliation across staging & production"],
+    agentic: "Autopilot monitors pipeline outputs and flags anomalies in real time",
+    icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M5 6h14M5 18h14" stroke="#00e5d3" strokeWidth="1.8" strokeLinecap="round"/><circle cx="19" cy="6" r="2" fill="#00e5d3"/><circle cx="5" cy="12" r="2" fill="#00e5d3"/><circle cx="19" cy="18" r="2" fill="#00e5d3"/></svg>,
+  },
+  {
+    label: "Documents & File Systems",
+    color: "#fccd00",
+    tech: "PDF · Excel · CSV · Email · SFTP",
+    caps: ["Content extraction & field-level validation", "Format compliance & structure checks", "Cross-system file delivery tracking"],
+    agentic: "Autopilot validates document outputs as part of end-to-end test flows",
+    icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#fccd00" strokeWidth="1.8"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="#fccd00" strokeWidth="1.8" strokeLinecap="round"/></svg>,
+  },
 ];
 
 const INTEGRATIONS = ["Jira", "GitHub", "GitLab", "Azure DevOps", "Jenkins", "CircleCI", "Bamboo", "Slack", "Teams", "Selenium Grid", "BrowserStack", "Sauce Labs"];
@@ -121,34 +199,44 @@ export default function UnifiedPage() {
         </div>
       </section>
 
-      {/* ── COVERAGE CHIPS ── */}
-      <section style={{ padding: "72px 0", borderTop: "1px solid #21262d" }}>
+      {/* ── TECH DOMAIN TILES ── */}
+      <section style={{ padding: "88px 0", borderTop: "1px solid #21262d" }}>
         <div className="container-xl">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
-            <div>
-              <span className="badge badge-teal" style={{ marginBottom: 16, display: "inline-flex" }}>Full Stack Coverage</span>
-              <h2 style={{ fontSize: "clamp(1.4rem, 2.8vw, 2rem)", fontWeight: 800, color: "#e6edf3", marginBottom: 16, lineHeight: 1.2 }}>Every technology domain. One interface.</h2>
-              <p style={{ fontSize: 14, color: "#8b949e", lineHeight: 1.75, marginBottom: 24 }}>
-                No tool switching. No context switching. Autopilot agents operate across every domain through the same Unified execution layer.
-              </p>
-              <div style={{ display: "flex", gap: 10 }}>
-                <div style={{ textAlign: "center", padding: "12px 20px", background: "#161b22", border: "1px solid #30363d", borderRadius: 10 }}>
-                  <div style={{ fontSize: 22, fontWeight: 900, color: "#7856ff" }}>1</div>
-                  <div style={{ fontSize: 10, color: "#6e7681", marginTop: 2 }}>Interface</div>
+          <div style={{ textAlign: "center", marginBottom: 56 }}>
+            <span className="badge badge-teal" style={{ marginBottom: 16, display: "inline-flex" }}>Full-Stack Coverage</span>
+            <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", fontWeight: 800, color: "#e6edf3", marginBottom: 12, lineHeight: 1.2 }}>Every technology domain. One platform.</h2>
+            <p style={{ fontSize: 14, color: "#8b949e", maxWidth: 520, margin: "0 auto", lineHeight: 1.75 }}>
+              No stitching tools together. Autopilot agents operate natively across every stack through the same Unified execution layer.
+            </p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
+            {TECH_DOMAINS.map((d) => (
+              <div key={d.label} style={{ background: "#161b22", border: "1px solid #30363d", borderTop: `2px solid ${d.color}`, borderRadius: 12, padding: "22px 20px", display: "flex", flexDirection: "column" }}>
+                {/* Header */}
+                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
+                  <div style={{ width: 32, height: 32, borderRadius: 8, background: `${d.color}15`, border: `1px solid ${d.color}30`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    {d.icon}
+                  </div>
+                  <div style={{ fontSize: 13, fontWeight: 800, color: "#e6edf3" }}>{d.label}</div>
                 </div>
-                <div style={{ textAlign: "center", padding: "12px 20px", background: "#161b22", border: "1px solid #30363d", borderRadius: 10 }}>
-                  <div style={{ fontSize: 22, fontWeight: 900, color: "#00e5d3" }}>0</div>
-                  <div style={{ fontSize: 10, color: "#6e7681", marginTop: 2 }}>Code required</div>
+                {/* Tech tags */}
+                <div style={{ fontSize: 11, color: "#6e7681", marginBottom: 16, paddingLeft: 42 }}>{d.tech}</div>
+                {/* Capabilities */}
+                <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 18, flex: 1 }}>
+                  {d.caps.map((cap) => (
+                    <div key={cap} style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" style={{ marginTop: 1, flexShrink: 0 }}><path d="M20 6L9 17l-5-5" stroke={d.color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      <span style={{ fontSize: 12, color: "#c9d1d9", lineHeight: 1.5 }}>{cap}</span>
+                    </div>
+                  ))}
+                </div>
+                {/* Agentic hint */}
+                <div style={{ display: "flex", alignItems: "flex-start", gap: 7, paddingTop: 14, borderTop: "1px solid #21262d" }}>
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" style={{ marginTop: 1, flexShrink: 0 }}><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#7856ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <span style={{ fontSize: 11, color: "#7856ff", lineHeight: 1.5 }}>{d.agentic}</span>
                 </div>
               </div>
-            </div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-              {COVERAGE.map((c) => (
-                <div key={c.label} style={{ padding: "7px 14px", background: "#161b22", border: `1px solid ${c.color}40`, borderLeft: `3px solid ${c.color}`, borderRadius: 6, fontSize: 12, fontWeight: 600, color: c.color }}>
-                  {c.label}
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </section>
