@@ -125,6 +125,14 @@ const TECH_DOMAINS = [
     agentic: "Autopilot validates document outputs as part of end-to-end test flows",
     icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#fccd00" strokeWidth="1.8"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="#fccd00" strokeWidth="1.8" strokeLinecap="round"/></svg>,
   },
+  {
+    label: "Service Virtualization",
+    color: "#e879f9",
+    tech: "Virtual Services · API Mocking · Stubs · Simulators",
+    caps: ["Mock unavailable services & third-party APIs", "Simulate edge cases, errors & latency", "Shift-left testing without environment dependencies"],
+    agentic: "Autopilot auto-creates virtual services from recorded traffic or specs",
+    icon: <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="8" height="10" rx="2" stroke="#e879f9" strokeWidth="1.8"/><rect x="14" y="7" width="8" height="10" rx="2" stroke="#e879f9" strokeWidth="1.8"/><path d="M10 12h4" stroke="#e879f9" strokeWidth="1.8" strokeLinecap="round" strokeDasharray="2 1.5"/></svg>,
+  },
 ];
 
 const INTEGRATIONS = ["Jira", "GitHub", "GitLab", "Azure DevOps", "Jenkins", "CircleCI", "Bamboo", "Slack", "Teams", "Selenium Grid", "BrowserStack", "Sauce Labs"];
