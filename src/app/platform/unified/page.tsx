@@ -195,50 +195,99 @@ export default function UnifiedPage() {
         </div>
       </section>
 
-      {/* ── NO-CODE vs CODE ── */}
-      <section style={{ padding: "80px 0" }}>
+      {/* ── ASSET MANAGEMENT, GOVERNANCE & ALM ── */}
+      <section style={{ padding: "88px 0" }}>
         <div className="container-xl">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "center" }}>
-            <div>
-              <span className="badge badge-blue" style={{ marginBottom: 16, display: "inline-flex" }}>Why No-Code Matters More Now</span>
-              <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2.1rem)", fontWeight: 800, color: "#e6edf3", marginBottom: 24, lineHeight: 1.25 }}>
-                AI writes code faster than engineers can write tests.
-              </h2>
-              <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
+          <div style={{ textAlign: "center", marginBottom: 56 }}>
+            <span className="badge badge-blue" style={{ marginBottom: 12, display: "inline-flex" }}>Enterprise Platform</span>
+            <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", fontWeight: 800, color: "#e6edf3", marginBottom: 12 }}>
+              Asset management, governance, and ALM — built in
+            </h2>
+            <p style={{ color: "#8b949e", maxWidth: 560, margin: "0 auto", fontSize: 14, lineHeight: 1.75 }}>
+              ACCELQ is not just an execution engine. It&apos;s a quality management platform with centralized assets, full traceability, and deep ALM ecosystem integration.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+
+            {/* ── ASSET MANAGEMENT ── */}
+            <div style={{ background: "#161b22", border: "1px solid #30363d", borderRadius: 14, overflow: "hidden" }}>
+              <div style={{ padding: "20px 24px 16px", borderBottom: "1px solid #30363d", background: "rgba(33,173,195,0.06)" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+                  <div style={{ width: 36, height: 36, borderRadius: 8, background: "rgba(33,173,195,0.15)", border: "1px solid rgba(33,173,195,0.3)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 3h18v4H3zM3 10h18v4H3zM3 17h18v4H3z" stroke="#21adc3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </div>
+                  <h3 style={{ fontSize: 15, fontWeight: 800, color: "#21adc3", margin: 0 }}>Test Asset Management</h3>
+                </div>
+                <p style={{ fontSize: 12, color: "#8b949e", margin: 0, lineHeight: 1.6 }}>Centralized, versioned, reusable across every test type and team</p>
+              </div>
+              <div style={{ padding: "20px 24px", display: "flex", flexDirection: "column", gap: 14 }}>
                 {[
-                  { color: "#21adc3", title: "Close the gap without adding headcount", desc: "No-code means every QA analyst, BA, and product owner can build test coverage — not just SDETs." },
-                  { color: "#58a6ff", title: "Zero maintenance debt from code rot", desc: "Test logic built in no-code doesn't accumulate the technical debt of hand-written scripts that break on every deploy." },
-                  { color: "#a371f7", title: "Business language, not selectors", desc: "Tests that describe business processes, not DOM elements. Understandable and ownable by the whole team." },
-                ].map((p) => (
-                  <div key={p.title} style={{ display: "flex", gap: 14 }}>
-                    <div style={{ width: 3, background: p.color, borderRadius: 2, flexShrink: 0, marginTop: 3 }} />
-                    <div>
-                      <div style={{ fontSize: 14, fontWeight: 700, color: "#e6edf3", marginBottom: 5 }}>{p.title}</div>
-                      <div style={{ fontSize: 13, color: "#8b949e", lineHeight: 1.65 }}>{p.desc}</div>
-                    </div>
+                  { label: "Shared Object Repository", desc: "UI elements, API schemas, and data objects maintained once and inherited by all tests — web, mobile, and API." },
+                  { label: "Reusable Test Components", desc: "Build login flows, checkout sequences, and common actions once. Reuse across modalities without duplication." },
+                  { label: "Test Data Management", desc: "Parameterized, data-driven execution with built-in test data versioning and environment-aware data sets." },
+                  { label: "Version Control for Assets", desc: "Full history of changes to test assets. Branch, compare, and roll back — without leaving the platform." },
+                ].map((item) => (
+                  <div key={item.label}>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: "#e6edf3", marginBottom: 3 }}>{item.label}</div>
+                    <div style={{ fontSize: 12, color: "#8b949e", lineHeight: 1.6 }}>{item.desc}</div>
                   </div>
                 ))}
               </div>
             </div>
-            <div style={{ background: "#161b22", border: "1px solid #30363d", borderRadius: 12, overflow: "hidden" }}>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderBottom: "1px solid #30363d" }}>
-                <div style={{ padding: "12px 18px", borderRight: "1px solid #30363d", fontSize: 12, fontWeight: 700, color: "#f85149", textTransform: "uppercase", letterSpacing: "0.06em" }}>Code-Based Automation</div>
-                <div style={{ padding: "12px 18px", fontSize: 12, fontWeight: 700, color: "#21adc3", textTransform: "uppercase", letterSpacing: "0.06em" }}>ACCELQ No-Code</div>
-              </div>
-              {[
-                ["Requires developer skills", "Any team member can author"],
-                ["Breaks with every UI change", "AI self-heals automatically"],
-                ["Months to build coverage", "Days to full regression suite"],
-                ["Code debt accumulates", "No code, no debt"],
-                ["Engineers own all tests", "Business owns their tests"],
-                ["Maintenance = 60% of effort", "Maintenance = near zero"],
-              ].map(([bad, good], i) => (
-                <div key={i} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderBottom: i < 5 ? "1px solid #21262d" : "none" }}>
-                  <div style={{ padding: "11px 18px", borderRight: "1px solid #21262d", fontSize: 13, color: "#6e7681" }}>✗ {bad}</div>
-                  <div style={{ padding: "11px 18px", fontSize: 13, color: "#e6edf3" }}>✓ {good}</div>
+
+            {/* ── GOVERNANCE ── */}
+            <div style={{ background: "#161b22", border: "1px solid #30363d", borderRadius: 14, overflow: "hidden" }}>
+              <div style={{ padding: "20px 24px 16px", borderBottom: "1px solid #30363d", background: "rgba(163,113,247,0.06)" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+                  <div style={{ width: 36, height: 36, borderRadius: 8, background: "rgba(163,113,247,0.15)", border: "1px solid rgba(163,113,247,0.3)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7h7l-5.5 4.5 2 7L12 17l-6.5 3.5 2-7L2 9h7z" stroke="#a371f7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </div>
+                  <h3 style={{ fontSize: 15, fontWeight: 800, color: "#a371f7", margin: 0 }}>Quality Governance</h3>
                 </div>
-              ))}
+                <p style={{ fontSize: 12, color: "#8b949e", margin: 0, lineHeight: 1.6 }}>Traceability, access control, and compliance from requirement to result</p>
+              </div>
+              <div style={{ padding: "20px 24px", display: "flex", flexDirection: "column", gap: 14 }}>
+                {[
+                  { label: "Requirement Traceability", desc: "Every test linked to a business requirement. Full coverage matrix shows what's tested, what's not, and what's at risk." },
+                  { label: "Role-Based Access Control", desc: "Granular permissions for QA, developers, BAs, and managers. AI actions respect RBAC — no ungoverned automation." },
+                  { label: "Audit Trails & History", desc: "Every test execution, result, and change is logged with timestamps and attribution. Full compliance readiness." },
+                  { label: "Release Quality Gates", desc: "Configurable go/no-go criteria per release. Block deployments automatically when quality thresholds aren't met." },
+                ].map((item) => (
+                  <div key={item.label}>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: "#e6edf3", marginBottom: 3 }}>{item.label}</div>
+                    <div style={{ fontSize: 12, color: "#8b949e", lineHeight: 1.6 }}>{item.desc}</div>
+                  </div>
+                ))}
+              </div>
             </div>
+
+            {/* ── ALM INTEGRATION ── */}
+            <div style={{ background: "#161b22", border: "1px solid #30363d", borderRadius: 14, overflow: "hidden" }}>
+              <div style={{ padding: "20px 24px 16px", borderBottom: "1px solid #30363d", background: "rgba(88,166,255,0.06)" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+                  <div style={{ width: 36, height: 36, borderRadius: 8, background: "rgba(88,166,255,0.15)", border: "1px solid rgba(88,166,255,0.3)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="6" r="2" stroke="#58a6ff" strokeWidth="2"/><circle cx="19" cy="6" r="2" stroke="#58a6ff" strokeWidth="2"/><circle cx="12" cy="18" r="2" stroke="#58a6ff" strokeWidth="2"/><path d="M7 6h10M5 8v8a2 2 0 0 0 2 2h3M19 8v8a2 2 0 0 1-2 2h-3" stroke="#58a6ff" strokeWidth="2" strokeLinecap="round"/></svg>
+                  </div>
+                  <h3 style={{ fontSize: 15, fontWeight: 800, color: "#58a6ff", margin: 0 }}>ALM Ecosystem</h3>
+                </div>
+                <p style={{ fontSize: 12, color: "#8b949e", margin: 0, lineHeight: 1.6 }}>Bidirectional sync with the tools your teams already live in</p>
+              </div>
+              <div style={{ padding: "20px 24px", display: "flex", flexDirection: "column", gap: 14 }}>
+                {[
+                  { label: "Jira & Azure DevOps Sync", desc: "Stories and epics become test coverage. Defects raised from failures flow back as linked tickets — automatically." },
+                  { label: "CI/CD Pipeline Integration", desc: "Jenkins, GitHub Actions, GitLab CI, CircleCI. All test types — web, API, mobile — from one pipeline trigger." },
+                  { label: "Defect Lifecycle Management", desc: "Failures link to defect records with full execution context, screenshots, and logs. No manual bridging." },
+                  { label: "Release & Sprint Tracking", desc: "Coverage and quality metrics aligned to active sprints and release milestones. Visibility for every stakeholder." },
+                ].map((item) => (
+                  <div key={item.label}>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: "#e6edf3", marginBottom: 3 }}>{item.label}</div>
+                    <div style={{ fontSize: 12, color: "#8b949e", lineHeight: 1.6 }}>{item.desc}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
