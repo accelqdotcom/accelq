@@ -6,11 +6,33 @@ export const metadata: Metadata = {
   description: "Web, API, mobile, desktop, mainframe, and enterprise systems — all in one no-code platform. Eliminate tool sprawl, shared components, one CI/CD. Zero code required.",
 };
 
+const PTEAL = "#0d9e80";
 const PRODUCTS = [
-  { name: "Automate Web", color: "#21adc3", href: "/products/web", desc: "Browser automation with AI self-healing selectors across any framework" },
-  { name: "Automate API", color: "#58a6ff", href: "/products/api", desc: "REST, GraphQL, SOAP, and gRPC — full chain testing and contract validation" },
-  { name: "Automate Mobile", color: "#2ea043", href: "/products/mobile", desc: "iOS and Android native, hybrid, and browser — real-device cloud execution" },
-  { name: "ACCELQ Manual", color: "#a371f7", href: "/products/manual", desc: "Test case management and manual execution tracking in the same platform" },
+  {
+    name: "Automate Web", href: "/products/web",
+    desc: "Codeless AI record & instant playback across web, cloud ERP apps and more",
+    icon: <svg width="32" height="28" viewBox="0 0 32 28" fill="none"><path d="M6 2L26 2L22 26L2 26Z" fill={PTEAL} opacity="0.85"/><path d="M10 8L20 8L18 20L8 20Z" fill="#fff" opacity="0.3"/></svg>,
+  },
+  {
+    name: "Automate API", href: "/products/api",
+    desc: "REST, SOAP, GraphQL, Kafka, MQs, Microservices — fully codeless",
+    icon: <svg width="30" height="28" viewBox="0 0 30 28" fill="none"><path d="M15 1L29 27H1Z" fill={PTEAL} opacity="0.85"/><path d="M15 9L22 23H8Z" fill="#fff" opacity="0.25"/></svg>,
+  },
+  {
+    name: "Automate Mobile", href: "/products/mobile",
+    desc: "Zero-setup, cloud-native codeless automation for real-device apps on iOS & Android",
+    icon: <svg width="26" height="30" viewBox="0 0 26 30" fill="none"><rect x="3" y="1" width="20" height="28" rx="3" fill={PTEAL} opacity="0.85"/><rect x="7" y="5" width="12" height="16" rx="1" fill="#fff" opacity="0.3"/><circle cx="13" cy="25" r="2" fill="#fff" opacity="0.3"/></svg>,
+  },
+  {
+    name: "Automate Desktop", href: "/products/web",
+    desc: "Native Windows & legacy desktop application testing with no-code design-first approach",
+    icon: <svg width="30" height="28" viewBox="0 0 30 28" fill="none"><rect x="1" y="1" width="28" height="20" rx="2" fill={PTEAL} opacity="0.85"/><rect x="4" y="4" width="22" height="14" rx="1" fill="#fff" opacity="0.25"/><rect x="11" y="23" width="8" height="2" rx="1" fill={PTEAL} opacity="0.6"/><rect x="8" y="26" width="14" height="2" rx="1" fill={PTEAL} opacity="0.4"/></svg>,
+  },
+  {
+    name: "Test Management", href: "/products/manual",
+    desc: "Unified planning, execution, traceability & collaboration across the quality lifecycle",
+    icon: <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" rx="3" fill={PTEAL} opacity="0.85"/><rect x="5" y="5" width="18" height="18" rx="1" fill="#fff" opacity="0.25"/><line x1="9" y1="11" x2="19" y2="11" stroke="#fff" strokeWidth="1.5" opacity="0.5"/><line x1="9" y1="15" x2="16" y2="15" stroke="#fff" strokeWidth="1.5" opacity="0.5"/><line x1="9" y1="19" x2="14" y2="19" stroke="#fff" strokeWidth="1.5" opacity="0.4"/></svg>,
+  },
 ];
 
 const CAPABILITIES = [
@@ -87,68 +109,23 @@ export default function UnifiedPage() {
         </div>
       </section>
 
-      {/* ── WHAT'S INCLUDED ── */}
+      {/* ── PRODUCTS IN UNIFIED ── */}
       <section style={{ padding: "72px 0", borderTop: "1px solid #21262d" }}>
         <div className="container-xl">
-          <p style={{ textAlign: "center", fontSize: 11, color: "#6e7681", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 32, fontWeight: 700 }}>What&apos;s included in Unified</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
+          <div style={{ textAlign: "center", marginBottom: 40 }}>
+            <span className="badge badge-teal" style={{ marginBottom: 12, display: "inline-flex" }}>Complete Coverage</span>
+            <h2 style={{ fontSize: "clamp(1.4rem, 2.5vw, 1.9rem)", fontWeight: 800, color: "#e6edf3", marginBottom: 8 }}>Five specialized engines. One unified platform.</h2>
+            <p style={{ fontSize: 13, color: "#6e7681", maxWidth: 480, margin: "0 auto", lineHeight: 1.7 }}>Every test type shares the same asset library, execution infrastructure, and quality dashboard.</p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 14 }}>
             {PRODUCTS.map((p) => (
-              <Link key={p.name} href={p.href} className="card-hover" style={{ padding: 24, background: "#161b22", border: "1px solid #30363d", borderRadius: 12, borderTop: `3px solid ${p.color}`, display: "block", textDecoration: "none" }}>
-                <div style={{ fontSize: 16, fontWeight: 800, color: p.color, marginBottom: 8 }}>{p.name}</div>
-                <div style={{ fontSize: 13, color: "#8b949e", lineHeight: 1.6, marginBottom: 12 }}>{p.desc}</div>
-                <div style={{ fontSize: 12, color: p.color }}>Learn more →</div>
+              <Link key={p.name} href={p.href} className="card-hover" style={{ padding: "22px 20px", background: "#161b22", border: "1px solid #30363d", borderRadius: 12, display: "block", textDecoration: "none" }}>
+                <div style={{ marginBottom: 14 }}>{p.icon}</div>
+                <div style={{ fontSize: 14, fontWeight: 800, color: "#e6edf3", marginBottom: 6 }}>{p.name}</div>
+                <div style={{ fontSize: 12, color: "#8b949e", lineHeight: 1.6, marginBottom: 12 }}>{p.desc}</div>
+                <div style={{ fontSize: 11, color: PTEAL, fontWeight: 600 }}>Learn more →</div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── TOOL SPRAWL vs UNIFIED ── */}
-      <section style={{ padding: "80px 0", background: "#161b22", borderTop: "1px solid #30363d" }}>
-        <div className="container-xl">
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)", fontWeight: 800, color: "#e6edf3", marginBottom: 12 }}>
-              Stop stitching. Start shipping.
-            </h2>
-            <p style={{ color: "#8b949e", maxWidth: 520, margin: "0 auto", lineHeight: 1.7 }}>
-              Every disconnected tool adds a maintenance tax. ACCELQ Unified is the single platform your whole quality team lives in.
-            </p>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, maxWidth: 840, margin: "0 auto" }}>
-            {/* Tool Sprawl */}
-            <div style={{ padding: 28, background: "#0d1117", border: "1px solid #30363d", borderRadius: 12 }}>
-              <div style={{ fontSize: 12, fontWeight: 700, color: "#6e7681", marginBottom: 20, textTransform: "uppercase", letterSpacing: "0.08em" }}>Tool Sprawl Reality</div>
-              {[
-                "Selenium for web, Postman for API",
-                "Appium for mobile, Excel for manual",
-                "4 separate CI integrations to maintain",
-                "4 dashboards to reconcile",
-                "No shared test components",
-                "Every team owns their own silo",
-                "40% of QA time lost to overhead",
-              ].map((item) => (
-                <div key={item} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: 13, color: "#8b949e", marginBottom: 10, lineHeight: 1.5 }}>
-                  <span style={{ color: "#f85149", flexShrink: 0, marginTop: 1 }}>✗</span> {item}
-                </div>
-              ))}
-            </div>
-            {/* ACCELQ Unified */}
-            <div style={{ padding: 28, background: "#0d1117", border: "1px solid rgba(33,173,195,0.35)", borderRadius: 12, boxShadow: "0 0 32px rgba(33,173,195,0.06)" }}>
-              <div style={{ fontSize: 12, fontWeight: 700, color: "#21adc3", marginBottom: 20, textTransform: "uppercase", letterSpacing: "0.08em" }}>ACCELQ Unified</div>
-              {[
-                "One no-code platform for all test types",
-                "One shared test asset library",
-                "Shared business components across modalities",
-                "One CI/CD connection for everything",
-                "One real-time quality dashboard",
-                "One team, complete coverage",
-                "Near-zero maintenance overhead",
-              ].map((item) => (
-                <div key={item} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: 13, color: "#e6edf3", marginBottom: 10, lineHeight: 1.5 }}>
-                  <span style={{ color: "#2ea043", flexShrink: 0, marginTop: 1 }}>✓</span> {item}
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
