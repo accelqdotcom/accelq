@@ -121,62 +121,6 @@ export default function UnifiedPage() {
         </div>
       </section>
 
-      {/* ── AGENTIC LAYER ── */}
-      <section style={{ padding: "80px 0", borderTop: "1px solid #21262d" }}>
-        <div className="container-xl">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
-
-            {/* Left: lifecycle as plain text list */}
-            <div>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(120,86,255,0.08)", border: "1px solid rgba(120,86,255,0.18)", borderRadius: 6, padding: "4px 12px", marginBottom: 20 }}>
-                <span style={{ fontSize: 11, fontWeight: 700, color: "#7856ff", letterSpacing: "0.08em", textTransform: "uppercase" }}>Agentic AI</span>
-              </div>
-              <h2 style={{ fontSize: "clamp(1.4rem, 2.8vw, 2rem)", fontWeight: 800, color: "#e6edf3", marginBottom: 12, lineHeight: 1.25 }}>
-                Autopilot agents run your entire quality lifecycle
-              </h2>
-              <p style={{ fontSize: 14, color: "#8b949e", lineHeight: 1.75, marginBottom: 28 }}>
-                From reading a story ticket to closing a defect — AI agents work autonomously across all five Unified engines, no human handoff required.
-              </p>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                {[
-                  { stage: "Discover", desc: "Reads specs, stories & app structure automatically" },
-                  { stage: "Generate", desc: "Writes test cases from natural language requirements" },
-                  { stage: "Execute", desc: "Runs tests across all 5 engines in parallel" },
-                  { stage: "Self-Heal", desc: "Detects app changes and repairs broken tests" },
-                  { stage: "Insights", desc: "Surfaces risk, coverage gaps & quality signals" },
-                ].map((s, i, arr) => (
-                  <div key={s.stage} style={{ display: "flex", gap: 14, alignItems: "flex-start", padding: "13px 0", borderBottom: i < arr.length - 1 ? "1px solid #21262d" : "none" }}>
-                    <div style={{ width: 6, height: 6, borderRadius: "50%", background: "#7856ff", marginTop: 5, flexShrink: 0 }} />
-                    <div>
-                      <span style={{ fontSize: 13, fontWeight: 700, color: "#c9d1d9" }}>{s.stage}</span>
-                      <span style={{ fontSize: 13, color: "#6e7681" }}> — {s.desc}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right: minimal architecture diagram */}
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-              <div style={{ width: "100%", maxWidth: 320, padding: "20px 24px", background: "rgba(120,86,255,0.05)", border: "1px solid rgba(120,86,255,0.18)", borderRadius: 12, textAlign: "center" }}>
-                <div style={{ fontSize: 11, fontWeight: 800, color: "#7856ff", letterSpacing: "0.1em", marginBottom: 4 }}>AUTOPILOT</div>
-                <div style={{ fontSize: 12, color: "#8b949e" }}>Agentic AI · Discover · Generate · Self-Heal</div>
-              </div>
-              <div style={{ width: 2, height: 28, background: "linear-gradient(to bottom, rgba(120,86,255,0.35), rgba(13,158,128,0.35))" }} />
-              <div style={{ width: "100%", maxWidth: 320, padding: "20px 24px", background: "rgba(13,158,128,0.04)", border: "1px solid rgba(13,158,128,0.18)", borderRadius: 12 }}>
-                <div style={{ fontSize: 11, fontWeight: 800, color: PTEAL, letterSpacing: "0.1em", marginBottom: 14, textAlign: "center" }}>UNIFIED EXECUTION</div>
-                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-                  {["Web", "API", "Mobile", "Desktop", "Test Management"].map((e) => (
-                    <div key={e} style={{ fontSize: 12, color: "#8b949e", padding: "7px 14px", background: "#161b22", border: "1px solid #30363d", borderRadius: 6 }}>{e}</div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
       {/* ── COVERAGE CHIPS ── */}
       <section style={{ padding: "72px 0", borderTop: "1px solid #21262d" }}>
         <div className="container-xl">
