@@ -42,9 +42,7 @@ const COVERAGE = [
   { label: "Mobile iOS/Android", color: "#a371f7" },
   { label: "Desktop Apps", color: "#2ea043" },
   { label: "Mainframe / AS400", color: "#8b949e" },
-  { label: "SAP / Fiori", color: "#1a6abb" },
-  { label: "Salesforce", color: "#00a1e0" },
-  { label: "ServiceNow", color: "#62d84e" },
+  { label: "Business & Enterprise Apps", color: "#1a6abb" },
   { label: "Kafka & Middleware", color: "#d29922" },
   { label: "Databases", color: "#a371f7" },
   { label: "ETL Pipelines", color: "#58a6ff" },
@@ -176,13 +174,13 @@ export default function UnifiedPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}>
             <div>
               <span className="badge badge-teal" style={{ marginBottom: 16, display: "inline-flex" }}>Full Stack Coverage</span>
-              <h2 style={{ fontSize: "clamp(1.4rem, 2.8vw, 2rem)", fontWeight: 800, color: "#e6edf3", marginBottom: 16, lineHeight: 1.2 }}>12 technology domains. One interface.</h2>
+              <h2 style={{ fontSize: "clamp(1.4rem, 2.8vw, 2rem)", fontWeight: 800, color: "#e6edf3", marginBottom: 16, lineHeight: 1.2 }}>10 technology domains. One interface.</h2>
               <p style={{ fontSize: 14, color: "#8b949e", lineHeight: 1.75, marginBottom: 24 }}>
                 No tool switching. No context switching. Autopilot agents operate across every domain through the same Unified execution layer.
               </p>
               <div style={{ display: "flex", gap: 10 }}>
                 <div style={{ textAlign: "center", padding: "12px 20px", background: "#161b22", border: "1px solid #30363d", borderRadius: 10 }}>
-                  <div style={{ fontSize: 22, fontWeight: 900, color: "#21adc3" }}>12</div>
+                  <div style={{ fontSize: 22, fontWeight: 900, color: "#21adc3" }}>10</div>
                   <div style={{ fontSize: 10, color: "#6e7681", marginTop: 2 }}>Tech domains</div>
                 </div>
                 <div style={{ textAlign: "center", padding: "12px 20px", background: "#161b22", border: "1px solid #30363d", borderRadius: 10 }}>
@@ -297,7 +295,7 @@ export default function UnifiedPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 2 }}>
             {[
               { val: "5", label: "Test engines", sub: "Web · API · Mobile · Desktop · Manual", color: PTEAL },
-              { val: "12", label: "Tech domains", sub: "From mainframe to Kafka", color: "#58a6ff" },
+              { val: "10", label: "Tech domains", sub: "Web to mainframe to enterprise apps", color: "#58a6ff" },
               { val: "1", label: "CI/CD connection", sub: "All test types, one pipeline trigger", color: "#a371f7" },
               { val: "0", label: "Code required", sub: "No-code from design to execution", color: "#00e5d3" },
             ].map((s, i) => (
