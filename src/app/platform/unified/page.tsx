@@ -249,87 +249,128 @@ export default function UnifiedPage() {
         </div>
       </section>
 
-      {/* ── ASSET, GOVERNANCE & ALM ── */}
-      <section style={{ padding: "80px 0", background: "#161b22", borderTop: "1px solid #30363d" }}>
+      {/* ── PLATFORM DEPTH ── */}
+      <section style={{ padding: "96px 0", background: "#0d1117", borderTop: "1px solid #21262d" }}>
         <div className="container-xl">
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <span className="badge badge-blue" style={{ marginBottom: 12, display: "inline-flex" }}>Enterprise Platform</span>
-            <h2 style={{ fontSize: "clamp(1.4rem, 2.8vw, 2rem)", fontWeight: 800, color: "#e6edf3" }}>Asset management, governance & ALM — built in</h2>
+          <div style={{ textAlign: "center", marginBottom: 64 }}>
+            <span className="badge badge-blue" style={{ marginBottom: 14, display: "inline-flex" }}>Enterprise Platform</span>
+            <h2 style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 800, color: "#e6edf3", marginBottom: 12, lineHeight: 1.2 }}>One platform. Enterprise depth.</h2>
+            <p style={{ fontSize: 14, color: "#8b949e", maxWidth: 540, margin: "0 auto", lineHeight: 1.75 }}>
+              ACCELQ is not a test automation tool — it&apos;s a quality engineering platform. Every capability below is built-in, not bolted on.
+            </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
 
-            {/* Asset Management */}
-            <div style={{ background: "#0d1117", border: "1px solid #30363d", borderRadius: 14, padding: "28px 24px" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20, paddingBottom: 16, borderBottom: "1px solid #21262d" }}>
-                <div style={{ width: 34, height: 34, borderRadius: 8, background: "rgba(33,173,195,0.12)", border: "1px solid rgba(33,173,195,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 3h18v4H3zM3 10h18v4H3zM3 17h18v4H3z" stroke="#21adc3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 2, marginBottom: 2 }}>
+            {[
+              {
+                color: "#21adc3",
+                icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" stroke="#21adc3" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+                title: "Test Asset Management",
+                sub: "Branch · Merge · Version · Share",
+                features: [
+                  "Branch & merge test assets like source code",
+                  "Checkout / check-in with isolated change verification",
+                  "Merge wizard — accept/reject changes line-by-line",
+                  "Cross-project asset sharing with subscription model",
+                  "Shared object repository across teams & projects",
+                  "Version history with full change audit trail",
+                ],
+              },
+              {
+                color: "#d29922",
+                icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3" stroke="#d29922" strokeWidth="1.8"/><path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5" stroke="#d29922" strokeWidth="1.8"/><path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6" stroke="#d29922" strokeWidth="1.8"/></svg>,
+                title: "Test Data Platform",
+                sub: "Generate · Configure · Manage",
+                features: [
+                  "AI-driven synthetic test data generation",
+                  "Environment-aligned data config — QA / UAT / PROD / Region",
+                  "Data Map framework for storage, reuse & sharing",
+                  "All-pairs analysis for minimal permutation coverage",
+                  "Parameterized, data-driven test case instances",
+                  "Secure masking for sensitive & PII data",
+                ],
+              },
+              {
+                color: "#58a6ff",
+                icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#58a6ff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+                title: "Execution Platform",
+                sub: "Parallel · Distributed · Grid · Cloud",
+                features: [
+                  "Parallel execution — multiple threads per agent",
+                  "Distributed execution — jobs split across agent pool",
+                  "Cloud grid with cross-browser & cross-OS matrix",
+                  "Setup & teardown actions per environment",
+                  "Run properties for environment-specific overrides",
+                  "Execution tags & parameterized job configurations",
+                ],
+              },
+              {
+                color: "#a371f7",
+                icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#a371f7" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+                title: "Governance & Security",
+                sub: "RBAC · Traceability · Compliance",
+                features: [
+                  "Role-based access control — Tenant & Project Admin levels",
+                  "Requirement traceability to Jira, Azure, Rally stories",
+                  "Bulk traceability matrix updates across releases",
+                  "Release quality gates inside CI/CD pipelines",
+                  "Audit trails — who changed what, when",
+                  "Multi-tenant project isolation",
+                ],
+              },
+              {
+                color: "#2ea043",
+                icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="6" r="2" stroke="#2ea043" strokeWidth="1.8"/><circle cx="19" cy="6" r="2" stroke="#2ea043" strokeWidth="1.8"/><circle cx="12" cy="18" r="2" stroke="#2ea043" strokeWidth="1.8"/><path d="M7 6h10M5 8v8a2 2 0 0 0 2 2h3M19 8v8a2 2 0 0 1-2 2h-3" stroke="#2ea043" strokeWidth="1.8" strokeLinecap="round"/></svg>,
+                title: "ALM & CI/CD Integration",
+                sub: "Jira · Azure · Jenkins · GitHub · TeamCity",
+                features: [
+                  "Jira & Azure DevOps — bidirectional test coverage sync",
+                  "Jenkins, GitHub Actions, Azure Pipeline, TeamCity, Bamboo",
+                  "Defect auto-creation with pre-populated context",
+                  "Real-time defect status reflected back in ACCELQ",
+                  "Sprint & release tracking across test cycles",
+                  "ACCELQ CI Connect plugin for pipeline-native execution",
+                ],
+              },
+              {
+                color: "#fccd00",
+                icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#fccd00" strokeWidth="1.8" strokeLinecap="round"/></svg>,
+                title: "Analytics & Collaboration",
+                sub: "Dashboards · Slack · Teams · Reporting",
+                features: [
+                  "Customizable project dashboards with configurable widgets",
+                  "Flakiness analysis, trend reporting & coverage gap detection",
+                  "Slack & Microsoft Teams webhook notifications",
+                  "Real-time execution visibility for the whole team",
+                  "Traceability matrices — requirements to results",
+                  "Video capture, screenshots & request/response payloads",
+                ],
+              },
+            ].map((card, i) => (
+              <div key={card.title} style={{
+                background: "#161b22",
+                border: "1px solid #30363d",
+                borderTop: `2px solid ${card.color}`,
+                borderRadius: i === 0 ? "12px 0 0 0" : i === 2 ? "0 12px 0 0" : i === 3 ? "0 0 0 12px" : i === 5 ? "0 0 12px 0" : 0,
+                padding: "26px 22px",
+              }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
+                  <div style={{ width: 30, height: 30, borderRadius: 7, background: `${card.color}15`, border: `1px solid ${card.color}30`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    {card.icon}
+                  </div>
+                  <div style={{ fontSize: 13, fontWeight: 800, color: "#e6edf3" }}>{card.title}</div>
                 </div>
-                <div>
-                  <div style={{ fontSize: 14, fontWeight: 800, color: "#21adc3" }}>Test Asset Management</div>
-                  <div style={{ fontSize: 11, color: "#6e7681" }}>Centralized · Versioned · Reusable</div>
+                <div style={{ fontSize: 11, color: "#6e7681", marginBottom: 18, paddingLeft: 40 }}>{card.sub}</div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
+                  {card.features.map((f) => (
+                    <div key={f} style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
+                      <div style={{ width: 5, height: 5, borderRadius: "50%", background: card.color, marginTop: 5, flexShrink: 0 }} />
+                      <span style={{ fontSize: 12, color: "#c9d1d9", lineHeight: 1.55 }}>{f}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
-              {[
-                ["Shared Object Repository", "#21adc3"],
-                ["Reusable Test Components", "#21adc3"],
-                ["Test Data Management", "#21adc3"],
-                ["Version Control for Assets", "#21adc3"],
-              ].map(([label, color]) => (
-                <div key={label} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke={color as string} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  <span style={{ fontSize: 13, color: "#e6edf3", fontWeight: 500 }}>{label}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Governance */}
-            <div style={{ background: "#0d1117", border: "1px solid #30363d", borderRadius: 14, padding: "28px 24px" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20, paddingBottom: 16, borderBottom: "1px solid #21262d" }}>
-                <div style={{ width: 34, height: 34, borderRadius: 8, background: "rgba(163,113,247,0.12)", border: "1px solid rgba(163,113,247,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#a371f7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                </div>
-                <div>
-                  <div style={{ fontSize: 14, fontWeight: 800, color: "#a371f7" }}>Quality Governance</div>
-                  <div style={{ fontSize: 11, color: "#6e7681" }}>Traceability · RBAC · Compliance</div>
-                </div>
-              </div>
-              {[
-                ["Requirement Traceability", "#a371f7"],
-                ["Role-Based Access Control", "#a371f7"],
-                ["Audit Trails & History", "#a371f7"],
-                ["Release Quality Gates", "#a371f7"],
-              ].map(([label, color]) => (
-                <div key={label} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke={color as string} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  <span style={{ fontSize: 13, color: "#e6edf3", fontWeight: 500 }}>{label}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* ALM */}
-            <div style={{ background: "#0d1117", border: "1px solid #30363d", borderRadius: 14, padding: "28px 24px" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20, paddingBottom: 16, borderBottom: "1px solid #21262d" }}>
-                <div style={{ width: 34, height: 34, borderRadius: 8, background: "rgba(88,166,255,0.12)", border: "1px solid rgba(88,166,255,0.25)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="6" r="2" stroke="#58a6ff" strokeWidth="2"/><circle cx="19" cy="6" r="2" stroke="#58a6ff" strokeWidth="2"/><circle cx="12" cy="18" r="2" stroke="#58a6ff" strokeWidth="2"/><path d="M7 6h10M5 8v8a2 2 0 0 0 2 2h3M19 8v8a2 2 0 0 1-2 2h-3" stroke="#58a6ff" strokeWidth="2" strokeLinecap="round"/></svg>
-                </div>
-                <div>
-                  <div style={{ fontSize: 14, fontWeight: 800, color: "#58a6ff" }}>ALM Ecosystem</div>
-                  <div style={{ fontSize: 11, color: "#6e7681" }}>Bidirectional sync · CI/CD · Defects</div>
-                </div>
-              </div>
-              {[
-                ["Jira & Azure DevOps Sync", "#58a6ff"],
-                ["CI/CD Pipeline Integration", "#58a6ff"],
-                ["Defect Lifecycle Management", "#58a6ff"],
-                ["Release & Sprint Tracking", "#58a6ff"],
-              ].map(([label, color]) => (
-                <div key={label} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke={color as string} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  <span style={{ fontSize: 13, color: "#e6edf3", fontWeight: 500 }}>{label}</span>
-                </div>
-              ))}
-            </div>
-
+            ))}
           </div>
         </div>
       </section>
